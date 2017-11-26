@@ -1,1 +1,1 @@
-Ï²»¶¶É±ßÂéÓÑµÄÕ¬ÄĞÒ»Ã¶¡£
+I am a new developer in javascript.And im studing java now.my favorate idol is the jpense girl watanabe mayuyu.also im chiese.skill is not good.but ill be better.if you get there,i wesh to make frends with you .concat me .myQQ: 878182159.myQQ name : luguo
