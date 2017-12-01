@@ -15,7 +15,8 @@
     "idoc": {
         "theme": "default",
         "md": [
-            "index.md"
+            "index.md",
+            "git_order.md"
         ]
     }
 }
