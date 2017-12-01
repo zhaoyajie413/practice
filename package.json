@@ -1,0 +1,21 @@
+{
+    "name": "andriodNote",
+    "version": "1.0.0",
+    "description": "",
+    "keywords": [
+        ""
+    ],
+    "homepage": "http://JSLite.io",
+    "author": "Yajie",
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "licenses": "MIT",
+    "idoc": {
+        "theme": "default",
+        "md": [
+            "index.md"
+        ]
+    }
+}
