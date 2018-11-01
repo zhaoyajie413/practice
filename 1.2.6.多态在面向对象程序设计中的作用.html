@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>1.2.6.多态在面向对象程序设计中的作用</title>
+	</head>
+	<body>
+	</body>
+	<script src="print.js"></script>
+<script>
+	var googleMap={
+		show:function(){
+			print.add("这是谷歌地图");
+		}
+	}
+	var baiduMap={
+		show:function(){
+			print.add("这是百度地图")
+		}
+	}
+	var renderMap=function(mapper){
+		mapper.show();
+	}
+	renderMap(googleMap);
+	renderMap(baiduMap)
+</script>
+</html>

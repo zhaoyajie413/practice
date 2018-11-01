@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+	</body>
+	<script src="print.js"></script>
+	<script>
+		/*Function.prototype.call 和 Function.prototype.apply 都是非常常用的方法。它们的作用一模
+		一样，区别仅在于传入参数形式的不同。
+		apply 接受两个参数，第一个参数指定了函数体内 this 对象的指向，第二个参数为一个带下
+		标的集合，这个集合可以为数组，也可以为类数组，apply 方法把这个集合中的元素作为参数传
+		递给被调用的函数：*/
+		function fun(){
+			return this.querySelector(arguments[0]);
+		}
+		var dom=fun.apply(document,["body"]);
+		print.add(dom);
+	</script>
+
+</html>

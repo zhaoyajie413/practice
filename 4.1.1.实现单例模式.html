@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script src="print.js"></script>
+	<script>
+		var singleton=function(name){
+			this.name=name;
+			this.instance=null;
+		}
+		singleton.getInstance=function(name){
+			if(!this.instance){
+				this.instance=new singleton(name);
+			}
+			return this.instance;
+		}
+		var s1=singleton.getInstance("单列模式");
+		var s2=singleton.getInstance("多列模式");
+		print.add(s1.name);
+		print.add(s2.name)
+	</script>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<canvas id="canvas" style="background-color: #000000;"></canvas>
+	</body>
+	<script>
+		var DrawStar=(function(){
+			this.stage=null;
+			this.ctx=null;
+			return {
+				setStage:function(dom,width,height){
+					if(!this.stage){
+						this.stage=document.querySelector(dom);
+						this.stage.width=width?width:document.documentElement.clientWidth;
+						this.stage.height=height?height:document.documentElement.clientHeight;
+						this.ctx=this.stage.getContext("2d");
+					}else{
+						console.info("重复创建canvas容器");
+					}
+				},
+				setImage:function(src,x,y,dw,dh,ox,oy,ow,oh){
+					var img=new Image();
+					img.src=src;
+					img.onload=function(){
+						if(x,y,dw,dh,ox,oy,ow,oh){
+							DrawStar.ctx.drawImage(img,x,y,dw,dh,ox,oy,ow,oh)
+						}else if(x,y,dw,dh){
+							DrawStar.ctx.drawImage(img,x,y,dw,dh);
+						}else if(x,y){
+							DrawStar.ctx.drawImage(img,x,y);
+						} else{
+							throw "参数不完整"
+						}
+						
+					}.bind(this)
+				},
+				randomStar(arr,pos){
+					var size=arr.length-1;
+					index=Math.ceil(Math.random()*size);
+					this.setImage(
+						"./img/stars.png",
+						arr[index][0],
+						arr[index][1],
+						arr[index][2],
+						arr[index][3],
+						pos[0],
+						pos[1],
+						12*Math.random()+2,
+						12*Math.random()+2
+					)
+				}
+			}
+		})();
+	DrawStar.setStage("#canvas")
+	var arr=[
+		[18,8,25,34],
+		[17,49,21,24],
+		[22,78,12,20,100],
+		[8,92,42,46],
+		[18,142,24,26],
+		[10,168,30,34]
+	]
+	var pos=[]
+	for(var i=0;i<100;i++){
+		pos.push([DrawStar.stage.width*Math.random(),
+						DrawStar.stage.height*Math.random(),])
+	}
+	
+	update()
+		function update(){
+			DrawStar.ctx.clearRect(0,0,DrawStar.stage.width,DrawStar.stage.height)
+			for(var i=0;i<100;i++){
+				DrawStar.randomStar(arr,pos[i])
+			}
+			setTimeout(update,100)
+		}
+		
+	
+	</script>
+</html>

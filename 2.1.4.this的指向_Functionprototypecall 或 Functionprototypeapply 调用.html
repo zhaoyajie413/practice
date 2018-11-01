@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+	</body>
+	<script src="print.js"></script>
+	<script>
+		/*跟普通的函数调用相比，用 Function.prototype.call 或 Function.prototype.apply 可以动态地
+				改变传入函数的 this：*/
+		var obj1 = {
+			name: 'sven',
+			getName: function() {
+				return this.name;
+			}
+		};
+		var obj2 = {
+			name: 'anne'
+		};
+		print.add(obj1.getName()); // 输出: sven 
+		print.add(obj1.getName.call(obj2)); // 输出：anne 
+		/*call 和 apply 方法能很好地体现 JavaScript 的函数式语言特性，在 JavaScript 中，几乎每一次
+		编写函数式语言风格的代码，都离不开 call 和 apply。在 JavaScript 诸多版本的设计模式中，也
+		用到了 call 和 apply。在下一节会详细介绍它们。*/
+	</script>
+
+</html>

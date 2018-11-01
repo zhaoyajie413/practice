@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script src="print.js"></script>
+	<script>
+		/*当函数不作为对象的属性被调用时，也就是我们常说的普通函数方式，此时的 this 总是指
+		向全局对象。在浏览器的 JavaScript 里，这个全局对象是 window 对象。*/
+		window.name="mayu";
+		var getName=function(){
+			print.add("this: "+this);
+			print.add("name: "+this.name);
+		}
+		getName();
+	</script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script src="print.js"></script>
+	<script>
+		var Plane=function(){
+			this.blood=100;
+			this.attackLevel=1;
+			this.defenseLevel=1;
+		}
+		var plane=new Plane();
+		plane.blood=500;
+		plane.attackLevel=5;
+		plane.defenseLevel=5;
+		clonePlane=Object.create(plane);
+		for(let p in clonePlane){
+			print.add(p+":"+clonePlane[p])
+		}
+		//兼容写法
+//		Object.create = Object.create || function( obj 
+//			var F = function(){}; 
+//			F.prototype = obj; 
+//			return new F(); 
+//		} 
+	</script>
+</html>

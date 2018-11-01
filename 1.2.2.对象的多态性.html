@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>1.2.2.对象的多态性</title>
+	</head>
+	<body>
+	</body>
+	<script src="print.js"></script>
+	<script>
+	var makesound=function(animal){
+		animal.sound();
+	}
+	var Duck=function(){
+		
+	}
+	Duck.prototype.sound=function(){
+		print.add("嘎嘎嘎");
+	}
+	var Chicken=function(){
+		
+	}
+	Chicken.prototype.sound=function(){
+		print.add("咯咯咯");
+	}
+	makesound(new Duck());
+	makesound(new Chicken());
+</script>
+</html>

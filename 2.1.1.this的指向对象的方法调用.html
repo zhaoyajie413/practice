@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script src="print.js"></script>
+	<script>
+		//当函数作为对象的方法被调用时，this指向对象本身；
+		var obj={
+			tag:"mayu",
+			showTag:function(){
+				print.add('this===obj: '+(this===obj));
+				print.add('this.tag '+this.tag);
+			}
+		}
+		obj.showTag();
+	</script>
+</html>
