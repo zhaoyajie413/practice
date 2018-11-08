@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.mall-circle-wrapper{
+				transform: rotate(0);
+				animation: clrt 1s ease-in-out infinite;
+			}
+			@keyframes clrt{
+				from{
+					transform: rotate(0);
+				}
+				to{
+					transform: rotate(360deg);
+				}
+			}
+			.mall-circle{
+				fill: none; 
+				stroke: #af81f6;
+				stroke-width: 2; 
+				stroke-linecap: round;
+				transform-origin: 50% 50%;
+				stroke-dashoffset: -23;
+				stroke-dasharray: 42, 95;
+				
+			}
+		</style>
+	</head>
+	<body>
+
+		<svg class="mall-circle-wrapper" width="50" height="50" version="1.1"
+xmlns="http://www.w3.org/2000/svg">
+
+<circle 
+	id="mallCircle"
+	cx="25" 
+	cy="25" 
+	r="15" 
+	class="mall-circle" />
+<animate
+  xlink:href="#mallCircle"
+  attributeName="stroke-dashoffset"
+  from="-0"
+  to="-120"
+  dur="2s"
+  begin="0s"
+  freeze="fill"
+  restart="never"
+  values="-0; -20; -80; -120"
+    keyTimes="0; 0.3; 0.7; 1"
+   repeatCount="999"
+ />  
+ 
+
+</svg>
+			
+
+	</body>
+</html>

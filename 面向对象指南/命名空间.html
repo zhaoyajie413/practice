@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		//命名空间实际上是用来解决全局变量污染的一种实现
+		//通过函数（function)创建
+		var Person=window.Person || {}
+		
+		 Person.hello=function(){
+			this.name="world"
+		}
+		Person.hello.prototype.sayhello=function(_name){
+			return "hello"+(_name||this.name);
+		}
+		var hello=new Person.hello();
+		hello.sayhello();
+		//通过JSON对象创建Object
+		var Hunter=window.Hunter || {};
+		Hunter.hello={
+			name:"伊利丹",
+			sayhello:function(_name){
+				(_name || this.name)+" say hello "
+			}
+		}
+		Hunter.hello.sayhello();
+		//这种写法比较紧凑，缺点是所有变量都必须声明为公有(public)的，导致所有对这些变量的引用都需要加this指示作用域，写法也略有冗余。
+		
+		
+		//通过闭包(Closure)和Object实现
+		var Animal=window.Animal || {};
+		Animal.Skill=(function(){
+			var Skill={};
+			var name="猫咪";
+			var skillName="扑捉老鼠";
+			Skill.useSkill=function(_name,_skillName){
+				return (_name || name)+(_skillName || skillName);
+			}
+			return Skill
+		})()
+		console.log(Animal.Skill.useSkill());
+		
+		//Function 的简洁写法
+		
+		var NameSpace = window.NameSpace || {};
+		NameSpace.Hello = new function() {
+		  var self = this;
+		  var name = 'world';
+		  self.sayHello = function(_name) {
+		    return 'Hello ' + (_name || name);
+		  };
+		};
+		NameSpace.Hello.sayHello();
+	</script>
+</html>

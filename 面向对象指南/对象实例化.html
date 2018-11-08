@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		var idol=function(){
+				this.name="";
+				this.age=0;
+				this.team="";
+			}
+		idol.prototype.skills=function(){
+			console.log("I can sing");
+		}
+		//第一实例化idol函数对象，得到mayu实例。
+		var mayu=new idol();
+		//因为mayu是iodl的一个实例，所以很显然的拥有了idol的属性和方法
+         console.log(mayu)
+	</script>
+</html>

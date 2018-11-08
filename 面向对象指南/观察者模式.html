@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		var Person=function(n,a,s){
+			this.name=n;
+			this.age=a;
+			this.sex=s;
+		}
+		Person.prototype.hair="long";
+		Person.prototype.speak=function(){
+			console.log("good morning");
+		}
+		
+		var mayu=new Person('mayu',24,"female");
+		for(var k in mayu){
+			if(mayu.hasOwnProperty(k)){
+				console.log(k)
+			}
+		}
+		
+		function extend( extension, obj ){
+		  for ( var key in extension ){
+		  
+		    obj[key] = extension[key];
+		  }
+		}
+	</script>
+</html>

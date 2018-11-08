@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		var idol=function(){
+			this.name="";
+			this.age=0;
+			this.team="";
+			this.sex=function(){
+				console.log("I am a girl")
+			}
+		}
+		
+		idol.prototype.skills=function(){
+			console.log("I can sing");
+		}
+		
+		var mayu=function(){
+			idol.call(this);     //使用call方法来让this继承idol的显性属性和方法
+		}
+		console.log(new mayu())  //但是并不能调用原型链上的方法
+	</script>
+</html>

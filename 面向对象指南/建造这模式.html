@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+	</body>
+	<script>
+		//需要建造的对象
+		//房子
+		function Fangzi() {
+			this.woshi = '';
+			this.keting = '';
+			this.chufang = '';
+		}
+		//分发任务的函数
+		//包工头
+		function Baogongtou() {
+			this.jianfangzi = function(gongren) {
+				gongren.jian_woshi();
+				gongren.jian_keting();
+				gongren.jian_chufang();
+			}
+		}
+		//执行任务的函数
+		//工人
+		function Gongren() {
+			this.jian_woshi = function() {
+				console.log('卧室已经建好了');
+			}
+			this.jian_keting = function() {
+				console.log('客厅已经建好了');
+			}
+			this.jian_chufang = function() {
+				console.log('厨房已经建好了');
+			}
+			this.jiaogong = function() {
+				var _fangzi = new Fangzi();
+				_fangzi.woshi = 'ok';
+				_fangzi.keting = 'ok';
+				_fangzi.chufang = 'ok';
+				return _fangzi;
+			}
+		}
+		var gongren = new Gongren;
+		var baogongtou = new Baogongtou;
+		baogongtou.jianfangzi(gongren);
+		var myfangzi = gongren.jiaogong();
+		console.log(myfangzi);
+	</script>
+
+</html>

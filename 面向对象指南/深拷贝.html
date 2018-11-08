@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+	</body>
+	<script>
+		var mayu={
+				frend:["youki","mio","nana","koa",{"天下第一傻":"Yajie"}],
+				name:"mayu",
+				age:24,
+				team:"teamB",
+				speak:function(){
+					console.log("watanabe mayuyu");
+				},
+				songs:{
+					songName:"同步心跳",
+					"演唱者":["渡边麻友","Yajie"]
+				}
+		}
+		mayu.speak.prototype.sayLove=function(){
+			console.log("I Love You");
+		}
+		
+		function extend(target){
+			var obj={};
+			(function iteration(t,o){
+				for(var k in t){
+					if(t[k] instanceof Array){
+						o[k]=new Array();
+						iteration(t[k],o[k]);
+					}else if(t[k] instanceof Object && !(t[k] instanceof Function)){
+						o[k]=new Object();
+						iteration(t[k],o[k]);
+					}else{
+						o[k]=t[k]
+					}
+				}
+				
+			})(target,obj)
+			return obj
+		}
+		
+		//拷贝mayu;
+		var youki=extend(mayu);
+		mayu.name="mioAndNana";
+		console.log(youki);
+		
+		youki.speak();
+		
+		//实例化speak函数
+		
+		var express=new youki.speak();
+		//改变mayu下的saylove方法
+		
+	new	mayu.speak().sayLove=function(){
+			console.log("I Love mayuyu");
+		}
+		//调用实例的方法。实例方法改变了。
+		express.sayLove();
+	</script>
+</html>

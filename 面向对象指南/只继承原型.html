@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		function fa(){
+			this.name="爹爹";
+			this.tag="强壮"
+		}
+		fa.prototype.skills=function(){
+			console.log("搬砖")
+		};
+		function son(){
+			
+		}
+		son.prototype=new fa();
+		
+		var s=new son();
+		fa.prototype.skills=function(){
+			console.log("开车")
+		};
+		s.skills()
+
+	</script>
+</html>

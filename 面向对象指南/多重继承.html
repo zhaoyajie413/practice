@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		var grandFa=function(){
+			this.name="爷爷";
+			this.wife="奶奶";
+			this.skills="搬砖";
+		}
+		grandFa.prototype.isOld=function(){
+			console.log("爷爷年纪大");
+		}
+		var fa=function(){
+			this.name="爹爹";
+			this.wife="妈妈";
+		}
+		fa.prototype=new grandFa();    //原型链继承
+		fa.prototype.isStrong=function(){
+			console.log("爹爹很壮")
+		}
+		var son=function(){
+			this.name="儿子";
+			this.wife="媳妇"
+		}
+		son.prototype=new fa();    //原型链继承
+		son.prototype.isYong=function(){
+			console.log("儿子年轻")
+		}
+		
+		var s=new son();
+		console.log(s.skills);
+		s.isOld();
+		
+		console.log(s.constructor)
+	</script>
+</html>

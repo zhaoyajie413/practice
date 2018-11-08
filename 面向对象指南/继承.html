@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		var idol =function(){
+			this.name="member";
+			this.age=0;
+			this.team=""
+		}
+		idol.prototype.skills=function(){
+			console.log("I can sing");
+		}
+		console.log(idol.prototype)
+		var mayu=function(){
+			 idol.call(this);
+			this.name="mayu"
+		}
+		//这里有点恶心,似乎是利用原型链直接=idol对象。所以mayu.prototype.name 是member
+		//这种继承是有缺陷的
+		//mayu.prototype=new idol();
+		mayu.prototype=new idol();
+		/*mayu.prototype.skills=function(){
+			console.log("I can sing UZA");
+		}*/
+		mayu.prototype.introduce=function(){    
+				console.log("watanabe mayuyu");
+			}	
+		
+		var i=new idol();
+		var m=new mayu();
+		i.age=24;
+		i.skills=function(){
+			console.log("I can sing 同步心跳");
+		}
+		m.skills()
+		console.log(m.age)
+		
+		
+	</script>
+</html>

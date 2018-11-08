@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		var fa=function(){
+			this.name="";
+			this.age="";
+			this.sex=""
+		}
+		fa.prototype.skills=function(){
+			console.log("搬砖")
+		}
+		var son=function(){
+			this.idol="mayu"
+		}
+		var newF=new Function();
+	    newF.prototype=fa.prototype;
+	    son.prototype=new newF();
+	    son.prototype.constructor=son;
+
+	    fa.prototype.skills=function(){
+			console.log("做生意")
+		}
+	    var s=new son();
+	  s.skills()
+	</script>
+</html>

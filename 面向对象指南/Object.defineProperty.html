@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		var idol={};
+		Object.defineProperty(idol,'name',{
+			value: "mayu",
+			writable: false,
+			enumerable: true,
+			configurable: true
+		})
+		console.log(idol)
+		var mayu={}
+		Object.defineProperties(mayu,{
+			"age":{
+				get:function(){
+					return 22;
+				},
+				set:function(newValue){
+					console.log("mayu的年龄改变了")
+					
+				},
+				//writable: true,
+				enumerable: true,
+			},
+			"sex":{
+				value:"girl",
+				writable: true,
+				enumerable: true,
+			}
+		})
+		console.log(mayu)
+		mayu.age=24
+	</script>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+	</body>
+	<script>
+		var Singer = Object.create(null);
+		console.log(Singer)
+		// 设置属性
+		Object.defineProperty(Singer, "skill", {
+			value: "sing",
+			writable: true,
+			enumerable: true,
+			configurable: true
+		});
+		console.log(Singer.skill);
+
+		Object.defineProperty(Singer, "name", {
+			get: function() {
+				return "mayu"
+			},
+			set: function(nv) {
+				console.log(nv)
+			},
+			enumerable: true,
+			configurable: true
+		});
+		Singer.name = "mio";
+		
+		/*实现对对象内数据的监听*/
+		var defineProp = function(obj, key, value) {
+			var config = {
+				get: function() {
+					return value
+				},
+				set: function(nv) {
+					console.log(nv)
+				},
+				enumerable: true,
+				configurable: true
+			};
+			Object.defineProperty(obj,key,config);
+		};
+
+		var Person = new Object();
+
+		defineProp(Person, "sex", "美女");
+		defineProp(Person, "profassion", "dancer");
+		defineProp(Person, "age", 16);
+		Person.sex="少女"
+		
+		Object.defineProperties(Person, {
+			"name": {
+			    value: "mayu", 
+			    writable: true 
+			  },
+			
+			  "boyfrend": { 
+			    value: "Yajie", 
+			    writable: false 
+			  } 
+			});
+			
+		console.log(Person)
+	</script>
+
+</html>

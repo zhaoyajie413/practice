@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		var idol=function(){
+				this.name="";
+				this.age=0;
+				this.sex="";
+				this.team="";
+				this.frends=["youki","mio"];
+				this.info={
+					addr:"埼玉县"
+				}
+		}
+		idol.prototype.skills=function(){
+			console.log("I am sing");
+		}
+		var i=new idol();
+		//遍历对象的时候只会将它自身的属性或方法显性遍历
+		for(var a in i ){
+			console.log(a)
+		}
+		console.log(["youki","mio"] instanceof Array)
+		var mayu=function(){
+			extend(this,idol);
+		}
+		
+		
+	</script>
+</html>
