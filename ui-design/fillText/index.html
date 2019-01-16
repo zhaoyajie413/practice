@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			
+			div[data-text='MAYUYU']{
+				text-align: center;
+				margin: 0;
+				position: 0;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%,-50%);
+				font-family: verdana;
+				color: #DDDDDD;
+				text-transform: uppercase;
+				font-size: 240px;
+			}
+			div[data-text='MAYUYU']:before{
+				position: absolute;
+				top: 0;
+				left: 0;
+				content: attr(data-text);
+				color: #262626;
+				width: 0;
+				transition:1s;
+				overflow: hidden;
+			}
+			 div[data-text='MAYUYU']:hover:before{
+				width: 100%;
+			} 
+		</style>
+	</head>
+	<body>
+		<div data-text="MAYUYU">MAYUYU</div>
+	</body>
+</html>

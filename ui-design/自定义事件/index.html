@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$.Event</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.js"></script>
+</head>
+<body>
+ <input type="text" id="input-1" />
+ <div class="mayu" style="width: 100px;height: 100px;background-color: darkred;margin-top: 10px;cursor: pointer;"></div>
+ <script>
+        +function($){
+           function testEvent(){
+			   alert(1212)
+            var hidden = jQuery.Event( "hide.bs",{
+                    user:"foo",
+					pass:"bar",
+					//relatedTarget: $(".mayu")
+				  });
+		   $( ".mayu" ).trigger(hidden);
+		    }
+           $("#input-1").on("click",testEvent);
+		  
+        }(jQuery)
+        $(function(){
+            $( ".mayu" ).on("hide.bs",function(event){
+                   //alert(event.relatedTarget.tagName)
+                   alert(event.user)//foo
+              })
+        })
+</script>
+</body>
+</html>

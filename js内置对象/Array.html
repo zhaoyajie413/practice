@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script src="print.js"></script>
+	<script>
+		//创建数组
+		var girls=["mayu","yokiri","mio"]
+		console.log("创建数组:"+girls);
+		//通过索引访问
+		console.log("通过索引访问:"+girls[0]);
+		console.log("通过索引访问:"+girls[girls.length-1]);
+		//循环
+		girls.forEach(function(it){
+			console.log("循环:"+it);
+		})
+		//循环每一个元素并返回新数组
+		var singer=girls.map(function(it){
+			return {
+				name:it,
+				sex:"girl"
+			}
+		})
+		//转为字符串
+		console.log("转为字符串:"+singer.toString());
+		//向后添加
+		girls.push("meru");
+		console.log("向后添加:"+girls);
+		//删除最后一个,并返回;
+		var m=girls.pop();
+		console.log("删除最后一个,并返回:"+m);
+		
+		//向前添加
+		girls.unshift("tomomi");
+		console.log("向前添加:"+girls);
+		
+		//向前删除,并返回
+		m=girls.shift();
+		console.log("向前删除:"+m);
+		
+		//拷贝数组内的元素
+		var new_girls=girls.slice(0,2);
+		console.log("拷贝仓库内的元素："+new_girls);
+		
+		//根据索引删除,替换
+		girls.splice(1,1);
+		console.log("根据索引删除,替换:"+girls);
+		
+		// 方法从一个类似数组或可迭代对象中创建一个新的数组实例
+		function member(){
+			return Array.from(arguments)
+		}
+		console.log("javascript","paython","java","c","c#","c++");
+		
+		//判断一个数组是不是数组
+		if(Array.isArray(girls))console.log("这是一个数组");
+		
+		//倒序
+		var reverse=girls.reverse();
+		console.log("倒序："+reverse);
+		
+		//排序
+		var numeric=[3,2,3,7,4,3,9,5,3,7,4,34,8,34,23,5,87,34,3,465,87,23];
+		var numeric_sort=numeric.sort(function(a,b){
+			return a-b;
+		})
+		console.log("排序："+numeric_sort);
+
+		//合并数组
+		console.log("合并数组:"+numeric.concat(girls));
+		
+		//every,some,filter了解即可
+	</script>
+</html>

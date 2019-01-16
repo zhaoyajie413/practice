@@ -1,0 +1,32 @@
+input[type='checkbox'].m-switch{
+				appearance: none;
+				-moz-appearance:none; /* Firefox */
+				-webkit-appearance:none; 
+				width: 4em;
+				height: 2em;
+				border-radius: 1em;
+				background-color: #DDDDDD;
+				cursor: pointer;
+				outline: 0;
+				transition: all 0.3 ease-in-out;
+				position: relative;
+			}
+			input[type='checkbox'].m-switch:checked{
+				background-color: #0033FF;
+			}
+			input[type='checkbox'].m-switch:after{
+				position: absolute;
+				top: 0;
+				left: 0;
+				background-color: white;
+				width: 2em;
+				height: 2em;
+				border-radius: 1em;
+				box-shadow: 0 0.1em rgba(0,0,0,0.5);
+				display: inline-block;
+				content: "";
+				transition: .3s ease-in-out;
+			}
+			input[type='checkbox'].m-switch:checked:after{
+				left: 2em;
+			}

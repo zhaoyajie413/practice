@@ -1,0 +1,61 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<title>iOS8风格loading加载进度条代码（CSS3+JS)</title>
+<!-- <script type="text/javascript" src="prefixfree.min.js"></script> -->
+<style>
+body {
+  background-color: #f5f7f9;
+  color: #6c6c6c;
+  font: 300 1em/1.5em;
+}
+.progress-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* PROGRESS */
+.progress {
+  background-color: #e5e9eb;
+  height: 0.15em;
+  position: relative;
+  width: 100%;
+}
+.progress-bar {
+  background-image: linear-gradient(to right, #4cd964, #5ac8fa, #007aff, #34aadc, #5856d6, #ff2d55);
+  background-size: 24em 0.25em;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  transition: .3s;
+}
+.progress-shadow {
+  background-image: linear-gradient(to bottom, #eaecee, transparent);
+  height: 4em;
+  position: absolute;
+  top: 100%;
+  transform: skew(45deg);
+  transform-origin: 0 0;
+  width: 100%;
+}
+
+</style>
+</head>
+<body>
+
+<div class="progress-container">
+<div class="progress">
+<div class="progress-bar">
+<div class="progress-shadow"></div>
+</div>
+</div>
+</div>
+
+</body>
+</html>

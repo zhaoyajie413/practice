@@ -1,0 +1,8 @@
+.text-fade-in {
+		opacity: 0;
+	}
+
+.text-fade-in span {
+	font-size: 1.2em;
+}
+

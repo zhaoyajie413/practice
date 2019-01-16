@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.wave-text{
+				margin: 0;
+				padding: 0;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				font-size: 240px;
+				background-image: url(wave.png);
+				background-position: top 100px left 0;
+				background-repeat:repeat-x;
+				background-clip: -webkit-text;
+				-webkit-background-clip: text;
+				color: rgba(0,0,0,0.5);
+				 animation: waveText 3s  linear infinite; 
+			}
+			@keyframes waveText{
+				from{
+					background-position: top 100px left 0;
+				}
+				to{
+					background-position: top 100px left 720px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<h1 class="wave-text">HUAHUA</h1>
+	</body>
+</html>
