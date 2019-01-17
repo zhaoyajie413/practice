@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<button class="msgbox">点击</button>
+		<div class="msg">
+			哈哈哈哈
+		</div>
+		<div id="target">
+			事件信息
+		</div>
+	</body>
+	<script>
+		var msgbox = document.querySelector(".msgbox");
+		msgbox.addEventListener("click", SendMessage, false);
+
+		// new message: raise newMessage event
+		function SendMessage(e) {
+			e.preventDefault();
+			var msg = document.querySelector(".msg").innerText;
+
+			if (msg && window.CustomEvent) {
+				var event = new CustomEvent("newMessage", {
+					detail: {
+						message: msg,
+						time: new Date(),
+					},
+					bubbles: true,
+					cancelable: true
+				});
+
+				document.querySelector("#target").dispatchEvent(event);
+			}
+
+		}
+		
+		document.querySelector("#target").addEventListener("newMessage", newMessageHandler, false);
+
+// newMessage event handler
+		function newMessageHandler(e) {
+			e.currentTarget.innerText="事件信息:"+e.detail.message;
+			console.log(
+				"Event subscriber on "+e.currentTarget.nodeName+", "
+				+e.detail.time.toLocaleString()+": "+e.detail.message
+			);
+		}
+	</script>
+</html>

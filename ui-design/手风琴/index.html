@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Title</title>
+		<style>
+			.accordion {
+				background-color: #eee;
+				color: #444;
+				cursor: pointer;
+				padding: 18px;
+				width: 100%;
+				text-align: left;
+				border: none;
+				outline: none;
+				transition: 0.4s;
+			}
+
+			.accordion:after {
+				content: '\02795';
+				/* Unicode character for "plus" sign (+) */
+				font-size: 13px;
+				color: #777;
+				float: right;
+				margin-left: 5px;
+			}
+
+			.active,
+			.accordion:hover {
+				background-color: #ccc;
+			}
+			.active:after {
+			  content: "\2796"; /* Unicode character for "minus" sign (-) */
+			}
+			.panel {
+				padding: 0 18px;
+				background-color: white;
+				max-height: 0;
+				transition: max-height 0.2s ease-out;
+				overflow: hidden;
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<button class="accordion">Section 1</button>
+		<div class="panel">
+			<p>Lorem ipsum...</p>
+		</div>
+
+		<button class="accordion">Section 2</button>
+		<div class="panel">
+			<p>Lorem ipsum...</p>
+		</div>
+
+		<button class="accordion">Section 3</button>
+		<div class="panel">
+			<p>Lorem ipsum...</p>
+		</div>
+	</body>
+	<script>
+		var accordions = document.querySelectorAll(".accordion");
+		var i;
+		Array.prototype.forEach.call(accordions, function(it) {
+			console.log(it)
+			it.addEventListener("click", function(e) {
+				this.classList.toggle("active");
+				var panel = this.nextElementSibling;
+				var h = getStyle(panel, "max-height");
+				if (h == "0px") {
+					panel.style.maxHeight = panel.scrollHeight + "px";
+				} else {
+					panel.style.maxHeight = "0px";
+				}
+			})
+		})
+
+		function getStyle(ele, name) {
+			return ele.currentStyle ? obj.currentStyle[bame] : window.getComputedStyle(ele)[name];
+		};
+	</script>
+</html>
