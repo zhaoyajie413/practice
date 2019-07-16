@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #clipboardItem{
+            overflow: hidden;
+            padding: 20px;
+        }
+        #clipboardItem ul,#clipboardItem li{
+            margin: 0;
+            list-style: none;
+            font-size: 12px;
+            color: #f5f5f5;
+        }
+        #clipboardItem ul{
+            width: 200px;
+            float: left;
+        }
+        #clipboardItem li{
+            padding: 6px;
+        }
+    </style>
+</head>
+<body>
+<div id="clipboardItem"></div>
+</body>
+<script src="colors.js"></script>
+<script src="colorsData.js"></script>
+<script>
+    var html = ''
+    var colorPicker = new colorPicker("#clipboardItem");
+    console.log(colorPicker)
+    colorPicker.render(colorsData,function ($el,it) {
+        console.log($el)
+       var c = "";
+       it.variations.forEach(function (colorItem) {
+           c+=`<li style="background-color: ${colorItem.hex};height: ${colorItem.height}">${colorItem.hex}</li>`
+       });
+       var domString =  `
+        <ul>
+            <div>${it.color}</div>
+            ${c}
+        </ul>
+        `
+        html += domString;
+        $el.innerHTML = html;
+    })
+    console.log( window.__theme_COLOR_cfg)
+</script>
+</html>

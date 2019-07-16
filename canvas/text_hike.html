@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<canvas id="canvas"></canvas>
+	</body>
+	<script>
+		var canvas = document.querySelector("#canvas");
+		canvas.width = document.documentElement.clientWidth || document.body.clientWidth;
+		canvas.height = document.documentElement.clientHeight || document.body.clientHeight;
+		context = canvas.getContext("2d");
+		context.fillStyle = "rgba(0,0,0,1)";
+		context.fillRect(0,0, canvas.width,canvas.height);
+		const LETTERS = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "A", "S", "D", "F", "G", "H", "J", "K", "L", "Z", "X", "C", "V", "B", "N", "M"];
+		function randomRange(size){
+			return Math.floor(Math.random() * size)
+		}
+		function createFont() {
+			var font = {
+				text: function() {
+					var index =randomRange(LETTERS.length);
+					return LETTERS[index];
+				},
+				fillStyle: "rgba("+randomRange(255)+","+randomRange(255)+","+randomRange(255)+",1)",
+				x: randomRange(canvas.width),
+				y: randomRange(canvas.height),
+				draw: function(context) {
+					context.fillStyle = this.fillStyle;
+					context.fillText(this.text(), this.x, this.y);
+				}
+			}
+			return font;
+		}
+		var fontMap={
+			algebra:0,
+			stack:{}
+		};
+		for(var i=0;i<1000;i++){
+			fontMap.algebra++
+			fontMap.stack[fontMap.algebra]=createFont();
+		}
+		setInterval(function() {
+			context.fillStyle = "rgba(0,0,0,0.1)";
+			 context.fillRect(0,0, canvas.width,canvas.height);
+			for( var k in fontMap.stack){
+				fontMap.stack[k].y += 10;
+				fontMap.stack[k].draw(context);
+				if(fontMap.stack[k].y>canvas.height){
+					delete fontMap.stack[k];
+					fontMap.algebra++
+					fontMap.stack[fontMap.algebra]=createFont();
+				}
+				
+			}
+		}, 30)
+	</script>
+
+</html>

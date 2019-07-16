@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        #canvas{
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+</body>
+<script src="TweenMax.min.js"></script>
+<script>
+	 const ease = {
+        // easeOutQuint
+        swipe: {
+            style: 'cubic-bezier(0.23, 1, 0.32, 1)',
+            fn: function (t) {
+                return 1 + (--t * t * t * t * t)
+            }
+        },
+        // easeOutQuard
+        swipeBounce: {
+            style: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+            fn: function (t) {
+                return t * (2 - t)
+            }
+        },
+        // easeOutQuart
+        bounce: {
+            style: 'cubic-bezier(0.165, 0.84, 0.44, 1)',
+            fn: function (t) {
+                return 1 - (--t * t * t * t)
+            }
+        }
+    }
+    var canvas=document.querySelector("#canvas");
+    var ctx=canvas.getContext("2d");
+    width = canvas.offsetWidth;
+    height = canvas.offsetHeight;
+    if (window.devicePixelRatio > 1) {
+        canvas.width = canvas.clientWidth * 2;
+        canvas.height = canvas.clientHeight * 2;
+        ctx.scale(2, 2);
+    } else {
+        canvas.width = width;
+        canvas.height = height;
+    }
+    /*
+    构建三维世界坐标
+    */
+    let PERSPECTIVE = canvas.width * 0.8; // 3D场景的视野
+    let PROJECTION_CENTER_X = canvas.width / 2; // x中心
+    let PROJECTION_CENTER_Y = canvas.height / 2; // y 中心
+    let dots=[];
+
+    class Dot{
+        constructor() {
+            this.x = (Math.random() - 0.5) * width; // 随机新坐标
+            this.y = (Math.random() - 0.5) * height; // 随机y坐标
+            this.z = Math.random() * width; // 随机z坐标
+            this.radius = 10; // 元素的大小
+			this.duration=Math.round(100*Math.random())*20;
+			this.now=Math.floor(this.duration*Math.random())
+
+            this.xProjected = 0; // 转换成2d界面的x坐标
+            this.yProjected = 0; //转换成2d界面的y坐标
+            this.scaleProjected = 0; // 2D世界中元素的比例（更远的=更小）
+        }
+        project() {
+            // scaleProjected将根据与“相机”的距离存储元素的比例
+            this.scaleProjected = (PERSPECTIVE / (PERSPECTIVE + this.z)).toFixed(3);
+            // xProjected是2D世界的x位置
+            this.xProjected = (this.x * this.scaleProjected) + PROJECTION_CENTER_X;
+            // yProjected是2D世界的y位置
+            this.yProjected = (this.y * this.scaleProjected) + PROJECTION_CENTER_Y;
+        }
+        //在画布上绘制点
+        draw() {
+            // 我们首先计算点的投影值
+            this.project();
+            // 我们根据距离定义元素的不透明度
+            var alpha=1 - this.z / canvas.width
+            //利用比例控制大小
+            var size = this.radius * 2 * this.scaleProjected;
+
+            // 我们根据投影坐标和比例绘制一个矩形
+            ctx.fillStyle="rgba(255,255,255,"+alpha+")";
+            ctx.fillRect(this.xProjected - this.radius, this.yProjected - this.radius,size,size );
+        }
+
+    }
+    // 创建800个新点
+    for (let i = 0; i < 800; i++) {
+        // 创建一个新点并将其推入数组
+        dots.push(new Dot());
+    }
+	
+    requestAnimationFrame(render)
+    function render() {
+        ctx.fillStyle="rgba(5,143,215,0.4)";
+        ctx.fillRect(0,0,canvas.width,canvas.height);
+       dots.forEach(function (dot,i) {
+           if(i%2==0){
+			   dot.now+=1;
+              // dot.z+=Math.floor(Math.random()*100)/100
+           }else{
+			   dot.now-=1;
+              // dot.z-=Math.floor(Math.random()*100)/100
+           };
+           if(dot.now>=dot.duration)dot.now=0;
+           if(dot.now<0)dot.now=dot.duration;
+		   dot.z=ease.swipeBounce.fn(dot.now/dot.duration)*2000;
+		   console.log(dot.z)
+           dot.draw();
+       })
+  
+		    requestAnimationFrame(render)
+	
+    }
+</script>
+</html>

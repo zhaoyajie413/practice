@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        #canvas{
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+</body>
+<script src="TweenMax.min.js"></script>
+<script>
+    var canvas=document.querySelector("#canvas");
+    var ctx=canvas.getContext("2d");
+    width = canvas.offsetWidth;
+    height = canvas.offsetHeight;
+    if (window.devicePixelRatio > 1) {
+        canvas.width = canvas.clientWidth * 2;
+        canvas.height = canvas.clientHeight * 2;
+        ctx.scale(2, 2);
+    } else {
+        canvas.width = width;
+        canvas.height = height;
+    }
+    /*
+    构建三维世界坐标
+    */
+    let PERSPECTIVE = canvas.width * 0.8; // 3D场景的视野
+    let PROJECTION_CENTER_X = canvas.width / 2; // x中心
+    let PROJECTION_CENTER_Y = canvas.height / 2; // y 中心
+
+    var dot={
+        /*三维世界的坐标*/
+        x :0,// 随机新坐标
+        y :0, // 随机y坐标
+        z :0, // 随机z坐标
+
+        radius:10, // 元素的大小
+        /*二维世界的坐标*/
+        xProjected:0, // 转换成2d界面的x坐标
+        yProjected:0,//转换成2d界面的y坐标
+        scaleProjected:0, // 2D世界中元素的比例（更远的=更小）
+        project() {
+            // scaleProjected将根据与“相机”的距离存储元素的比例
+            this.scaleProjected = (PERSPECTIVE / (PERSPECTIVE + this.z)).toFixed(3);
+            console.log(this.scaleProjected)
+            // xProjected是2D世界的x位置
+            this.xProjected = (this.x * this.scaleProjected) + PROJECTION_CENTER_X;
+            console.log(this.xProjected)
+            // yProjected是2D世界的y位置
+            this.yProjected = (this.y * this.scaleProjected) + PROJECTION_CENTER_Y;
+        },
+        //在画布上绘制点
+        draw() {
+            // 我们首先计算点的投影值
+            this.project();
+            // 我们根据距离定义元素的不透明度
+            ctx.globalAlpha = Math.abs(1 - this.z / canvas.width);
+            //利用比例控制大小
+            var size = this.radius * 2 * this.scaleProjected;
+
+            console.log("size",size)
+            // 我们根据投影坐标和比例绘制一个矩形
+            ctx.fillStyle="black";
+            ctx.fillRect(this.xProjected - this.radius, this.yProjected - this.radius,size,size );
+        }
+    }
+    requestAnimationFrame(render)
+    function render() {
+       dot.z++;
+       if(dot.z>=500)return;
+        ctx.fillStyle="rgba(255,255,255,1)";
+        ctx.fillRect(0,0,canvas.width,canvas.height);
+       dot.draw();
+        requestAnimationFrame(render)
+    }
+</script>
+</html>

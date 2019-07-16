@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+<body>
+		<canvas id="canvas"></canvas>
+	</body >
+	<script type="text/javascript">
+		
+		var canvas=document.querySelector("#canvas");
+			canvas.height=document.documentElement.clientHeight;
+			canvas.width=document.documentElement.clientWidth;
+		    var ctx=canvas.getContext("2d");
+			ctx.fillStyle="#000000";
+			ctx.fillRect(0,0,canvas.width,canvas.height),
+			Graphs={};
+			Graphs.index=0;
+		function Star(x,y){
+			this.x=x+randomNum(50);
+			this.y=y+randomNum(50);
+			this.vx=randomNum(2)
+			this.vy=randomNum(2)
+			this.ax=this.vx>0?-0.1:0.1;
+			this.ay=this.vy>0?-0.1:0.1;
+			this.r=Math.random()*10+2;
+			this.life=60;
+			Graphs.index++;
+			Graphs[Graphs.index]=this;
+		}
+		function randomNum(num){
+			var sync=Math.random()>0.5?"":"-";
+			var nv=sync+Math.floor(Math.random()*num)
+			return parseInt(nv);
+		}
+		var img=new Image();
+		
+		img.src="img/heart.png";
+		
+		var bg=new Image();
+		
+		bg.src="img/yuner.jpg";
+		
+		document.body.onmousemove=function(e){
+			var x=e.clientX;
+			var y=e.clientY;
+			console.log(x,y)
+			 for(var i=0;i<2;i++){
+				new Star(x,y);
+			} 
+		}
+		function update (ctx){
+			ctx.drawImage(bg,0,0,canvas.width,canvas.height),
+			ctx.beginPath();
+			/*Y轴方向*/
+			for(var k in Graphs){
+				var p=Graphs[k];
+				if((p.vx>0 && p.ax<0) || (p.vx<0 && p.ax>0))p.vx+=p.ax;
+				if((p.vy>0 && p.ay<0) || (p.vy<0 && p.ay>0))p.vy+=p.ay;
+				//console.log(p.vx)
+				//console.log(p.ax)
+				p.x+=p.vx;
+				p.y+=p.vy;
+			    ctx.drawImage(img,p.x,p.y,p.r,p.r);
+				p.life--;
+				if(p.life==0){
+					delete Graphs[k]
+				} 
+			}
+			var pointKeys=Object.keys(Graphs);
+			ctx.strokeStyle="rgba(223,0,1,0.1)";
+			var start=Graphs[pointKeys[0]];
+			ctx.moveTo(start.x,start.y);
+			
+			
+			for(var i=1;i<pointKeys.length;i++){
+					var k=pointKeys[i];
+					var p=Graphs[k];
+					ctx.lineTo(p.x,p.y);
+			}
+			ctx.stroke()
+		}
+			setInterval(function(){
+				update(ctx)
+			},15)
+		
+	</script>
+</html>

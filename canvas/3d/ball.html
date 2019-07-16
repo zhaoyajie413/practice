@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			body{
+				margin: 0;
+				padding: 0;
+			}
+			#scene{
+				width: 100vw;
+				height: 100vh;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="scene"></canvas>
+	</body>
+	<script src="dot.js"></script>
+	<script>
+		// Get the canvas element from the DOM
+		const canvas = document.getElementById('scene');
+
+		// Get the canvas dimensions
+		let width = canvas.offsetWidth; // Width of the scene
+		let height = canvas.offsetHeight; // Height of the scene
+
+		// Store the 2D context
+		const ctx = canvas.getContext('2d');
+
+		// Function called right after user resized its screen
+		function onResize() {
+			// We need to define the dimensions of the canvas to our canvas element
+			// Javascript doesn't know the computed dimensions from CSS so we need to do it manually
+			width = canvas.offsetWidth;
+			height = canvas.offsetHeight;
+
+			// If the screen device has a pixel ratio over 1
+			// We render the canvas twice bigger to make it sharper (e.g. Retina iPhone)
+			if (window.devicePixelRatio > 1) {
+				canvas.width = canvas.clientWidth * 2;
+				canvas.height = canvas.clientHeight * 2;
+				ctx.scale(2, 2);
+			} else {
+				canvas.width = width;
+				canvas.height = height;
+			}
+		}
+
+		// Listen to resize events
+		window.addEventListener('resize', onResize);
+		// Make sure the canvas size is perfect
+		onResize();
+		
+		let PERSPECTIVE = canvas.width * 0.8; // 3D场景的视野
+		let PROJECTION_CENTER_X = canvas.width / 2; // x中心
+		let PROJECTION_CENTER_Y = canvas.height / 2; // y 中心
+		const dots = []; // 存储每一个点
+		// 创建800个新点
+		for (let i = 0; i < 800; i++) {
+		  // 创建一个新点并将其推入数组
+		  dots.push(new Dot());
+		}
+		ctx.fillStyle="red";
+		dots.forEach(function(it){
+			it.draw()
+		})
+	</script>
+</html>

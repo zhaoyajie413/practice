@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="range" id="range" min="1" max="10" />
+		<canvas id="canvas"></canvas>
+	</body>
+	<script>
+		var rangeBtn=document.querySelector("#range");
+		
+		var canvas=document.querySelector("#canvas");
+			canvas.height=document.documentElement.clientHeight;
+			canvas.width=document.documentElement.clientWidth;
+			var iw,ih,ix,iy,imageData;
+			var ctx=canvas.getContext("2d");
+			
+			var img=new Image();
+			img.src="img/face.jpg";			
+			img.onload=function(e){
+				iw=img.width;
+				ih=img.height;
+				ix=(canvas.width-iw)/2;
+				iy=(canvas.height-ih)/2;
+				ctx.drawImage(img,ix,iy,iw,ih);
+				imageData = ctx.getImageData(ix,iy,iw,ih).data;
+				draw(imageData,2)
+				
+		}
+			
+		rangeBtn.oninput=function(e){
+			console.log(this.value);
+			draw(imageData,this.value)
+		};
+			function draw(data,range){
+				var pixes=[]
+				for(var i=0;i<data.length;i+=4){
+					/* 像素点位置 */
+					var pos=Math.floor(i/4);
+					/* 像素点的x坐标 */
+					var dx=Math.floor(ix+pos%iw);
+					/* 像素点的y坐标 */
+					var dy=Math.floor(iy+pos/iw);
+					if((data[i+3]) && dx%range==0 && dy%range==0){
+						pixes.push({
+							r:data[i],
+							g:data[i+1],
+							b:data[i+2],
+							a:data[i+3],
+							x:dx,
+							y:dy
+						})
+					}
+				
+			}
+			console.log(pixes)
+			ctx.clearRect(0, 0,canvas.width,canvas.height);
+			pixes.map(function(it){
+				ctx.fillStyle="rgba("+it.r+","+it.g+","+it.b+","+1+")";
+				//console.log(ctx.fillStyle)
+				ctx.fillRect(it.x,it.y,range,range);
+				ctx.fill()
+			})
+			}
+	</script>
+</html>

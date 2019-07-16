@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<canvas id="canvas"></canvas>
+	</body>
+	<script>
+		var canvas=document.querySelector("#canvas"),
+		    ctx=canvas.getContext("2d");
+		    
+		canvas.height=400;
+		canvas.width=400;
+		ctx.fillStyle="#000000";
+		ctx.fillRect(0,0,canvas.width,canvas.height),
+		pointIndex=0,
+		ctxGraphs={};
+		
+		
+		function Particle(option=null){
+			var defaultObj={
+				startX:0,
+				startY:0,
+				startR:0,
+				speedX:0,
+				speedY:0,
+				gravityY:0,
+				forceY:0
+			},
+			newOpt=Object.assign(defaultObj,option);
+			this.startX=newOpt.startX;
+			this.startY=newOpt.startY;
+			this.startR=newOpt.startR;
+			this.speedY=newOpt.speedY;
+			this.speedX=newOpt.speedX;
+			this.gravityY=newOpt.gravityY;
+			this.forceY=newOpt.forceY;
+			pointIndex++;
+			ctxGraphs[pointIndex]=this;
+		}
+		Particle.prototype.draw=function(ctx){
+			this.gravityY+=this.forceY;
+			this.speedY+=this.gravityY;
+			this.startY+=this.speedY;
+			if(this.startY>300){
+				this.startY=300;
+				this.speedY*=-0.8;
+				this.speedX*=-0.8;
+			}
+			/*X轴方向*/
+			this.startX+=this.speedX;
+			ctx.beginPath();
+			ctx.shadowOffsetX = 0;
+			ctx.shadowOffsetY = 0;
+			ctx.shadowBlur    = 4;
+			ctx.shadowColor   = "rgba(255,255,255,0.8)";  //or use rgb(red, green, blue)
+			ctx.fillStyle="rgba(255,255,255,0.8)";
+			ctx.arc(this.startX,this.startY,this.startR,0,2*Math.PI);
+			ctx.fill();
+		}
+		function randomOpt(){
+			return {
+					startX:100*Math.random(),
+					startY:100*Math.random(),
+					startR:4,
+					speedX:6*Math.random(),
+					speedY:0,
+					gravityY:-2*Math.random(),
+					forceY:0.2*Math.random()
+				}
+		}
+		for(var i=0;i<100;i++){
+			new Particle(randomOpt())
+		}
+		
+		setInterval(function(){
+			ctx.fillStyle="#000000";
+			ctx.fillRect(0,0,canvas.width,canvas.height);
+			/*Y轴方向*/
+			for(var i in ctxGraphs){
+				ctxGraphs[i].draw(ctx);
+			}
+		},30)
+	</script>
+</html>

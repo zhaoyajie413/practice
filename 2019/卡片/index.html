@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .polaroid {
+            width:250px;
+            box-shadow:0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+            text-align:center;
+            display:inline-block;
+            background-color:#FFF;
+        }
+        .container {
+            padding:10px;
+        }
+        /*文字卡片*/
+        .card {
+            width:250px;
+            box-shadow:0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+            text-align:center;
+            display:inline-block;
+            background-color:#FFF;
+        }
+        .header {
+            background-color:#4CAF50;
+            color:white;
+            padding:10px;
+            font-size:40px;
+        }
+        .container {
+            padding:10px;
+        }
+        /*投影卡片*/
+
+        #boxshadow {
+            position:relative;
+            -moz-box-shadow:1px 2px 4px rgba(0,0,0,0.5);
+            -webkit-box-shadow:1px 2px 4px rgba(0,0,0,.5);
+            box-shadow:1px 2px 4px rgba(0,0,0,.5);
+            padding:10px;
+            background:white;
+            width:400px;
+        }
+        /* Make the image fit the box */
+        #boxshadow img {
+            width:100%;
+        }
+        #boxshadow::after {
+            content:'';
+            position:absolute;
+            z-index:-1;
+            /* hide shadow behind image */
+            -webkit-box-shadow:0 5px 30px rgba(0,0,0,0.3);
+            -moz-box-shadow:0 5px 30px rgba(0,0,0,0.3);
+            box-shadow:0 5px 30px rgba(0,0,0,0.3);
+            width:80%;
+            left:10%;
+            /* one half of the remaining 30% */
+            height:100px;
+            bottom:0;
+        }
+        body {
+            background-color:#999;
+        }
+
+    </style>
+</head>
+<body>
+<div class="polaroid">
+    <img src="http://www.jq22.com/img/cs/500x300-1.png&#10;" style="width: 100%; height:200px; background-color: #0099FF; ">
+    <div class="container">
+        <p>Hardanger, Norway</p>
+    </div>
+</div>
+
+
+<div class="card">
+    <div class="header">
+        <h1>1</h1>
+    </div>
+
+    <div class="container">
+        <p>January 1, 2016</p>
+    </div>
+</div>
+
+<br>
+<br>
+
+
+<div id="boxshadow">
+    <img src="http://www.jq22.com/img/cs/500x300-1.png&#10;" style="width: 100%; height:200px; background-color: #0099FF; ">
+</div>
+</body>
+</html>

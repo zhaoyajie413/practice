@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			body {
+				height: 100vh;
+				background: #0e0e0e;
+			}
+
+			#canvas {
+				position: absolute;
+				top: calc(50% - 300px);
+				left: calc(50% - 300px);
+				height: 600px;
+				width: 600px;
+			}
+
+			#codepen-link {
+				position: absolute;
+				bottom: 30px;
+				right: 30px;
+				height: 60px;
+				width: 60px;
+				z-index: 10;
+				border: 1px solid white;
+				border-radius: 50%;
+				box-sizing: border-box;
+				background-image: url("http://www.seanalexanderfree.com/codepen/avatar.jpg");
+				background-position: center center;
+				background-size: cover;
+				opacity: 0.5;
+				-webkit-transition: all 0.25s;
+				transition: all 0.25s;
+			}
+
+			#codepen-link:hover {
+				opacity: 0.8;
+				box-shadow: 0 0 6px rgba(239, 239, 207, 0.8);
+			}
+		</style>
+	</head>
+	<body>
+
+		<canvas id="canvas"></canvas>
+		<a id="codepen-link" href="http://www.codepen.io/seanfree" target="_blank"></a>
+	</body>
+	<!-- <script src="http://wow.techbrood.com/libs/jquery/jquery-1.11.1.min.js"></script> -->
+	<script>
+		(function(window, document, undefined) {
+			var canvas, ctx, rect, mouse = {
+					x: 0,
+					y: 0
+				},
+				repulsion = 5000;
+			var points = [];
+
+			function distance(x1, y1, x2, y2) {
+				return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+			}
+
+			function mouseMoveHandler(e) {
+				mouse.x = e.clientX - rect.left;
+				mouse.y = e.clientY - rect.top;
+			}
+
+			function createGrid() {
+				var startX = 100,
+					endX = canvas.width - 200,
+					startY = 100,
+					endY = canvas.height - 200,
+					step = 20,
+					xPoints = endX / step,
+					yPoints = endY / step;
+				for (var i = 0; i <= xPoints; i++) {
+					for (var j = 0; j <= yPoints; j++) {
+						points.push({
+							x: (i * step) + startX,
+							y: (j * step) + startY,
+							dx: (i * step) + startX,
+							dy: (j * step) + startY,
+							update: function() {
+								var angle = Math.atan2(this.x - mouse.x, this.y - mouse.y);
+								var dist = repulsion / distance(mouse.x, mouse.y, this.x, this.y);
+								this.x += (Math.sin(angle) * dist) + (this.dx - this.x);
+								this.y += (Math.cos(angle) * dist) + (this.dy - this.y);
+							}
+						});
+					}
+				}
+			}
+
+			function draw() {
+				ctx.clearRect(0, 0, canvas.width, canvas.height);
+				for (var i = 0; i < points.length; points[i++].update()) {
+					ctx.beginPath();
+					ctx.fillStyle = 'lime'
+					ctx.moveTo(points[i].x, points[i].y);
+					ctx.arc(points[i].x, points[i].y, 2, 0, Math.PI * 2, true);
+					ctx.fill();
+					ctx.closePath();
+				}
+			}
+
+			function loop() {
+				draw();
+				window.requestAnimationFrame(loop);
+			}
+
+			function init() {
+				canvas = document.getElementById('canvas');
+				canvas.height = 600;
+				canvas.width = 600;
+				ctx = canvas.getContext('2d');
+				rect = canvas.getBoundingClientRect();
+				createGrid();
+				loop();
+			}
+			window.onmousemove = mouseMoveHandler;
+			window.onload = init;
+		})(this, document);
+	</script>
+</html>

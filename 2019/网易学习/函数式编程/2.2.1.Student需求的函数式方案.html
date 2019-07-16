@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script src="spread.js"></script>
+<script>
+    class Person {
+        constructor (firstname, lastname, ssn){
+            this._firstname = firstname;
+            this._lastname = lastname;
+            this._ssn = ssn;
+            this._address = null;
+            this._birthYear = null;
+        }
+        get ssn() {
+            return this._ssn;
+        }
+        get firstname() {
+            return this._firstname;
+        }
+        get lastname() {
+            return this._lastname;
+        }
+        get address() {
+            return this._address;
+        }
+        set address(addr){
+            this._address = addr;
+        }
+        get birthYear() {
+            return this._birthYear;
+        }
+        set birthYear(year) {
+            return this._birthYear=year;
+        }
+
+        toString(){
+            return `Person(${this._firstname},${this._lastname})`
+        }
+    }
+
+    class Student extends Person {
+        constructor(firstname, lastname, ssn, school) {
+            super(firstname, lastname, ssn);
+            this._school = school;
+        }
+        get school() {
+            return this._school;
+        }
+        /*
+        *@peopleInSameCountry 找到与学生在同一个国家的朋友
+        * */
+        peopleInSameCountry(friends){
+            return friends.filter(it=>it.address.country = this.address.country);
+        }
+        /*
+        * @studentsInSameCountryAndSchool 在同一个国家和同一个学校的朋友
+        * */
+        studentsInSameCountryAndSchool(friends){
+            var inSameContryFriends = this.peopleInSameCountry(friends);
+            return inSameContryFriends.filter(it=>it.school == this.school);
+        }
+    }
+
+    class Address {
+        constructor(country){
+            this.country = country;
+        }
+    }
+
+    var curry = new Student('Haskell', 'Curry', '1111-11-1111', 'Penn State');
+    curry.address = new Address('US');
+
+    var turing = new Student('Alan', 'Turing', '222-22-2222', 'Princetion');
+    turing.address = new Address('England');
+
+    var church = new Student('Alonzo', 'Church', '333-33-3333', 'Church');
+    church.address = new Address('US');
+
+    var kleene = new Student('Stephen', 'Kleene', '444-44-4444', 'Princeton');
+    kleene.address = new Address('US');
+
+    var friends = [curry, turing, church, kleene];
+
+    var mayuyu = new Student('watanabe', 'mayuyu', '555-55-555',"Princeton");
+    mayuyu.address = new Address('US');
+
+    var selector = function (country, school) {
+        return function (student) {
+            return student.address.country === country && student.school === school;
+        }
+    }
+
+    var findStudentsBy = function (friends, selector) {
+        return friends.filter(selector);
+    }
+
+    var students = findStudentsBy(friends,selector(mayuyu.address.country,mayuyu.school));
+
+</script>
+</html>

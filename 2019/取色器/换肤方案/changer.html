@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style id="style">
+        .color-primary{
+            background-color: #0a67fb;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="color-primary" style="width: 200px;height: 200px;border-radius: 8px"></div>
+</body>
+<script>
+
+    function replaceCssText (cssText, oldColors, newColors) {
+        oldColors.forEach(function (color, t) {
+            cssText = cssText.replace(new RegExp(color.replace(/,/g, ',\\s*'), 'ig'), newColors[t]) // 255, 255,3
+        });
+        return cssText
+    }
+    var cssText = document.querySelector("#style").innerText;
+    var newCss = replaceCssText (cssText, ['#0a67fb'],['#e5e5e5'])
+    document.querySelector("#style").innerText = newCss;
+</script>
+</html>

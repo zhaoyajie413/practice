@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+	<!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Simple Vue Blog | Cosmic JS App Demo</title>
+		<meta name="description" content="Cosmic JS is a cloud-hosted content platform that offers a flexible and intuitive CMS API.  Build websites and applications with more freedom and manage content easier. Get started for Free.">
+		<meta name="viewport" content="width=device-width, user-scalable=no" />
+		<link rel="preload" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600" as="style">
+		<link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600" rel="stylesheet" type="text/css">
+		<link rel="preload" href="/dist/css/combined.min.css" as="style">
+		<link rel="stylesheet" href="/dist/css/combined.min.css">
+		<script src="/dist/js/combined-head.min.js"></script>
+		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/favicons/apple-touch-icon-114x114.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.png" />
+		<link rel="icon" type="image/png" href="/images/favicons/favicon-196x196.png" sizes="196x196" />
+		<link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.png" sizes="96x96" />
+		<link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.png" sizes="32x32" />
+		<link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.png" sizes="16x16" />
+		<link rel="icon" type="image/png" href="/images/favicons/favicon-128.png" sizes="128x128" />
+		<meta name="application-name" content="&nbsp;" />
+		<meta name="msapplication-TileColor" content="#FFFFFF" />
+		<meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png" />
+		<meta name="msapplication-square70x70logo" content="/images/favicons/mstile-70x70.png" />
+		<meta name="msapplication-square150x150logo" content="/images/favicons/mstile-150x150.png" />
+		<meta name="msapplication-wide310x150logo" content="/images/favicons/mstile-310x150.png" />
+		<meta name="msapplication-square310x310logo" content="/images/favicons/mstile-310x310.png" />
+		<meta property="og:image" content="/images/marketing/logo.png" />
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="@cosmic_js">
+		<meta name="twitter:title" content="Simple Vue Blog">
+		<meta name="twitter:url" content="https://cosmicjs.com/app/simple-vue-blog">
+		<meta name="twitter:description" content="This simple blog app is built using Vue &amp;amp; Vuex. It connects to the Cosmic JS CMS via API. You can manage your content from your Cosmic JS Dashboard. &amp;nbsp;I...">
+		<meta name="twitter:image" content="https://cosmic-s3.imgix.net/06fb7580-f25e-11e7-baec-63bfc6f514b4-Screen Shot 2018-01-05 at 3.18.33 PM.png?w=600">
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "Corporation",
+				"url": "https://cosmicjs.com",
+				"name": "Cosmic JS Inc.",
+				"logo": "https://cosmic-s3.imgix.net/70b26370-2012-11e9-8b75-9b9c29c68edc-main.jpg",
+				"image": "https://cosmic-s3.imgix.net/70b26370-2012-11e9-8b75-9b9c29c68edc-main.jpg"
+			}
+		</script>
+	</head>
+	<body data-page="" data-app-url="https://cosmicjs.com" data-api-url="https://api.cosmicjs.com/v1">
+		<!--[if lt IE 7]>
+  <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+<![endif]-->
+		<nav class="navbar navbar-default main-nav" role="navigation">
+			<div class="container max-w-1150">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="/">
+						<img class="pull-left mr-15 relative logo__graphic" src="/images/logo.svg" width="28" height="28">
+						<span class="gotham-rounded">COSMIC JS</span>
+					</a>
+				</div>
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li class="dropdown">
+							<a href="#" style="cursor: default;" class="dropdown-toggle" data-toggle="dropdown">
+								Products
+							</a>
+							<ul class="dropdown-menu">
+								<li class="relative">
+									<a href="/headless-cms" class="relative" style="padding: 20px 30px">
+										<div class="absolute t-25 text-center">
+											<img src="/images/marketing/wrench.svg" class="w-30 absolute t-0" />
+										</div>
+										<div class="pl-50">
+											<h3 class="mt-0 mb-5 font-16">Headless CMS</h3>
+											<p class="font-14 mb-0" style="color: #666;">Powerful tools for your entire team</p>
+										</div>
+									</a>
+								</li>
+								<li class="pb-10">
+									<div class="col-sm-12 p-10 pr-0">
+										<a class="trigger-feature-focus" data-trigger="#features--developers" href="/headless-cms#features--developers"
+										 style="padding: 8px 20px">
+											<i class="fa fa-code text-primary font-18 absolute" style="top: 10px; margin-left: 5px"></i>
+											<span class="pl-50">For Developers</span>
+										</a>
+									</div>
+									<div class="col-sm-12 p-10 pr-0">
+										<a class="trigger-feature-focus" data-trigger="#features--content-creators" href="/headless-cms#features--content-creators"
+										 style="padding: 8px 20px">
+											<i class="fa fa-edit text-primary font-18 absolute" style="top: 10px; margin-left: 5px"></i>
+											<span class="pl-50">For Content Creators</span>
+										</a>
+									</div>
+									<div class="col-sm-12 p-10 pr-0">
+										<a class="trigger-feature-focus" data-trigger="#features--project-managers" href="/headless-cms#features--project-managers"
+										 style="padding: 8px 20px">
+											<i class="fa fa-clipboard text-primary font-18 absolute" style="top: 10px; margin-left: 5px"></i>
+											<span class="pl-50">For Managers</span>
+										</a>
+									</div>
+									<div class="clearfix"></div>
+								</li>
+								<li class="relative">
+									<a href="/enterprise" style="padding: 20px 30px">
+										<div class="absolute t-25 text-center"><i class="fa fa-building text-primary font-32"></i></div>
+										<div class="pl-50">
+											<h3 class="mt-0 mb-5 font-16">Enterprise CMS</h3>
+											<p class="font-14 mb-0" style="color: #666;">Enterprise-grade features and support</p>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" style="cursor: default;" class="dropdown-toggle" data-toggle="dropdown">
+								Developers
+							</a>
+							<ul class="dropdown-menu">
+								<li class="relative">
+									<a href="/docs" style="padding: 20px 30px">
+										<div class="absolute t-30"><i class="fa fa-book text-primary font-24"></i></div>
+										<div class="pl-40">
+											<h3 class="mt-0 mb-5 font-16">Documentation</h3>
+											<p class="font-14 mb-0" style="color: #666;">Learn how to integrate Cosmic JS<br /> products and tools</p>
+										</div>
+									</a>
+								</li>
+								<li class="pb-20">
+									<div class="col-sm-6 p-10">
+										<a href="https://cosmicjs.github.io/rest-api-docs" style="padding: 8px 20px">
+											<span class="font-18 absolute" style="top: 6px;">{}</span>
+											<span class="absolute l-70">REST API</span>
+										</a>
+									</div>
+									<div class="col-sm-6 p-10 pull-link-left">
+										<a href="/docs/graphql" style="padding: 8px 20px">
+											<img src="/images/docs/graphql-logo.svg" title="GraphQL API" alt="GraphQL API" class="w-20" />
+											<span class="absolute l-70">GraphQL API</span>
+										</a>
+									</div>
+									<div class="clearfix"></div>
+									<div class="col-sm-6 p-10">
+										<a href="/docs/webhooks" style="padding: 8px 20px">
+											<i class="openwebicons-webhooks font-22 absolute text-primary" style="top: 0px; margin-left: -2px"></i>
+											<span class="absolute l-70">Webhooks</span>
+										</a>
+									</div>
+									<div class="col-sm-6 p-10 pull-link-left">
+										<a href="/docs/extensions" style="padding: 8px 20px">
+											<i class="fa fa-puzzle-piece font-22 absolute text-primary t-10"></i>
+											<span class="absolute l-70">Extensions</span>
+										</a>
+									</div>
+									<div class="clearfix"></div>
+									<div class="col-sm-6 p-10">
+										<a href="/docs/functions" style="padding: 8px 20px">
+											<img src="/images/icons/function-blue.svg" class="w-20 absolute text-primary t-10">
+											<span class="absolute l-70">Functions</span>
+										</a>
+									</div>
+									<div class="clearfix"></div>
+								</li>
+								<li class="relative">
+									<a href="/getting-started" style="padding: 15px 30px">
+										<div class="absolute" style="top: 13px;"><i class="fa fa-rocket text-primary font-20"></i></div>
+										<div class="pl-40">
+											<h3 class="mt-0 mb-0 font-15 text-gray">Getting Started</h3>
+										</div>
+									</a>
+								</li>
+								<li class="relative">
+									<a href="/knowledge-base" style="padding: 15px 30px">
+										<div class="absolute" style="top: 13px;"><i class="fa fa-question text-primary font-20"></i></div>
+										<div class="pl-40">
+											<h3 class="mt-0 mb-0 font-15 text-gray">Knowledge Base</h3>
+										</div>
+									</a>
+								</li>
+								<li class="relative">
+									<a href="/integrations" style="padding: 15px 30px">
+										<div class="absolute" style="top: 13px;"><i class="fa fa-cogs text-primary font-20"></i></div>
+										<div class="pl-40">
+											<h3 class="mt-0 mb-0 font-15 text-gray">Integrations</h3>
+										</div>
+									</a>
+								</li>
+								<li class="relative">
+									<a href="https://github.com/cosmicjs" target="_blank" style="padding: 15px 30px">
+										<div class="absolute" style="top: 13px;"><i class="fa fa-code text-primary font-20"></i></div>
+										<div class="pl-40">
+											<h3 class="mt-0 mb-0 font-15 text-gray">Open Source</h3>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" style="cursor: default;" class="dropdown-toggle" data-toggle="dropdown">
+								Community
+							</a>
+							<ul class="dropdown-menu">
+								<li class="relative">
+									<a href="/apps" style="padding: 20px 30px">
+										<div class="absolute t-25 text-center"><i class="fa fa-shopping-bag text-primary font-24"></i></div>
+										<div class="pl-50">
+											<h3 class="mt-0 mb-5 font-16">Apps Marketplace</h3>
+											<p class="font-14 mb-0" style="color: #666;">Websites and apps available for demo<br /> and easy install</p>
+										</div>
+									</a>
+								</li>
+								<li class="relative">
+									<a href="/extensions" style="padding: 20px 30px">
+										<div class="absolute t-25 text-center"><i class="fa fa-puzzle-piece text-primary font-28"></i></div>
+										<div class="pl-50">
+											<h3 class="mt-0 mb-5 font-16">Extensions</h3>
+											<p class="font-14 mb-0" style="color: #666;">Extend the dashboard experience,<br />connect to third-party
+												APIs</p>
+										</div>
+									</a>
+								</li>
+								<li class="relative">
+									<a href="/articles" style="padding: 20px 30px">
+										<div class="absolute" style="top: 17px;"><i class="fa fa-graduation-cap text-primary font-24"></i></div>
+										<div class="pl-50">
+											<h3 class="mt-0 mb-5 font-16">Learning Center</h3>
+										</div>
+									</a>
+								</li>
+								<li class="relative">
+									<a href="/community" style="padding: 20px 30px">
+										<div class="absolute" style="top: 17px;"><i class="fa fa-users text-primary font-24"></i></div>
+										<div class="pl-50">
+											<h3 class="mt-0 mb-5 font-16">Connect</h3>
+										</div>
+									</a>
+								</li>
+								<li class="relative">
+									<div style="padding: 10px 30px">
+										<a href="/contribute" class="btn btn-primary pt-10 pb-10 w-100p">
+											<i class="fa fa-plus"></i>&nbsp;&nbsp;
+											<span class="font-16">Contribute</span>
+										</a>
+									</div>
+								</li>
+							</ul>
+						</li>
+						<li><a href="/pricing">Pricing</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+							<a href="#" style="cursor: default;" class="dropdown-toggle" data-toggle="dropdown">
+								Company
+							</a>
+							<ul class="dropdown-menu">
+								<li class="relative">
+									<a href="/case-studies" style="padding: 20px 30px 15px 22px">
+										<div class="absolute t-20"><i class="fa fa-book text-primary font-20"></i></div>
+										<div class="pl-40">
+											<h3 class="mt-0 mb-5 font-16">Case Studies</h3>
+										</div>
+									</a>
+								</li>
+								<li class="relative">
+									<a href="/blog" style="padding: 20px 30px 15px 22px">
+										<div class="absolute t-20"><i class="fa fa-newspaper-o text-primary font-20"></i></div>
+										<div class="pl-40">
+											<h3 class="mt-0 mb-5 font-16">Blog</h3>
+										</div>
+									</a>
+								</li>
+								<li class="relative">
+									<a href="/about" style="padding: 20px 30px 15px 22px">
+										<div class="absolute" style="top: 17px;"><i class="fa fa-users text-primary font-20"></i></div>
+										<div class="pl-40">
+											<h3 class="mt-0 mb-5 font-16">About Cosmic JS</h3>
+										</div>
+									</a>
+								</li>
+								<li class="relative">
+									<a href="/jobs" style="padding: 20px 30px 15px 22px">
+										<div class="absolute" style="top: 17px;"><i class="fa fa-briefcase text-primary font-20"></i></div>
+										<div class="pl-40">
+											<h3 class="mt-0 mb-5 font-16">Jobs</h3>
+										</div>
+									</a>
+								</li>
+								<li class="relative">
+									<a href="/contact" style="padding: 20px 30px 15px 22px">
+										<div class="absolute" style="top: 17px;"><i class="fa fa-envelope text-primary font-20"></i></div>
+										<div class="pl-40">
+											<h3 class="mt-0 mb-5 font-16">Contact Us</h3>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li><a href="/login" class="btn btn-primary btn-inverse navbar-btn--login-signup">Log in</a></li>
+						<li><a href="/signup" class="btn btn-primary navbar-btn--login-signup" style="color: #fff; background-color: #00AFD7; border-color: #00AFD7;">Create
+								Free Account</a></li>
+					</ul>
+				</div>
+				<!--/.navbar-collapse -->
+			</div><!-- // .container-fluid -->
+		</nav>
+		<header class="apps-demo__header">
+			<nav class="navbar navbar-default navbar-fixed-top">
+				<div class="container-fluid">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header relative" style="z-index: 10">
+						<a class="navbar-brand" href="/">
+							<img src="/images/logo.svg" />
+						</a>
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav relative" style="z-index: 10">
+							<li>
+								<a href="/apps/simple-vue-blog" class="btn btn-default navbar-btn" style="color: #333; padding: 6px 15px; height: 34px; margin-right: 10px"><i
+									 class="fa fa-arrow-left w-20"></i>&nbsp;&nbsp;Simple Vue Blog</a>
+							</li>
+							<li>
+								<a target="_blank" href="https://simple-vue-blog.cosmicapp.co" class="btn btn-default navbar-btn mr-10" style="color: #333; padding: 7px 11px 0 13px; height: 34px;"><i
+									 class="fa fa-external-link w-20"></i></a></a>
+							</li>
+							<li>
+								<a href="#" class="btn btn-default navbar-btn show-apps-carousel" style="color: #333; padding: 7px 11px 0 13px; height: 34px;"><i
+									 class="glyphicon glyphicon-th w-20"></i></a></a>
+							</li>
+						</ul>
+						<div class="hidden-xs w-100p text-center absolute z-0">
+							<ul class="nav navbar-nav" style="width: 330px; margin: 0 auto; float: inherit;">
+								<li class="active"><a href="#" data-id="desktop" class="select-device select-device--desktop" style="color: #333;">
+										<i class="fa fa-desktop" style="width: 20px;"></i>&nbsp;&nbsp;Desktop</a></li>
+								<li><a href="#" data-id="tablet" class="select-device select-device--tablet" style="color: #333;">
+										<i class="fa fa-tablet" style="width: 20px;"></i>&nbsp;&nbsp;Tablet</a>
+								</li>
+								<li><a href="#" data-id="mobile" class="select-device select-device--mobile" style="color: #333;">
+										<i class="fa fa-mobile" style="width: 20px;"></i>&nbsp;&nbsp;Mobile</a>
+								</li>
+							</ul>
+						</div>
+						<ul class="nav navbar-nav navbar-right">
+							<li>
+								<a href="/login?redirect_to=/add-bucket?install_app=5a4feb60e16dc3fb4b000169" class="btn btn-primary navbar-btn"
+								 style="color: #fff; padding: 7px 18px; height: 34px; background: #00afd7; border: none; margin-right: 10px;">
+									<i class="fa fa-download" style="width: 20px;"></i>&nbsp;&nbsp;Install Free
+								</a>
+							</li>
+							<li>
+								<a href="https://github.com/cosmicjs/vue-blog-netlify-template" target="_blank" class="btn btn-default navbar-btn"
+								 style="color: #333; padding: 6px 15px; height: 34px; margin-right: 10px;">
+									<i class="fa fa-github"></i>&nbsp;&nbsp;View Code</a>
+								</a>
+							</li>
+						</ul>
+					</div><!-- /.navbar-collapse -->
+				</div><!-- /.container-fluid -->
+			</nav>
+		</header>
+		<main id="main">
+			<section class="absolute w-100p h-140 apps-carousel">
+				<div data-href="/apps/react-book-app/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/e28ef120-e787-11e8-a8c8-ad6b576b471b-react-book-app-1.png?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/react-book-app">
+							React Book App
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/vue-music-website/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/f47f4d70-99a4-11e8-9205-292ad9bd50c1-vue-music-website.jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/vue-music-website">
+							Vue Music Website
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/vue-rpg-game/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/ee045340-b124-11e8-8640-cd3c78898edc-Screen Shot 2018-09-05 at 11.00.51 AM.png?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/vue-rpg-game">
+							Vue RPG Game
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/vue-garage-sale/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/8af30e80-bc15-11e8-96b2-13e1c284d225-df659b40-bb61-11e8-ac9f-67e4f371d8e5-garage.jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/vue-garage-sale">
+							Vue Garage Sale
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/react-spotify-blog/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/9ceb7510-c00b-11e8-a375-371e38d27ffb-smartmockups_jmgfdt1c.jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/react-spotify-blog">
+							React Spotify Blog
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/angular-blog/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/40ab22a0-c718-11e8-8e06-0bd0f42fa67f-angular-blog.png?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/angular-blog">
+							Angular Blog
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/multi-language-survey/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/f3fd7780-9d62-11e7-920f-8f9d55c0d297-jonathan-simcoe-88013.jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/multi-language-survey">
+							Multi Language Survey
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/react-pomodoro-todo-app/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/f78fe4b0-12a0-11e8-938f-eb23687b8a71-Screen Shot 2018-02-15 at 4.38.23 PM.png?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/react-pomodoro-todo-app">
+							React Pomodoro Todo App
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/parking-care/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/9cfcfaa0-10da-11e8-9410-7d7e86d6f183-carlo-d-agnolo-379969.jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/parking-care">
+							Parking Care
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/nextjs-tour-diary/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/9c03c010-0dc5-11e8-b496-d9efb359e755-tour-diary.jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/nextjs-tour-diary">
+							Next.js Tour Diary
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/gridsome-blog/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/e98e20f0-2381-11e9-9a33-33cf1f5abcb4-gridsome.jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/gridsome-blog">
+							Gridsome Blog
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/content-curation-website/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/8bfe9050-01b3-11e8-8590-4764eecfa402-screenshot-cosmic-stash.cosmicapp.co-2018-01-25-11-57-07-878.png?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/content-curation-website">
+							Content Curation Website
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/react-auth-app/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/560ae480-fca4-11e7-9dc8-bf86b30121ef-d1b2b130-faab-11e7-8d63-110eafbdc561-Untitled.png?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/react-auth-app">
+							React Auth App
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/react-blog/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/101c59b0-f4b9-11e7-95df-4fd6007b93a1-Screen Shot 2018-01-08 at 3.14.35 PM.png?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/react-blog">
+							React Blog
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/simple-vue-blog/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/06fb7580-f25e-11e7-baec-63bfc6f514b4-Screen Shot 2018-01-05 at 3.18.33 PM.png?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/simple-vue-blog">
+							Simple Vue Blog
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/ecommerce-premium-app/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/0347bda0-ec0e-11e7-9b37-a1b278c865a6-Screenshot from 2017-12-28 22-13-05.png?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/ecommerce-premium-app">
+							Ecommerce Premium App
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/real-estate-extended/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/b5bf9640-e67a-11e7-9b23-bf7bb9136344-Thumbnail.png?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/real-estate-extended">
+							Real Estate Extended
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/vue-portfolio/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/36d8c860-e8b9-11e7-b266-0bda9cde0587-home.png?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/vue-portfolio">
+							Vue Portfolio
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/react-news-app/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/6aab7520-e3a5-11e7-b2c2-0d51136efa6e-react-news-app.png?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/react-news-app">
+							React News App
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/agency-website/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/3523ab00-d876-11e7-9dcf-bd18c1639b0f-agency-app-banner2.png?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/agency-website">
+							Agency Website
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/cosmic-react-blog/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/83e43b50-5ebe-11e8-a6c6-45ebf708280e-smartmockups_jhhwhno1.jpeg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/cosmic-react-blog">
+							Cosmic React Blog
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/gatsby-blog/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/43a4f310-63ee-11e8-b5f7-137707533425-thumbnail.png?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/gatsby-blog">
+							Gatsby Blog
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/react-portfolio-website/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/5a047170-0d31-11e9-a299-4ffb9cf72936-2.jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/react-portfolio-website">
+							React Portfolio Website
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/angular-authentication-app/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/918b3000-1517-11e9-b639-ff9ababa68ba-angular.jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/angular-authentication-app">
+							Angular Authentication App
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/favorite-book-app/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/6be500b0-74db-11e8-9208-cd3d1efb8354-Favorite Book App.png?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/favorite-book-app">
+							Favorite Book App
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/restaurant-menu-app/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/1db368c0-c016-11e7-86b1-11303dae2759-0d0f60c0-c014-11e7-9a3a-8fba475cce0d-restaurant-menu-app.png?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/restaurant-menu-app">
+							Restaurant Menu App
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/search-tweets-by-location-app/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/19fd0c50-1ffa-11e9-8b75-9b9c29c68edc-15012da0-1ff8-11e9-8b75-9b9c29c68edc-tweets-by-location.png?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/search-tweets-by-location-app">
+							Search Tweets by Location App
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/conference-website/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/3f65ec90-b986-11e7-8b30-cd5452a98ae4-angular-conference.jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/conference-website">
+							Conference Website
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/nuxtjs-website-boilerplate/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/1f491910-31c6-11e8-8f3d-77ec50f01b43-nuxtjs-logo-cosmicjs.jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/nuxtjs-website-boilerplate">
+							Nuxt.js Website Boilerplate
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/vue-the-cosmos/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/f7946d10-2356-11e9-931e-19c0e1e6c59d-vue.jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/vue-the-cosmos">
+							Vue The Cosmos
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/bootstrap-landing-page/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/50775940-b8c0-11e7-9a91-1fa445eca758-bootstrap-landing-page.jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/bootstrap-landing-page">
+							Bootstrap Landing Page
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/react-cosmedium-blog/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/f75f77d0-fbed-11e8-a10d-776a0bb2ca7a-ipad.jpeg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/react-cosmedium-blog">
+							React Cosmedium Blog
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/band-website/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/7c9ecf10-b408-11e7-abdc-291385f01a31-band.jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/band-website">
+							Band Website
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/react-pwa-with-authentication/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/ffdf7ab0-28d2-11e9-8f20-ed6e1d80442e-pwa.jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/react-pwa-with-authentication">
+							React PWA with Authentication
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/simple-react-blog/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/a07a0d70-af74-11e7-a149-c578469eaed0-react-blog.jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/simple-react-blog">
+							Simple React Blog
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/vuetify-blog/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/50272370-20c1-11e9-9cb6-6302bd0b9978-vuetify-blog.jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/vuetify-blog">
+							Vuetify Blog
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/nextjs-website-boilerplate/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/e2194bb0-310b-11e8-8a87-1d4e79eefafa-nextjs-website-boilerplate.jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/nextjs-website-boilerplate">
+							Next.js Website Boilerplate
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/fyre-starter/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/25a62e20-22ba-11e9-b86c-2b85da9474de-fyre.jpeg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/fyre-starter">
+							Fyre Starter
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/vuejs-store-locator/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/fc54cea0-94e8-11e8-a5fa-09b40d29aab3-store-locator.jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/vuejs-store-locator">
+							Vue.js Store Locator
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/gatsby-docs/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/ab2aa280-2e20-11e9-8a3d-e3a3d7959670-gatsby-cosmic.jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/gatsby-docs">
+							Gatsby Docs
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/cosmic-store-with-algolia-search/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/425f2db0-6a72-11e8-b821-7f7a6aa30cf9-thumbnail.jpeg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/cosmic-store-with-algolia-search">
+							Cosmic Store with Algolia Search
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/appointment-scheduler/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/118d1e70-9748-11e7-8f92-57f70bec3665-eric-rothermel-23788.jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/appointment-scheduler">
+							Appointment Scheduler
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/vue-ecommerce-app/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/36379490-1596-11e8-a31c-5128bb7a25e2-Screen Shot 2018-02-19 at 10.56.55 AM.png?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/vue-ecommerce-app">
+							Vue Ecommerce App
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/angular-company-website/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/6bdb6590-ffc9-11e8-9a9c-8b349df2e2bf-smartmockups_jpoc1svl.jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/angular-company-website">
+							Angular Company Website
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/tutorials-app/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/4f98fdf0-a3c9-11e7-9268-0dbcfc4fb4e9-tutorials.png?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/tutorials-app">
+							Tutorials App
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/bitblog/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/95b81730-a207-11e7-972e-0dfa2fb64e35-bit-nature-4.jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/bitblog">
+							Bitblog
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/recipe-app/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/e097ae30-a344-11e7-a433-57d0033dd05a-yum.jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/recipe-app">
+							Recipe App
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/static-multi-language-app/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/2b2af210-923b-11e7-ae94-a7b5bb004bee-Screen Shot 2017-09-04 at 8.25.27 PM.png?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/static-multi-language-app">
+							Static Multi-Language App
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/portfolio-platform/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/cbb31170-8e69-11e7-9057-55bb117a3035-portfolio-platform-home.jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/portfolio-platform">
+							Portfolio Platform
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/sticky-notes/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/f3737520-86a7-11e7-8b86-7db4f533bdd3-sticky-notes-1.jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/sticky-notes">
+							Sticky Notes
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/premium-content-blog/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/57d03e70-81d2-11e7-aa84-c93d0ada6a5f-joe-shillington-240205.jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/premium-content-blog">
+							Premium Content Blog
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/vuejs-photo-gallery/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/fc44ef70-785c-11e7-998b-6dbc6e078b76-mo-baghdadi-109634.jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/vuejs-photo-gallery">
+							Vue.js Photo Gallery
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/angular-emoji-game/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/896c4220-6572-11e7-9c7d-5db69f32654d-angular-emoji-app.png?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/angular-emoji-game">
+							Angular Emoji Game
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/angular-js-image-feed/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/9fca3d30-64bc-11e7-9b49-fb58e1c2c269-angular-image-feed.jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/angular-js-image-feed">
+							Angular Image Feed
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/real-estate-website/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/8c469000-5c16-11e7-9aeb-9b9c2145760d-home.jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/real-estate-website">
+							Real Estate Website
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/react-native-twitter-clone/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/68467b40-5688-11e7-a105-ff95f7387ae8-Screen Shot 2017-06-21 at 8.47.16 AM.png?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/react-native-twitter-clone">
+							React Native Twitter Clone
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/ecommerce-app/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/d6856290-4b1d-11e7-bdd4-af52d70d3e48-watch.jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/ecommerce-app">
+							Ecommerce App
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/react-graphql-blog/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/f3f05580-4107-11e7-8d6b-a1a75699efdb-cosmicjs-graphql.jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/react-graphql-blog">
+							React GraphQL Blog
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/product-catelog-app/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/c791bd60-3beb-11e7-bfc3-91ffe5d3362c-ionic.jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/product-catelog-app">
+							Product Catalog App
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/inventory-app/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/22b7b810-3972-11e7-8b8c-299270efeba9-inventory-app-main.png?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/inventory-app">
+							Inventory App
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/events-app/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/c5cb8780-36b5-11e7-8843-0d734648413f-tokyo.jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/events-app">
+							Events App
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/todo-app/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/3414b630-2fb8-11e7-8a4c-11dbea3cc073-todo-app.jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/todo-app">
+							Todo App
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/note-to-self/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/5cece410-2dec-11e7-88fd-151e710b2934-note-to-self.png?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/note-to-self">
+							Note to Self
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/simple-blog/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/308e0f70-254f-11e7-8763-dbe52e5c9d41-paradise-cropped.jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/simple-blog">
+							Simple Blog
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/medium-backup/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/ec5dd3d0-02f3-11e7-99fa-cfd1d1962461-medium.png?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/medium-backup">
+							Medium Backup
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/portfolio-website/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/b2f19ca0-f26b-11e6-8893-11cd3268b677-portfolio-website.png?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/portfolio-website">
+							Portfolio Website
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/nuxtjs-website/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/d9dd59b0-e17e-11e6-a19e-716cc90a0c51-next.js-logo.jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/nuxtjs-website">
+							Nuxt.js Website
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/creative-agency/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/bfebdb60-ddc5-11e6-abdc-f961515701ba-creative-agency.jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/creative-agency">
+							Creative Agency
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/email-capture/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/42fe5ab0-d4ba-11e6-9083-c304f907aac4-sf3.jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/email-capture">
+							Email Capture
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/landing-page/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/d34ee0d0-c664-11e6-9d4e-3b627b472fc5-landing-page.png?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/landing-page">
+							Landing Page
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/nextjs-website/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/2b340f60-b4f8-11e6-90d2-a7e1741e7b9d-next.jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/nextjs-website">
+							Next.js Website
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/user-management/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/8bd3a6e0-c385-11e7-84d7-69582fe69304-users.jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/user-management">
+							User Management
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/static-website/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/b7c02960-9a3f-11e6-8103-8117827beac1-html.jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/static-website">
+							Static Website
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/cross-platform-blog/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/d6b62070-8083-11e6-a994-973764f7d6d1-af28ebc0-7f73-11e6-97ac-019ebaf20b79-amsterdam (1).jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/cross-platform-blog">
+							Cross-Platform Blog
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/photography-website/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/9f0f4f20-793f-11e6-9f50-c1e138141f9f-Screen Shot 2016-09-12 at 6.21.04 PM.png?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/photography-website">
+							Photography Website
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/real-estate/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/bbd13fb0-6d9b-11e6-b581-890a92317c6c-real-estate-website.jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/real-estate">
+							Real Estate
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/voting-app/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/f7064050-6295-11e6-9ea5-2d6de777d379-voting-app.jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/voting-app">
+							Voting App
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/roofing-company/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/dcaa3d00-5eb3-11e6-84b8-4f52bba274c0-cfcf6440-5eac-11e6-89ef-3ff7807a5a96-jackson (1).jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/roofing-company">
+							Roofing Company
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/medical-professional/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/6657e930-52e3-11e6-a069-734be6eb1ef6-doc.png?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/medical-professional">
+							Medical Professional
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/stellar/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/23c83740-487b-11e6-b7c1-a5e6331e97d8-stellar.png?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/stellar">
+							Stellar
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/react-universal/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/f8375be0-d14e-11e5-9da2-f3555224fd24-react-universal-blog.jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/react-universal">
+							React Universal
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/slide-deck/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/f45d04e0-469f-11e6-806a-45872309e054-Screen Shot 2016-07-10 at 8.11.59 AM.png?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/slide-deck">
+							Slide Deck
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/future-imperfect/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/af8efc10-d5f7-11e5-adbd-37d3674233e7-earth.jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/future-imperfect">
+							Future Imperfect
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/astral/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/090a4e00-d14f-11e5-9da2-f3555224fd24-php-single-page.jpg?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/astral">
+							Astral
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/react-chat-app/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/eb967be0-d8bb-11e5-982c-3bcbe05339dc-reactjs.png?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/react-chat-app">
+							React Chat App
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/wedding-site/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/00367e20-d915-11e5-b608-d73fce26bef8-wedding.png?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/wedding-site">
+							Wedding Site
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/localization-example/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://s3-us-west-2.amazonaws.com/cosmicjs/b3cfa830-4201-11e6-90cc-479c27b03182-current-location.svg'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/localization-example">
+							Localization Example
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/mobx-example-app/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://cosmic-s3.imgix.net/284f50e0-3ae4-11e6-8538-1d2708320bc9-17475736.png?w=600'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/mobx-example-app">
+							MobX Example App
+						</a>
+					</div>
+				</div>
+				<div data-href="/apps/polymer-blog-example/demo" class="apps-carousel__item pb-10 w-150 pointer">
+					<div class="w-100p h-100" style="background-image: url('https://s3-us-west-2.amazonaws.com/cosmicjs/0adec8e0-fa6d-11e5-8e23-c7530beb7ea7-polymer.svg'); background-size: cover; background-position: center;">
+					</div>
+					<div style="background: #fff; height: 50px; padding-top: 10px;">
+						<a href="/apps/polymer-blog-example">
+							Polymer Blog Example
+						</a>
+					</div>
+				</div>
+			</section>
+			<div id="app_iframe_wrapper">
+				<div id="app_iframe">
+					<iframe frameborder="0" src="https://simple-vue-blog.cosmicapp.co"></iframe>
+				</div>
+			</div>
+		</main>
+
+		<div class="clearfix"></div>
+		<div role="dialog" aria-live="polite" aria-label="cookieconsent" aria-describedby="cookieconsent:desc" class="cookie-policy fixed b-0 w-100p text-center font-15 hidden">
+			<div class="cookie-policy__bg"></div>
+			<div class="cookie-policy__text p-20 mb-10">We use cookies to ensure that you get the best experience on our
+				website.&nbsp;&nbsp;&nbsp;<a href="/cookie-policy" target="_blank">Learn more <i class="fa fa-external-link"></i></i></a>
+				<div class="cookie-policy-confirm">
+					<a role="button" tabindex="0" class="btn btn-primary ml-20 pl-40 pr-40 font-16 cookie-policy-confirm__button">Got
+						it!</a>
+				</div>
+			</div>
+		</div>
+		<footer class="footer invisible bg-gray-darker  hidden">
+
+			<section class="pt-20 pb-50 text-center bg-gray-dark text-white footer-callout">
+				<div class="max-w-450 center-block pl-15 pr-15">
+					<h3 class="pb-10">Start Free Trial</h3>
+					<form class="signup-email-form mb-15" action="/signup-email" method="post">
+						<div class="input-group">
+							<input class="form-control input-lg" name="email" type="email" placeholder="Enter your email" />
+							<div class="input-group-btn">
+								<button type="submit" class="btn btn-primary btn-lg btn-get-started pl-25 pr-25">Get Started</button>
+							</div>
+						</div>
+					</form>
+					<div class="font-12 text-left" style="color: #c0c8d8">
+						No payment info required. Cancel any time.
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</section>
+			<div role="dialog" aria-live="polite" aria-label="signupcta" aria-describedby="signupcta:desc" class="global-signup-cta fixed b-0 w-100p text-center font-15 hidden">
+				<div class="global-signup-cta__bg"></div>
+				<div class="global-signup-cta__text p-20 mb-10">
+					<span style="top: 2px;" class="relative mr-25 font-20 global-signup-cta-dismiss__button pointer text-gray">&times;</span>
+					Ready to get started?&nbsp;&nbsp;&nbsp;
+					<div class="global-signup-cta-confirm">
+						<a class="btn btn-primary btn-inverse ml-20 pl-20 pr-20 font-15" href="/login">Log in</a>
+						<a class="btn btn-primary ml-10 pl-20 pr-20 font-15" href="/signup">Create Free Account</a>
+					</div>
+				</div>
+			</div>
+
+
+		</footer>
+
+		<!-- Compiled foot file -->
+		<script src="/dist/js/combined-foot.min.js?v=1"></script>
+
+
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-47527341-3', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+		<!-- add on more info -->
+		<div class="modal" id="freePlanModal" tabindex="-1" role="dialog" aria-labelledby="freePlanModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="freePlanModalLabel">Free Bucket Options</h4>
+					</div>
+					<div class="modal-body p-30 pt-20 pb-10">
+						<div>
+							<div class="mb-40 text-gray font-15 lh-30">
+								<p class="mb-20">
+									You can have up to <b>5 Free Buckets</b> at any given time each with a 14-day trial. During this trial, you
+									have free access to all Bucket Add-ons including Webhooks, Localization, Revision History and more.
+								</p>
+								<p>
+									At any point during of your 14-day trial you can upgrade your Bucket, use the Free Bucket Referral Program to
+									extend your Free Bucket free trial time, or earn a Free Bucket forever by contributing to the Cosmic JS
+									community.</p>
+							</div>
+							<div class="mb-20 mt-10">
+								<h4 class="mb-20">Contribute</h4>
+								<div class="col-sm-3 text-center">
+									<i class="fa fa-handshake-o text-primary" style="font-size: 80px;"></i>
+								</div>
+								<div class="col-sm-9 mb-20">
+									<p class="text-gray font-15 lh-30 mb-15">Get rewarded for contributing <a href="/apps">Apps</a>, <a href="/extensions">Extensions</a>,
+										<a href="/docs/functions">Functions</a>, and <a href="/articles">Learning Center Articles</a> for our
+										community. Once your contribution is approved, you will receive a <b>Free Bucket forever</b> and <b>free
+											Cosmic JS swag</b>!</p>
+									</p>
+									<p class="text-gray font-15 lh-30"><a href="/contribute" class="btn btn-primary">Contribute&nbsp;&nbsp;<i
+											 class="fa fa-arrow-right"></i></a></p>
+								</div>
+								<div class="clearfix mb-20"></div>
+								<h4 class="mb-20">Referral Program</h4>
+								<div class="col-sm-3 text-center">
+									<i class="fa fa-bullhorn text-primary" style="font-size: 100px;"></i>
+								</div>
+								<div class="col-sm-9">
+									<p class="text-gray font-15 lh-30 mb-15">Refer a friend to signup and get <b>14 more days</b> of trial time
+										which can be applied to any of your Free Buckets. There is no limit to the number of referrals you can use to
+										get extended trial time.</p>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary pl-20 pr-20" data-dismiss="modal">Ok</button>
+					</div>
+				</div>
+			</div>
+		</div><!-- // end modal -->
+
+		<!-- add on more info -->
+		<div class="modal" id="moreInfoOverages" tabindex="-1" role="dialog" aria-labelledby="moreInfoOveragesLabel"
+		 aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="moreInfoOveragesLabel">Overage Policy</h4>
+					</div>
+					<div class="modal-body">
+						<p><b>Overage rate</b>: $80 per additional 100,000 API requests per month.</p>
+						<p>
+							If you go over your plan's API request limit for the month, Cosmic JS support will reach out to inform you. At
+							the point of contact you will have the choice to either upgrade your Bucket to the next higher plan or pay the
+							overage charges at the end of the calendar month.
+						</p>
+						<div class="clearfix"></div>
+						<p><b>API Requests Add-on Available</b>: $54.90 per additional 100,000 API requests per month.</p>
+						<div class="clearfix"></div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+					</div>
+				</div>
+			</div>
+		</div><!-- // end modal -->
+
+		<!-- add on more info -->
+		<div class="modal" id="apiRequestsAddOnModal" tabindex="-1" role="dialog" aria-labelledby="apiRequestsAddOnModalLabel"
+		 aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="apiRequestsAddOnModalLabel">API Requests Add-on</h4>
+					</div>
+					<div class="modal-body">
+						<p>You can add additional API Requests to any Bucket for $54.90 per month per additional 100,000 API requests.</p>
+						<p>Go to <i><a href="/buckets">Your Bucket > Settings > Billing</a></i> and scroll down to Bucket Add-ons.</p>
+						<div class="clearfix"></div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+					</div>
+				</div>
+			</div>
+		</div><!-- // end modal -->
+
+		<!-- star modal -->
+		<div class="modal" id="appStarModal" tabindex="-1" role="dialog" aria-labelledby="appStarModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title">Simple Vue Blog Stars</h4>
+					</div>
+					<div class="modal-body stars-modal-body">
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div><!-- // end modal -->
+
+		<!-- star modal -->
+		<div class="modal" id="articleStarModal" tabindex="-1" role="dialog" aria-labelledby="articleStarModalLabel"
+		 aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title"> Stars</h4>
+					</div>
+					<div class="modal-body stars-modal-body">
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div><!-- // end modal -->
+
+		<!-- star modal -->
+		<div class="modal" id="extensionStarModal" tabindex="-1" role="dialog" aria-labelledby="extensionStarModalLabel"
+		 aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title"> Stars</h4>
+					</div>
+					<div class="modal-body">
+						<div class="clearfix"></div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div><!-- // end modal -->
+
+		<!-- addObjectInline modal -->
+		<div class="modal" id="appModal" tabindex="-1" role="dialog" aria-labelledby="appModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content bg-off-white">
+					<div class="modal-header bg-off-white pb-0 pl-25" style="border-bottom: 0">
+						<button type="button" class="close font-30" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title font-30"><span class="app-title">App Title</span></h4>
+					</div>
+					<div class="modal-body p-25 pb-0">
+						<div class="app-body"></div>
+						<div class="data-loading text-center mt-60 mb-60">
+							<i class="fa fa-refresh fa-spin text-primary font-100"></i>
+						</div>
+					</div>
+					<div class="modal-footer pt-0" style="border-top: 0">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div><!-- // end modal -->
+
+		<!-- selectObjectsModal -->
+		<div class="modal" id="installAppCLI" tabindex="-1" role="dialog" aria-labelledby="installAppCLIModalLabel"
+		 aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title">Install App using the Cosmic CLI</h4>
+					</div>
+					<div class="modal-body">
+						<div class="font-15 mb-10" style="line-height: 26px">
+							Run the following code, one line at a time, in your preferred command line tool.<br />
+							Go to the <a href="https://www.npmjs.com/package/cosmic-cli" target="_blank">Cosmic CLI NPM page&nbsp;<i class="fa fa-external-link"></i></a>
+							for more info.
+						</div>
+						<div class="intall-app-cli-code-area mb-20">
+							<pre class="prism language-javascript"><code class="language-javascript"></code></pre>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- // end modal -->
+
+		<!-- awsKeysInfoModal -->
+		<div class="modal" id="awsKeysInfoModal" tabindex="-1" role="dialog" aria-labelledby="awsKeysInfoModalLabel"
+		 aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title">Finding your AWS credentials</h4>
+					</div>
+					<div class="modal-body lh-30 font-15">
+						<div class="mb-20"><b>Follow these steps to get your AWS access keys:</b></div>
+						<div>
+							<ol>
+								<li class="mb-15"><a href="http://console.aws.amazon.com/" target="_blank">Create or login</a> to your Amazon
+									Web Services Account and go to the Identity & Access Management (IAM) page.</li>
+								<li class="mb-15">Click on <b>Users</b> and then <b>Add user</b>. Enter a name in the first field to remind you
+									this User is from Cosmic, like <code>cosmic-admin</code>. <br />
+									Enable <b>Programmatic access</b> by clicking the checkbox. Click <b>Next</b> to go through to the Permissions
+									page. Click on <b>Attach existing policies directly</b>.<br />
+									Search for and select <b>AdministratorAccess</b> then click <b>Next: Review</b>. Check everything looks good
+									and click <b>Create user</b>. <br />
+								</li>
+								<li class="mb-15">View and copy the <b>API Key</b> & <b>Secret</b> to a temporary place. You'll need it for all
+									of your Cosmic Function deploys.</li>
+							</ol>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div><!-- // end modal -->
+		<script>
+			window.intercomSettings = {
+				app_id: "o4fm83zs"
+			};
+		</script>
+		<script>
+			$.FroalaEditor.DEFAULTS.key = 'pjexadmecD1qG-10y==';
+		</script>
+		<script>
+			(function() {
+				var w = window;
+				var ic = w.Intercom;
+				if (typeof ic === "function") {
+					ic('reattach_activator');
+					ic('update', intercomSettings);
+				} else {
+					var d = document;
+					var i = function() {
+						i.c(arguments)
+					};
+					i.q = [];
+					i.c = function(args) {
+						i.q.push(args)
+					};
+					w.Intercom = i;
+
+					function l() {
+						var s = d.createElement('script');
+						s.type = 'text/javascript';
+						s.async = true;
+						s.src = 'https://widget.intercom.io/widget/o4fm83zs';
+						var x = d.getElementsByTagName('script')[0];
+						x.parentNode.insertBefore(s, x);
+					}
+					if (w.attachEvent) {
+						w.attachEvent('onload', l);
+					} else {
+						w.addEventListener('load', l, false);
+					}
+				}
+			})()
+		</script>
+	</body>
+</html>

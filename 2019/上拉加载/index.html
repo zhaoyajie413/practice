@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    /* jQuery类级别插件扩展 */
+    $.extend({
+        onReachBottom: function(params, callFn) {
+            if (!params.container || !params.content) {
+                console.error('缺失必要的参数');
+                return;
+            }
+
+            var $container = params.container,
+                $content = params.content,
+                distance = params.distance || 30;
+
+            $container.scroll(function() {
+                var awayBtm = $content.height() - $container.scrollTop() - $container.height();
+                if (awayBtm <= distance) {
+                    callFn && callFn()
+                }
+            });
+        }
+    });
+
+    /* 调用插件 */
+    $.onReachBottom({
+        "container": $(window),
+        /* 容器对象 */
+        "content": $(document),
+        /* 内容对象 */
+        "distance": 30 /* 触发事件距离，默认30px */
+    }, function() {
+        /* 插件回调函数 */
+        getUserList.get();
+    });
+
+    /* 项目方法 */
+    var getUserList = {
+        /* 允许请求 */
+        isGet: true,
+        /* 条数 */
+        rows: 20,
+        /* 页码 */
+        page: 1,
+        /*获取*/
+        get: function() {
+            if (!this.isGet) {
+                return;
+            }
+            /* 关闭请求条件，避免多次调用 */
+            this.isGet = false;
+
+            /* 缓存 this 对象 */
+            var _self = this;
+
+            $("#load").html('正在加载');
+
+            /* 模拟请求 */
+            setTimeout(function() {
+                var strHtml = '';
+                for (var i = 1; i <= _self.rows; i++) {
+                    strHtml += '<div class="item">用户：' + (_self.rows * (_self.page - 1) + i) + '</div>';
+                }
+                $("#list").append(strHtml);
+
+                /* 允许重新加载 */
+                $("#load").html('上拉加载更多');
+                _self.isGet = true;
+                _self.page++;
+            }, 2000);
+        }
+    };
+
+    /* 初始化模拟数据 */
+    getUserList.get();
+</script>

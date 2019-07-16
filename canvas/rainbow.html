@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<canvas id="canvas"></canvas>
+	</body>
+</html>
+<script>
+	var canvas=document.querySelector("#canvas");
+	canvas.width=document.documentElement.clientWidth;
+	canvas.height=document.documentElement.clientHeight;
+	var context = canvas.getContext("2d"),
+	offsetEndX=offsetStartX=canvas.width/2,
+	offsetEndY=offsetStartY=canvas.height/2,
+	idIndex=0;
+	graphics={};
+	function Arc(startIndex,r,strokwidth){
+		this.points=[];
+		this.r=r;
+		this.startIndex=startIndex;
+		this.createPoints();
+		this.w=this.h=strokwidth;
+		colorNum=function(){
+			return Math.floor(Math.random()*255)
+		};
+	 	this.color= "rgba("+colorNum()+","+colorNum()+","+colorNum()+",1)";
+		idIndex++;
+		this.id=idIndex;
+		graphics[idIndex]=this;
+	}
+	Arc.prototype.createPoints=function(){
+		for(var i=0;i<360;i++){
+			this.points.push({
+				x:this.r*Math.cos(Math.PI/180*i),
+				y:this.r*Math.sin(Math.PI/180*i)
+			})
+		}
+	}
+	Arc.prototype.draw=function(){
+		if(this.startIndex==this.points.length){
+			this.startIndex=0
+		}
+		offsetStartX<offsetEndX?offsetStartX++:offsetStartX--;
+		offsetStartY<offsetEndY?offsetStartY++:offsetStartY--;
+	 	context.fillStyle = this.color;
+	 	var  x=this.points[this.startIndex].x+offsetStartX,y=this.points[this.startIndex].y+offsetStartY;
+    	context.fillRect(x,y, this.w,this.h);
+    	this.startIndex++;
+	}
+	
+	for(var i=0;i<100;i++){
+		new Arc(Math.floor(360*Math.random()),canvas.width/2*Math.random(),4)
+	}
+	var timer=setInterval(function(){
+		context.fillStyle = "rgba(255,255,255,0.05)";
+		context.fillRect(0,0,canvas.width,canvas.height);
+		for(var k in graphics){
+			graphics[k].draw();
+		}
+	},10)
+   
+ 
+ 	
+	
+</script>

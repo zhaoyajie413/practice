@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    /*
+    *
+    * */
+    let add=function(){
+        //arguments对象是所有（非箭头）函数中都可用的局部变量。：
+        let _args=Array.prototype.slice.call(arguments);
+
+        let _add=function(){
+            _args.push(...arguments);
+            return _add;
+        }
+
+        _add.toString=()=>{
+            return _args.reduce((a,b)=>a+b);
+        }
+
+        return _add
+    }
+
+    console.log(add(3)(4)(5)(6))
+</script>

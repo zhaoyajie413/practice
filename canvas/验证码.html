@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+<body>
+		<div id="verify"></div>
+	</body>
+	<script>
+		var def_Option={
+			width:300,
+			height:100,
+			text:""
+		}
+		function Verify(Option){
+			this.opt=this.clone(def_Option,Option);
+			var canvas=document.createElement("canvas");
+			var el=document.getElementById(this.opt.el);
+			canvas.id=canvas;
+			el.appendChild(canvas)
+  			canvas.height=this.opt.height;
+			canvas.width=this.opt.width;
+			this.canvas=canvas;
+		    this.ctx=canvas.getContext("2d");
+			this.draw();
+		}
+		Verify.prototype={
+				draw:function() { 
+					this.ctx.fillStyle=this.randomBgColor(); 
+					this.ctx.fillRect(0,0,this.canvas.width,this.canvas.height);
+					this.drawText();
+					this.drawDot();
+				},
+				drawText:function(){
+					_this=this;
+					var txtArr=this.opt.text.split("");
+					var step=this.opt.width/(txtArr.length+1);
+					var s=0;
+					_this.ctx.translate(0,50);
+					txtArr.map(function(it,i){
+						var deg = _this.randomNum(-60, 60);
+						s+=step;
+						_this.ctx.fillStyle=_this.randomColor();
+						_this.ctx.shadowOffsetX = 2;
+						_this.ctx.shadowOffsetY = 2;
+						_this.ctx.shadowBlur = 1;
+						_this.ctx.shadowColor = _this.randomColor();
+						_this.ctx.font = (parseInt(22*Math.random())+30)+"px serif";
+						//必须先位移
+						_this.ctx.translate(step,0);
+						//旋转
+						_this.ctx.rotate(Math.PI/180*deg);
+		  				_this.ctx.fillText(it,0,0);
+		  				_this.ctx.rotate(-Math.PI/180*deg);
+					});
+
+					 _this.ctx.translate(-s,-50);
+				},
+				drawDot(){
+					this.ctx.restore();
+					var _this=this;
+					var length=(this.canvas.width*this.canvas.height)/1000;
+					console.log("1:"+length)
+					var dots=[];
+					for(var i=0;i<length;i++){
+						dots.push({
+							x:parseInt(Math.random()*this.canvas.width),
+							y:parseInt(Math.random()*this.canvas.height),
+						})
+					}
+					dots.map(function(it){
+						console.log(it)
+						_this.ctx.beginPath();
+						_this.ctx.fillStyle=_this.randomColor();
+						_this.ctx.shadowOffsetX = 2;
+						_this.ctx.shadowOffsetY = 2;
+						_this.ctx.shadowBlur = 1;
+						_this.ctx.shadowColor = _this.randomColor();
+						_this.ctx.arc(it.x,it.y,2,0,2*Math.PI);
+						_this.ctx.fill();
+						_this.ctx.closePath();
+					})
+					
+				},
+				randomNum:function(min, max) {
+					return Math.floor(Math.random() * (max - min) + min);
+				},
+				randomColor:function(min, max) {
+					var r =parseInt(Math.random()*255);
+					var g =parseInt(Math.random()*255);
+					var b =parseInt(Math.random()*255);
+					return "rgb(" + r + "," + g + "," + b + ")";
+				},
+				randomBgColor:function(min, max) {
+					var r =parseInt(Math.random()*255);
+					var g =parseInt(Math.random()*255);
+					var b =parseInt(Math.random()*255);
+					return "rgba(" + r + "," + g + "," + b + ",0.6)";
+				},
+				clone:function(target,obj){
+					for(let key in obj){
+						target[key] = obj[key];
+					}
+					return target
+				}	
+		}
+		new Verify({el:"verify",text:"萌新路过"})
+		
+	</script>
+</html>

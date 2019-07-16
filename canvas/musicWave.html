@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<audio id="audioDom" loop="loop" src="Disfigure%20-%20Blank.mp3" controls="controls"></audio>
+		<div id="container"></div>
+	</body>
+	<script>
+	//音乐播放器模块、
+var cxMusic = {
+    audioDom : null,
+    // 初始化
+    init : function(callback) {
+        this.audioDom = document.getElementById("audioDom");
+        this.time(callback);
+    },
+    // 播放
+    play : function() {
+        return this.audioDom.play();
+    },
+    // 暂停
+    stop : function() {
+        return this.audioDom.pause();
+    },
+    // 时间
+    time : function(callback) {
+        var $this = this;
+        this.audioDom.addEventListener("canplaythrough", function() {
+            var totaltime = $this.format(this.duration);
+            // $(".time").html($this.format(this.duration));
+            // 这种写法耦合度较高，只适用于当前页面，无法进行扩展，可以用回调函数，将得到的时间回调出去
+            if (callback)
+                callback.call(this, true, totaltime);
+        });
+        this.audioDom.addEventListener("timeupdate", function() {
+            var current = $this.format(this.currentTime);
+            var percent = this.currentTime / this.duration * 100;
+            if (callback)
+                callback.call(this, false, current, percent);
+        });
+    },
+    // 格式化时间
+    format : function(ftime) {
+        var m = Math.floor(ftime / 60);
+        var s = Math.floor(ftime % 60);
+        if (m < 10)
+            m = "0" + m;
+        if (s < 10)
+            s = "0" + s;
+        return m + ":" + s;
+    },
+    // 进度
+    percent : function() {
+
+    }
+};
+
+
+
+/* 音乐解析器 */
+var KeKeMusic = {
+    mark : false,
+
+    init : function() {// ie11以上的浏览器才支持
+        // 1:音频上下文===html5+ajax+audioContext html5+audio+audioContext
+        window.AudioContext = window.AudioContext || window.webkitAudioContext
+                || window.mozAudioContext || window.msAudioContext;
+        /* 动画执行的兼容写法 */
+        window.requestAnimationFrame = window.requestAnimationFrame
+                || window.webkitRequestAnimationFrame
+                || window.mozRequestAnimationFrame
+                || window.msRequestAnimationFrame;
+        // 2:初始化音轨对象
+        var audioContext = new window.AudioContext();
+        return audioContext;
+    },
+
+    parse : function(audioContext, audioDom, callback) {
+        try {
+            // 拿到播放器去解析你音乐文件
+            var audioBufferSouceNode = audioContext
+                    .createMediaElementSource(audioDom);
+            // 创建解析对象
+            var analyser = audioContext.createAnalyser();
+            // 将source与分析器连接
+            audioBufferSouceNode.connect(analyser);
+            // 将分析器与destination连接，这样才能形成到达扬声器的通路
+            analyser.connect(audioContext.destination);
+            // 调用解析音频的方法
+            KeKeMusic.data(analyser, callback);
+        } catch (e) {
+
+        }
+    },
+
+    data : function(analyser, callback) {
+        if (KeKeMusic.mark) {
+            // 将音频转换一个数组
+            var array = new Uint8Array(analyser.frequencyBinCount);
+            analyser.getByteFrequencyData(array);
+            // 通过回调函数返回
+            if (callback)
+                callback(array);
+            requestAnimationFrame(function() {
+                KeKeMusic.data(analyser, callback);
+            });
+        }
+    }
+};
+
+
+
+	
+		
+	</script>
+</html>

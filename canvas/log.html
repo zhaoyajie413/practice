@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			 #canvas{
+				background-color: #6a4ffe;
+				background-position: center;
+				background-size: 100%;
+			} 
+		</style>
+	</head>
+	<body>
+		<div style="position: fixed;width: 100vw;height: 100vh;">
+			<div style="position: absolute;">
+				<input type="range" id="range" value="10" min="1" max="10" />
+				<input type="range" id="padding" value="10" min="1" max="10" />
+			</div>
+			<canvas id="canvas"></canvas>
+		</div>
+	</body>
+	<script>
+		var rangeBtn=document.querySelector("#range");
+		var paddingBtn=document.querySelector("#padding");
+		var padding=1;
+		var range=1;
+		var pixes=[];
+		pageX=0;
+		pageY=0;
+		var canvas=document.querySelector("#canvas");
+			canvas.height=document.documentElement.clientHeight;
+			canvas.width=document.documentElement.clientWidth;
+			var iw,ih,ix,iy,imageData;
+			var ctx=canvas.getContext("2d");
+			
+			var img=new Image();
+			img.src="img/mio.png";			
+			img.onload=function(e){
+				iw=img.width;
+				ih=img.height;
+				ix=(canvas.width-iw)/2;
+				iy=(canvas.height-ih)/2;
+				ctx.drawImage(img,ix,iy,iw,ih);
+				imageData = ctx.getImageData(ix,iy,iw,ih).data;
+				draw(imageData,10)
+		}
+			
+		rangeBtn.oninput=function(e){
+			range=this.value;
+			getSource(imageData,range)
+		};
+		paddingBtn.oninput=function(e){
+			padding=this.value;
+			getSource(imageData,range)
+		}
+		 setInterval(function(){
+			draw()
+		},10) 
+		function getRandomRadius(it){
+			if(it.current==it.duration || it.radius==it.endRadius){
+				it.endRadius=Math.floor(Math.random()*range*padding);
+			}
+			 /* console.log(it.radius) */
+				it.endRadius>=it.radius?it.radius+=0.2:it.radius-=0.2;
+					
+			if(it.radius<1)it.radius=1
+			return it.radius;
+		}
+		function getRandomColorNUm(){
+		
+			return Math.floor(255*Math.random());
+		}
+		function distance(x1, y1, x2, y2) {
+			return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+		}
+		function getSource(data,range){
+				pixes=[]
+				for(var i=0;i<data.length;i+=4){
+					/* 像素点位置 */
+					var pos=Math.floor(i/4);
+					/* 像素点的x坐标 */
+					var dx=Math.floor(ix+pos%iw);
+					/* 像素点的y坐标 */
+					var dy=Math.floor(iy+pos/iw);
+					if((data[i+3]) && dx%(range*padding)==0 && dy%(range*padding)==0){
+			
+						pixes.push({
+							r:255,//color.r,
+							g:255,//color.g,
+							b:255,//color.b,
+							a:data[i+3],
+							x:dx,
+							y:dy,
+							duration:10,
+							current:10,
+							endRadius:0,
+							radius:0
+						})
+					}
+			}
+		}
+			function draw(){
+			
+			ctx.clearRect(0, 0,canvas.width,canvas.height);
+			pixes.map(function(it){
+				ctx.fillStyle="rgba("+it.r+","+it.g+","+it.b+","+it.a+")";
+				ctx.beginPath();
+				var x=it.x;
+				var y=it.y;
+				var angle = Math.atan2(it.x - pageX, it.y - pageY);
+				var dist = 500 / distance(pageX, pageY, it.x, it.y);
+				x += (Math.sin(angle) * dist) + (x - it.x);
+				y += (Math.cos(angle) * dist) + (y - it.y);
+				 ctx.arc(x,y,getRandomRadius(it),0,2*Math.PI); 
+				 /* ctx.fillRect(it.x,it.y,range,range); */
+				ctx.fill()
+			})
+			}
+			
+			window.onmousemove=function(e){
+				pageX=e.pageX;
+				pageY=e.pageY;
+			}
+	</script>
+</html>

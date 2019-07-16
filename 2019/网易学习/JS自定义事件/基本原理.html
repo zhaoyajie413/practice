@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button type="button">点击</button>
+</body>
+<script>
+    var elem = document.querySelector("button");
+    var event = document.createEvent('Event');
+
+    // 定义事件名为'build'.
+    event.initEvent('build', true, true);
+
+    var elemFn=function (e) {
+        console.log("mayuyu")
+        // e.target matches elem
+    }
+    // 监听事件
+    elem.addEventListener('build',elemFn , false);
+
+    window.onmousemove=function(){
+        // 触发对象可以是任何元素或其他事件目标
+        elem.dispatchEvent(event);
+    }
+    elem.onclick=function () {
+        elem.removeEventListener('build',elemFn);
+    }
+</script>
+</html>

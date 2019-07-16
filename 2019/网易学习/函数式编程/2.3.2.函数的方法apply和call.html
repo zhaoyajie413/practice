@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function negate(func) {
+        return function () {
+            return !func.apply(null, arguments);
+        }
+    }
+
+    function isNull(val) {
+        return val === null
+    }
+    //非空
+    var isNotNull = negate(isNull);
+    console.log(isNotNull(null));
+    console.log(isNotNull({}));
+</script>
+</html>

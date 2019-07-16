@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+</body>
+<script>
+    var canvas = document.querySelector("#canvas");
+    canvas.width = document.documentElement.clientWidth;
+    canvas.height = document.documentElement.clientHeight;
+    const ctx = canvas.getContext('2d');
+    const ANGLE = 15;
+    const DOT_RADIUS = 4;
+
+    var Dot =function (x,y,z) {
+        this._x=x;
+        this._y=y;
+        this._z=z;
+    }
+    Dot.prototype.translate3D = function () {
+        var p = 1 - (this.z * Math.tan(15))/this.x;
+        return {
+            x : this.x * p,
+            y : this.y * p
+        }
+    }
+    Dot.prototype.draw = function(){
+        // ctx.fillRect(this.xProject - DOT_RADIUS, this.yProject - DOT_RADIUS, DOT_RADIUS * 2 * this.sizeProjection, DOT_RADIUS * 2 * this.sizeProjection);
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, DOT_RADIUS , 0, Math.PI * 2);
+        ctx.closePath();
+        ctx.fill();
+    }
+
+    var d = new Dot(300,100,500);
+    d.draw();
+</script>
+</html>
+
