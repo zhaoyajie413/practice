@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    class Person {
+        constructor (firstname, lastname, ssn){
+            this._firstname = firstname;
+            this._lastname = lastname;
+            this._ssn = ssn;
+            this._address = null;
+            this._birthYear = null;
+        }
+        get ssn() {
+            return this._ssn;
+        }
+        get firstname() {
+            return this._firstname;
+        }
+        get lastname() {
+            return this._lastname;
+        }
+        get address() {
+            return this._address;
+        }
+        set address(addr){
+            this._address = addr;
+        }
+        get birthYear() {
+            return this._birthYear;
+        }
+        set birthYear(year) {
+            return this._birthYear=year;
+        }
+
+        toString(){
+            return `Person(${this._firstname},${this._lastname})`
+        }
+    }
+    var person = Object.freeze(new Person('Mayuyu','Watanabe','13234-34324'));
+    console.log(person);
+    person.address="埼玉县"
+</script>
+</html>

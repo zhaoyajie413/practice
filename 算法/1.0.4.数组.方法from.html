@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var numbers = [1,2,3,4,5,6,7,8,9];
+    //根据已有数组赋值一个新的数组。比如赋值numbers;
+    var newList = Array.from(numbers);
+    console.log(newList);
+    //也可以传入一个函数来过滤
+    var half =Array.from(numbers, function (it) {
+        return it+1;
+    })
+    console.log(half);
+</script>
+</html>

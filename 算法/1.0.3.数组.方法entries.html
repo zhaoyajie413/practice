@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var numbers = [1,2,3,4,5,6,7,8];
+    var entries = numbers.entries();
+    //[位置，值]
+    console.log(entries.next().value);
+    console.log(entries.next())
+
+    var keys = numbers.keys();
+    //位置
+    console.log(keys.next().value);
+
+    var values = numbers.values();
+    console.log(values.next().value);
+</script>
+</html>

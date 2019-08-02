@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="no-cache" http-equiv="Cache-Control"/>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimum-scale=1.0"
+          name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="Billions Connect" hid="description" name="description">
+    <meta content="portrait" hid="x5-orientation">
+    <meta content="portrait" hid="screen-orientation">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <style>
+        body{
+            margin: 0;
+        }
+        .card-wapper{
+            position: relative;
+        }
+        .card-wapper-title{
+            position: absolute;
+            top:60px;
+            left:50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 200px;
+        }
+        .card-item{
+            position: absolute;
+            bottom: -20px;
+            left:50%;
+            transform: translateX(-50%);
+            width: 300px;
+            height: 160px;
+            border-radius: 8px;
+            background-color: rgba(187, 156, 162,0.95);
+            text-align: center;
+            line-height: 160px;
+            color: white;
+            font-size: 20px;
+        }
+
+        .card-item-tag{
+            position: absolute;
+            bottom:-20px;
+            left:50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 20px;
+            background: linear-gradient(to right, #ffae65, #ff787c);
+            color: white;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+<div class="card-wapper">
+    <div id="mybg">
+    </div>
+    <div class="card-item">
+       <span>898600120233213213</span>
+        <div class="card-item-tag">
+            流量查询
+        </div>
+    </div>
+</div>
+</body>
+<script src="clipperBgBevelAngle.js"></script>
+<script>
+
+    new clipperBgBevelAngle({
+        dom:document.querySelector("#mybg"),
+        src:"feifei.jpg",
+        height:400,
+        offsetBottom:120
+    })
+</script>
+</html>

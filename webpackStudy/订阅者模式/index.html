@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script src="publish.js"></script>
+<script>
+    //订阅者
+    let a =  function(data){
+        console.log(`订阅者a收到订阅信息：${data}`)
+    }
+    let b = function(data){
+        console.log(`订阅者b收到订阅信息：${data}`)
+    }
+    let c = function(data){
+        console.log(`订阅者c收到订阅信息：${data}`)
+    }
+
+    //初始化
+    let publisher = new Public();
+
+    //添加订阅者
+    publisher.addSubscriber(a).addSubscriber(b).addSubscriber(c);
+
+    //公众号发布消息
+    publisher.deliver('这是公众号推送的第1条新信息！');
+    publisher.deliver('这是公众号推送的第2条新信息！').deliver('这是公众号推送的第3条新信息！');
+</script>
+</html>

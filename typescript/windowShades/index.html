@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .plane{
+            width: 800px;
+            height:600px;
+            perspective: 600px;
+        }
+        @keyframes  rotatePos  {
+            from{
+                transform: rotateY(0) ;
+            }
+            to{
+                transform: rotateY(180deg);
+            }
+        }
+        @keyframes  rotateOtherPos  {
+            from{
+                transform: rotateY(180deg);
+            }
+            to{
+                transform: rotateY(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="plane">
+
+    </div>
+</body>
+<script src="built/Shades.js"></script>
+<script>
+    var p =document.querySelector(".plane");
+    var s = new Shades(p);
+</script>
+</html>

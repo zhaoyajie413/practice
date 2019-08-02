@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    /*
+    * enqueue 向尾部添加一个和多个项
+    * dequeue 移除队列第一项，并返回被移除的元素
+    * peek 返回队列的第一个元素
+    * isEmpty 判断队列中是否包含元素
+    * size 返回队列中包含的元素
+    *
+    * */
+    class Queue{
+        constructor(){
+            this.count = 0;
+            this.lowestCount = 0;
+            this.items = {};
+        }
+        enqueue(element){
+            this.items[this.count] = element;
+            this.count++;
+        }
+        dequeue(){
+            if(this.isEmpty()){
+                return undefined;
+            }
+            var result = this.items[this.lowestCount];
+            delete  this.items[this.lowestCount];
+            this.lowestCount++;
+            return result;
+        }
+        isEmpty(){
+            return this.count - this.lowestCount == 0;
+        }
+        peek(){
+            if(this.isEmpty()){
+                return undefined;
+            }
+            return this.items(this.lowestCount);
+        }
+         fr
+    }
+    var q = new Queue();
+    q.enqueue("mayuyu");
+    q.enqueue("youki");
+    q.enqueue("mio");
+    q.dequeue()
+    console.log(q)
+</script>
+</html>

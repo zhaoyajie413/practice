@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <div>{{$store.state}}</div>
+    <button  type="button" @click="handClick">Submit</button>
+</div>
+</body>
+<script src="vue.2.6.1.js"></script>
+<script src="vuex.3.1.1.js"></script>
+<script>
+    //Mutation：必须同步执行。
+    //Action：可以异步，但不能直接操作State。
+
+    /*
+    * @login 模拟登陆方法。
+    * */
+    var login = function (userInfo) {
+        //返回报文
+        var responseBody = {
+            key:"0000",
+            msg:"操作成功",
+            token: 'SAHDKJAHSDJAJASJHD2132KJEWHDUWYSD98A',
+            roles: ['上将','元帅','集团军军长'],
+            info: {
+                name: 'MAYUYU',
+                gender:'female',
+                age:25
+            }
+
+        }
+       return new Promise(function (resolve,reject) {
+           var {username, password} = userInfo;
+           if(username && password){
+               setTimeout(function () {
+                   resolve(responseBody)
+               },2000)
+           }else{
+               setTimeout(function () {
+                   resolve({key:"9999",msg:"操作失败"})
+               },2000)
+           }
+       }).catch(error => {
+            reject(error)
+        })
+    }
+
+    var store = new Vuex.Store({
+        state:{
+            token: '',
+            roles: [],
+            info: {}
+        },
+        mutations:{
+            SET_TOKEN: (state, token) => {
+                state.token = token
+            },
+            SET_ROLES: (state, roles) => {
+                state.roles = roles
+            },
+            SET_INFO: (state, info) => {
+                state.info = info
+            }
+        },
+        actions:{
+            Login ({ commit }, userInfo) {
+                return new Promise(function(resolve, reject){
+                    login(userInfo).then(function(result){
+                        commit('SET_TOKEN', result.token);
+                        commit('SET_ROLES', result.roles);
+                        commit('SET_INFO', result.info);
+                        resolve()
+                    }).catch(error => {
+                        reject(error)
+                    })
+                })
+            },
+        }
+    })
+    new Vue({
+        el:"#app",
+        data:function () {
+            return {
+
+            }
+        },
+        store:store,
+        methods:{
+            handClick:function () {
+                this.$store.dispatch("Login",{username:'mayuyu',password:'123456'})
+            }
+        }
+    })
+</script>
+</html>

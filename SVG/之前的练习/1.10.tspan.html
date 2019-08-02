@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg">
+    <text x="20" y="20">
+        <tspan>tspan line 1</tspan>
+        <tspan>tspan line 2</tspan>
+    </text>
+</svg>
+
+<!--垂直定位-->
+<!--如果你希望每一行文字都相对于前一行文字垂直定位，你可以在<tspan>元素中使用dy属性（delta y）：-->
+<svg xmlns="http://www.w3.org/2000/svg">
+    <text x="20" y="20">
+        <tspan>tspan line 1</tspan>
+        <tspan dy="20">tspan line 2</tspan>
+    </text>
+</svg>
+
+<!--如果你在<dy>属性中写了多个数字，那么每一个数字会被应用到<tspan>元素的每一个字符上。看下面的例子：-->
+<svg xmlns="http://www.w3.org/2000/svg">
+    <text x="20" y="20">
+        <tspan  dy="5 10 20">123</tspan>
+    </text>
+</svg>
+
+<!--水平定位-->
+<!--要使每一行文本在X轴方向上相对定位可以使用dx属性（delta x）。下面的例子展示了将dx的值设置为30的效果，
+现在第二行文字在水平方向上相对于第一行文字向右偏移了30像素。-->
+<svg xmlns="http://www.w3.org/2000/svg">
+    <text x="20" y="10">
+        <tspan>tspan line 1</tspan>
+        <tspan dx="30" dy="10">tspan line 2</tspan>
+    </text>
+</svg>
+
+<!--如果你在<dx>属性中写了多个数字，那么每一个数字会被应用到<tspan>元素的每一个字符上。看下面的例子：-->
+<svg xmlns="http://www.w3.org/2000/svg">
+    <tspan dx="5 10 20">123</tspan>
+</svg>
+
+<!--baseline-shift CSS属性将一个<tspan>元素设置为上标或下标-->
+<svg>
+    <text x="10" y="40">
+        这是一个tspan元素的 <tspan style="baseline-shift: super;">上标</tspan>
+        和 <tspan style="baseline-shift: sub;">下标</tspan> 混合的文本串效果。
+    </text>
+</svg>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+</style>
+<body>
+    <canvas style="background: #0e0e0e"></canvas>
+</body>
+<script>
+    class Point {
+        constructor(x,y,z){
+            this.x=x;
+            this.y=y;
+            this.z=z;
+        }
+    }
+
+    class Points{
+        constructor(X_MAX=2,X_MIN=-2,Y_MAX=2,Y_MIN=-2){
+            this.items = [];
+            this.X_MAX=X_MAX;
+            this.X_MIN=X_MIN;
+            this.Y_MAX=Y_MAX;
+            this.Y_MIN=Y_MIN;
+        }
+        push(element){
+            this.items.push(element)
+        }
+        roateY(point,theta){
+            return{
+                x:Math.cos(theta)*point.x-Math.sin(theta)*point.z,
+                y:point.y,
+                z:Math.sin(theta)*point.x+Math.cos(theta)*point.z,
+            }
+        }
+        roateX(point,theta){
+            return{
+                x:point.x,
+                y:Math.cos(theta)*point.y-Math.sin(theta)*point.z,
+                z:Math.sin(theta)*point.y+Math.cos(theta)*point.z,
+            }
+        }
+        translatePoint(stage,point){
+            let w = stage.canvas.width, h = stage.canvas.height;
+            return {
+                x:w*(point.x/(point.z+2)-this.X_MIN)/(this.X_MAX-this.X_MIN),
+                y:h*(point.y/(point.z+2)-this.Y_MIN)/(this.Y_MAX-this.Y_MIN),
+            }
+        }
+        draw(stage,theta){
+            this.items.forEach((point)=>{
+                point = this.roateY(point,theta);
+                point = this.roateX(point,0.6*theta)
+                var particle = this.translatePoint(stage,point);
+                stage.ctx.beginPath()
+                stage.ctx.moveTo(particle.x,particle.y);
+                stage.ctx.lineTo(particle.x+1,particle.y+1);
+                stage.ctx.strokeStyle='white';
+                stage.ctx.strokeWidth=4;
+                stage.ctx.stroke();
+            })
+        }
+    }
+
+    class Stage{
+        constructor(canvas,width=this.getWindowWidth(),height=this.getWindowHeight()) {
+            this.canvas = canvas;
+            this.canvas.width=width;
+            this.canvas.height=height;
+            this.ctx = canvas.getContext('2d');
+        }
+        getWindowWidth(){
+            return Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+        }
+        getWindowHeight(){
+            return Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+        }
+        render(fn){
+            this.ctx.clearRect(0,0,this.canvas.width,this.canvas.height);
+            fn();
+            requestAnimationFrame(function () {
+                this.render(fn)
+            }.bind(this));
+        }
+    }
+
+    var stage = new Stage(document.querySelector('canvas'));
+    var points = new Points();
+    var step =0.1;
+    var initGeometry=()=>{
+        for (var x=-1;x<1;x+=step ) {
+            for (var y=-1;y<1;y+=step ) {
+                for (var z=0;z<1;z+=step ) {
+                    points.push(new Point(x,y,z));
+                }
+            }
+        }
+    }
+    initGeometry();
+    var theta=0;
+    var dtheta=0.01;
+    stage.render(function () {
+        theta+=dtheta
+        points.draw(stage,theta);
+
+    })
+
+</script>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //es2015为array类增加了一个@@属性。需要通过symbol.iterator来访问。
+
+    var numbers = [1,2,3,4,5,6,7,8];
+    console.log(numbers)
+    var iterator = numbers[Symbol.iterator]();
+    //单个读取
+    //console.log(iterator.next().value)
+    //循环读取
+  /* for(var n of iterator){
+       console.log(n)
+   }*/
+   var item = iterator.next()
+  while (!item.done) {
+       console.log(item.value)
+      item = iterator.next();
+  }
+</script>
+</html>

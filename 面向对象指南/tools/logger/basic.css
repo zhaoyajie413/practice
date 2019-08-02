@@ -1,0 +1,14 @@
+.logger{
+    background-color: #353535;
+    color:#fff;
+    padding:30px 10px 10px;
+    position: relative;
+}
+.logger:before{
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    display: block;
+    content: "运行结果：";
+    color: #e5e5e5;
+}

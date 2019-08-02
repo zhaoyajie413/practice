@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var defaultEquals = (a,b)=>{
+        return a === b;
+    }
+
+    class Node {
+        constructor(element){
+            this.element = element;
+            this.next = undefined;
+        }
+    }
+
+    /*
+    * push:向链表尾部添加一个元素
+    * insert(element,position)在指定位置插入一个元素
+    * getElementAt(index):返回指定位置的元素
+    * remove(element)从链表中删除一个元素
+    *indexOf(element)返回链表中的索引
+    * removeAt(position）从指定位置删除
+    * isEmpty();判断是否为空
+    * size();返回链表长度
+    * */
+    class LinkedList {
+        constructor(equalsFn = defaultEquals){
+            this.count = 0;
+            this.head = null;
+            this.equalsFn = equalsFn;
+        }
+        push(element){
+            let node =new Node(element);
+            if(this.head == null){
+                this.head = node;
+            }else{
+                let current = this.head;
+                while (current.next!=null){
+                    current=current.next;
+                }
+                current.next = node
+            }
+            this.count++
+        }
+        removeAt(index){
+            /*检查越界*/
+            if(index>=0 && index<this.count){
+                var current = this.head;
+                var privious = null;
+                if(index==0){
+                    this.head=this.head.next;
+                }else {
+                    for(var i = 0;i<index;i++ ){
+                        privious =current;
+                        current = current.next;
+                    }
+                    privious.next =current.next;
+                }
+                this.count--;
+                return;
+            }
+            return undefined;
+        }
+        getElementAt(index){
+            if(index>=0 && index <= this.count){
+                let node = this.head;
+                for(let i = 0;i < index && node != null;i++){
+                    node = node.next;
+                }
+                return node;
+            }
+            return undefined;
+        }
+        removeAt(index){
+            if(index === 0 ){
+                this.head = this.head.next;
+            }else{
+                const previous = this.getElementAt(index - 1);
+                current = previous.next;
+                previous.next = current.next;
+            }
+        }
+        insert(element,index){
+            var node =new Node(element),current,previous;
+            if(index>=0 && index<=this.count){
+                if(index === 0){
+                    current = this.head;
+                    node.next=current;
+                    this.head=node;
+                }else{
+                     previous = this.getElementAt(index);
+                     current =previous.next;
+                    previous.next =node;
+                    node.next = current
+                }
+                this.count++;
+                return true;
+            }
+            return false;
+        }
+        indexOf(element){
+            var current = this.head;
+           for (var i = 0 ;i<this.count;i++){
+               if(current.element == element){
+                   return i;
+               };
+               current = current.next;
+           }
+           return -1;
+        }
+        remove(element){
+            var index = this.indexOf(element);
+            return this.removeAt(index);
+        }
+        size(){
+            return this.count;
+        }
+        isEmpty(){
+            return this.size()===0;
+        }
+        getHead(){
+            return this.head;
+        }
+    }
+    var link = new LinkedList();
+    link.push("mayuyu");
+    link.push("youki");
+    link.push("mio");
+    link.push("nana");
+    link.push("miwa");
+    console.log(link.indexOf("huahua"))
+    console.log(link);
+</script>
+</html>

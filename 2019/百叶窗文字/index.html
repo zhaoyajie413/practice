@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+			}
+
+			li {
+				list-style: none;
+			}
+
+			#ul1,
+			#ul2 {
+				width: 300px;
+				height: auto;
+				float: left;
+				border-top: 1px solid #000;
+				margin: 20px;
+			}
+
+			li {
+				width: 100%;
+				height: 30px;
+				overflow: hidden;
+				position: relative;
+				border-bottom: 1px dashed #333;
+				line-height: 30px;
+			}
+
+			li div {
+				position: absolute;
+				top: -30px;
+				left: 0;
+			}
+
+			li div p {
+				height: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<ul id="ul1">
+			<li>
+				<div>
+					<p>1111111111111</p>
+					<p>2222222222222</p>
+				</div>
+			</li>
+			<li>
+				<div>
+					<p>33333333333333</p>
+					<p>44444444444444</p>
+				</div>
+			</li>
+			<li>
+				<div>
+					<p>555555555555555</p>
+					<p>666666666666666</p>
+				</div>
+			</li>
+			<li>
+				<div>
+					<p>777777777777777</p>
+					<p>88888888888888</p>
+				</div>
+			</li>
+			<li>
+				<div>
+					<p>999999999999999</p>
+					<p>ddddddddddddddd</p>
+				</div>
+			</li>
+			<li>
+				<div>
+					<p>aaaaaaaaaaaaaaaa</p>
+					<p>cccccccccccccccc</p>
+				</div>
+			</li>
+		</ul>
+
+		<ul id="ul2">
+			<li>
+				<div>
+					<p>1111111111111</p>
+					<p>2222222222222</p>
+				</div>
+			</li>
+			<li>
+				<div>
+					<p>33333333333333</p>
+					<p>44444444444444</p>
+				</div>
+			</li>
+			<li>
+				<div>
+					<p>555555555555555</p>
+					<p>666666666666666</p>
+				</div>
+			</li>
+			<li>
+				<div>
+					<p>777777777777777</p>
+					<p>88888888888888</p>
+				</div>
+			</li>
+			<li>
+				<div>
+					<p>999999999999999</p>
+					<p>ddddddddddddddd</p>
+				</div>
+			</li>
+			<li>
+				<div>
+					<p>aaaaaaaaaaaaaaaa</p>
+					<p>cccccccccccccccc</p>
+				</div>
+			</li>
+		</ul>
+	</body>
+</html>
+<script>
+	function startMove(obj, json, fn) {
+    clearInterval(obj.iTimer);
+    var iCur = 0;
+    var iSpeed = 0;
+    obj.iTimer = setInterval(function() {
+
+        var iBtn = true;
+
+        for (var attr in json) {
+            var iTarget = json[attr];
+            if (attr == "opacity") {
+                iCur = Math.round(css(obj, "opacity") * 100);
+            } else {
+                iCur = parseInt(css(obj, attr));
+            }
+
+            iSpeed = (iTarget - iCur) / 8;
+
+            iSpeed = iSpeed > 0 ? Math.ceil(iSpeed) : Math.floor(iSpeed);
+
+            if (iCur != iTarget) {
+                iBtn = false;
+                if (attr == "opacity") {
+                    obj.style.opacity = (iCur + iSpeed) / 100;
+                    obj.style.filter = 'alpha(opacity=' + (iCur + iSpeed) + ')';
+                } else {
+                    obj.style[attr] = iCur + iSpeed + 'px';
+                }
+            }
+
+        }
+        if (iBtn) {
+            clearInterval(obj.iTimer);
+            fn && fn.call(obj);
+        }
+
+    }, 30);
+}
+
+function css(obj, attr) {
+    if (obj.currentStyle) {
+        return obj.currentStyle[attr];
+    } else {
+        return getComputedStyle(obj, false)[attr];
+    }
+}
+
+window.onload = function() {
+    var oUl = document.getElementById("ul1");
+    var oUl2 = document.getElementById("ul2");
+
+
+    toShow(oUl);
+
+    setTimeout(function() {
+        toShow(oUl2);
+    }, 2000);
+
+    function toShow(obj) {
+        var aDiv = obj.getElementsByTagName("div");
+        var iNow = 0;
+        var timer = null;
+        var bBtn = true;
+        setInterval(function() {
+            toChange();
+        }, 4000);
+
+        function toChange() {
+            timer = setInterval(function() {
+                if (iNow == aDiv.length) {
+                    clearInterval(timer);
+                    iNow = 0;
+                    bBtn = !bBtn;
+                } else if (bBtn) {
+                    startMove(aDiv[iNow], {
+                        top: 0
+                    });
+                    iNow++;
+                } else {
+                    startMove(aDiv[iNow], {
+                        top: -30
+                    });
+                    iNow++;
+                }
+
+            }, 100);
+        }
+    }
+}
+</script>

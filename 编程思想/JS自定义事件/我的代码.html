@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .btn {
+            display: inline-block;
+            padding: 5px 12px;
+            margin-bottom: 0;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 1.53846154;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            -webkit-transition: .4s cubic-bezier(.175,.885,.32,1);
+            -o-transition: .4s cubic-bezier(.175,.885,.32,1);
+            transition: .4s cubic-bezier(.175,.885,.32,1);
+            -webkit-transition-property: background,border,outline,opacity,-webkit-box-shadow;
+            -o-transition-property: background,border,box-shadow,outline,opacity;
+            transition-property: background,border,outline,opacity,-webkit-box-shadow;
+            transition-property: background,border,box-shadow,outline,opacity;
+            transition-property: background,border,box-shadow,outline,opacity,-webkit-box-shadow;
+        }
+        .btn-primary {
+            color: #fff;
+            background-color: #8666b8;
+            border-color: #7855b0;
+        }
+    </style>
+</head>
+<body>
+    <button id="myBtn" type="button" class="btn btn-primary">click</button>
+</body>
+<script>
+    var $ = (function () {
+        var Pool=[];
+        var isExist = function (el) {
+            for(var i in Pool){
+                if(Pool[i].el == el){
+                    return Pool[i]
+                }
+            }
+            return null;
+        }
+        return function (el) {
+            var element = document.querySelector(el);
+            var instance = isExist(element);
+            if(!instance){
+                instance = new _$(element);
+                Pool.push(instance);
+            }
+            return instance;
+        }
+    })()
+
+    var _$ = function(el){
+        this.el = el;
+        this.eventMap={};
+    }
+    _$.prototype = {
+        constructor:this,
+        addEvent:function (type, fn) {
+            var el = this.el;
+            this.eventMap[type]={};
+            this.eventMap[type].fn=fn;
+            this.eventMap[type].event = document.createEvent('HTMLEvents')
+            this.eventMap[type].event.initEvent(type, true, true)
+            el.addEventListener(type,this.eventMap[type].fn);
+        },
+        fireEvent:function (type) {
+            this.el.dispatchEvent(this.eventMap[type].event)
+        },
+        removeEvent:function (type) {
+            if(this.eventMap[type]){
+                this.el.removeEventListener(type,this.eventMap[type].fn);
+            }
+        }
+    }
+    $("#myBtn").addEvent("message",function () {
+        console.log("mayuyu");
+    })
+    $("#myBtn").addEvent("click",function () {
+        $("#myBtn").removeEvent('message')
+    },true)
+    //event.eventType = 'message'
+    window.onresize=function () {
+        $("#myBtn").fireEvent('message');
+    }
+
+
+</script>
+</html>

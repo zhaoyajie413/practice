@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    //使用递归来深冻结对象
+    var isObject = (val) => val && typeof val === 'object';
+
+    function  deepFreeze(Obj) {
+        if(isObject(obj) && !Object.isFrozen(obj)){
+            Object.keys(obj).forEach(name => deepFreeze(obj[name]));
+            Object.freeze(obj);
+     }
+        return obj;
+    }
+</script>
+</html>

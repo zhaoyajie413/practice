@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		var idol=function(){
+			this.name="";
+			this.age=0;
+			this.team="";
+			this.sex=function(){
+				console.log("I am a girl")
+			}
+		}
+
+		idol.prototype.skills=function(){
+			console.log("I can sing");
+		}
+
+		var mayu=function(){
+			//使用call方法来让this继承idol的显性属性和方法
+			idol.call(this);
+		}
+		//将idol的原型的方法赋值给mayu
+		mayu.prototype = idol.prototype;
+		var person = new mayu();
+
+		console.log(person);
+		console.log(person.constructor == mayu)
+		console.log(person.constructor == idol)
+		console.log(person.__proto__ == idol.prototype)
+		console.log(person.__proto__.constructor == idol)
+		//这里直接将idol.prototype赋值给mayu.prototype 显然是有问题的。
+	</script>
+</html>

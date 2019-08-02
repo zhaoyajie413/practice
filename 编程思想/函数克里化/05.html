@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+</body>
+<script>
+    var add = function (fn) {
+        var addArgs = [];
+        return function () {
+            if (arguments.length == 0) {
+                return fn.apply(null, addArgs)
+            }
+            addArgs = [...addArgs, ...[].slice.call(arguments)];
+        }
+    }
+
+    var addScore = add(function () {
+        var args = [].slice.call(arguments)
+        var res = args.reduce((a, b) => a + b)
+        return res
+    })
+    addScore(2)
+    addScore(12)
+    console.log(addScore())
+</script>
+</html>

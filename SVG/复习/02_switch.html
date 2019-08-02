@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--SVG <switch>元素是用来做什么的呢？<switch>元素也是用来绘制文字的，那么它和<text>元素有何不同呢？
+        switch在很多编程语言中都有这个关键字，它是分支的意思，在SVG中，可以使用<switch>元素来匹配不同的语言，
+            在不同的浏览器语言环境中显示不同的SVG文字。
+        <switch>典型的用法是用于显示不同的文字，但是你不可以用它来显示不同的图形。看下面的简单例子：-->
+    <svg xmlns="http://www.w3.org/2000/svg">
+        <switch>
+            <g systemLanguage="en-UK">
+                <text x="10" y="20">UK English</text>
+            </g>
+            <g systemLanguage="en">
+                <text x="10" y="20">English</text>
+            </g>
+            <g systemLanguage="es">
+                <text x="10" y="20">Spanish</text>
+            </g>
+            <g systemLanguage="zh">
+                <text x="10" y="20">中文</text>
+            </g>
+        </switch>
+    </svg>
+</body>
+</html>

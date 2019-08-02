@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    class DoublyNode {
+        constructor(element){
+            this.element = element;
+            this.next = null;
+            this.prev = null;
+        }
+    }
+    class DoublyLinkedList {
+        constructor(){
+            this.count = 0;
+            this.head = null;
+            this.tail =null
+        }
+        push(element){
+            let node =new DoublyNode(element);
+            if(this.head == null){
+                this.head = node;
+                this.tail =node;
+            }else{
+                let current = this.head;
+                for(var i = 1;i<this.count;i++){
+                    current = current.next;
+                }
+                current.next = node;
+                node.prev = current;
+                this.tail =node;
+            }
+            this.count++
+        }
+        getElementAt(index){
+            if(index>=0 && index <= this.count){
+                let node = this.head;
+                for(let i = 0;i < index && node != null;i++){
+                    node = node.next;
+                }
+                return node;
+            }
+            return undefined;
+        }
+        insert(element,index){
+            var current = this.head;
+            var previous = null;
+            var node = new DoublyNode(element)
+            if(index>=0 && index<this.count){
+                if(index == 0){
+                    if(this.head == null){
+                        this.head = node;
+                        this.tail = node;
+                    }else{
+                        node.next = this.head;
+                        current.prev = node;
+                        this.head = node;
+                    }
+                } else if(index == this.count){
+                    current = this.tail;
+                    current.next = node;
+                    node.prev = current;
+                    this.tail = node;
+                } else{
+                    previous = this.getElementAt(index -1);
+                    current = previous.next;
+                    previous.next = node;
+                    node.prev = previous;
+                    node.next =current;
+                    current.prev = node;
+                }
+               this.count++;
+                return true
+            }
+            return false
+        }
+        removeAt(index){
+            var current,previous;
+            if(index>=0 && index<this.count){
+                if(index == 0){
+                   if(this.count==1){
+                       this.head = null;
+                       this.tail = null;
+                   } else{
+                        current = this.head.next;
+                        current.prev = null;
+                        this.head = current;
+                    }
+                } else if(index == this.count-1){
+                    previous =this.tail.prev;
+                    previous.next = null;
+                    this.tail = previous;
+                } else{
+                    previous = this.getElementAt(index -1);
+                    current = previous.next;
+                    previous.next = current.next;
+                    current.next.prev = previous;
+                }
+                this.count--;
+                return true
+            }
+            return false;
+        }
+    }
+    var d =new DoublyLinkedList();
+    console.log(d.removeAt(0))
+    d.push("mayuyu");
+    console.log(d.removeAt(0))
+   /* d.push("huahua");
+    d.push("mio")
+    d.push("yaya")
+    d.insert("youki",1)*/
+    console.log(d)
+</script>
+</html>

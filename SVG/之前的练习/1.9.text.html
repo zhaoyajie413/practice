@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg">
+    <text x="20" y="40">这里是SVG文字</text>
+</svg>
+<!--Glyphs是字母或符号的视觉表现。例如，因为字母“a”有多种不同的视觉表现方式，
+所以可以使用不同的Glyphs来绘制它-->
+<!--Fonts代表字体，它是glyphs的集合，可以用于表现一组字母或符号-->
+<!--Characters是代表一个字母或符号的二进制数字。一个character可以使用1个或多个字节来表示。
+一个characters在被计算机渲染的时候，会将它映射为字体中的一个符号-->
+
+<svg xmlns="http://www.w3.org/2000/svg">
+    <text style="text-anchor: start" x="50"
+          y="20">
+        Start
+    </text>
+    <text style="text-anchor: middle" x="50"
+          y="60">
+        Middle
+    </text>
+    <text style="text-anchor: end" x="50"
+          y="100">
+        End
+    </text>
+</svg>
+
+<!--SVG文字也可以进行描边和填充操作。如果你只指定了文字的描边属性，文字将会渲染为一个文字轮廓。
+如果你只指定了文字的填充属性，那么文字看起来和平常是一样的。-->
+
+<svg xmlns="http://www.w3.org/2000/svg">
+    <text style="fill: transparent;stroke: #0e0e0e;stroke-width: 1px;font-weight: 800;font-size: 24px" x="0"
+          y="50%">WATABE MAYUYU
+    </text>
+</svg>
+
+<!--旋转文字-->
+<svg xmlns="http://www.w3.org/2000/svg">
+    <text style="stroke:none; fill:#000000;" transform="rotate(30 20,40)"
+          x="20"
+          y="40"
+    >Rotated SVG text
+    </text>
+
+    <!--你可以使用旋转的方法来制作垂直的SVG文字，但是还有一种简单的方法来显示垂直文字。
+    那就是使用writing-mode属性，将它的值设置为tb（Top to Bottom）-->
+    <svg xmlns="http://www.w3.org/2000/svg">
+        <text style="writing-mode: tb;" x="10" y="20">
+            垂直文字
+        </text>
+    </svg>
+
+    <!--样式表-->
+    <!--
+    font-family	设置字体
+    font-size	设置文字大小
+    kerning	设置字距调整的值
+    letter-spacing	字母之间的间距
+    word-spacing	单词之间的间距
+    text-decoration	是否带下划线。可选值有：none、underline、overline和line-through
+    stroke	文字的描边颜色。默认文字只有填充色，没有描边，添加描边将使文字变粗
+    stroke-width	文字描边的宽度
+    fill	文字的填充色
+-->
+    <svg xmlns="http://www.w3.org/2000/svg">
+        <text x="20"  y="40"
+              style="font-family: Arial;
+                 font-size  : 34;
+                 stroke     : #000000;
+                 fill       : #00ff00;
+                "
+        >Styled SVG text</text>
+    </svg>
+    <!--
+    你可以使用textLength属性来设置文字的长度。文字的长度可以用来调整字符（characters）之间的距离来适应指定的长度。同时也会调整符号（glyphs）的宽度。-->
+</svg>
+</body>
+</html>

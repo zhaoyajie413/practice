@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //例子1:
+    var multiplier = (a, b) => a*b;
+    function applyOpration (a, b, opt){
+        return opt(a, b);
+    }
+    var res = applyOpration(10, 2, multiplier);
+    console.log("计算结果:"+res);
+
+    //例子2:
+    function add(a) {
+        return function (b) {
+            return a+b;
+        }
+    }
+   var sum = add(4)(6);
+    console.log("和:"+sum);
+
+    //例子3:
+    const peoples = [
+        {name:"中华民国",team:"中华民族统一战线"},
+        {name:"中华苏维埃",team:"中华民族统一战线"},
+        {name:"新桂系",team:"中华民族统一战线"},
+        {name:"西北三马",team:"中华民族统一战线"},
+        {name:"满洲国",team:"大东亚共荣圈"},
+        {name:"大日本帝国",team:"大东亚共荣圈"},
+    ]
+
+    function printPeople(people, action) {
+        return people.filter(it=>action(it))
+    }
+    function action(people) {
+        return people.team == "中华民族统一战线";
+    }
+    var list = printPeople(peoples,action);
+    console.log(list);
+</script>
+</html>

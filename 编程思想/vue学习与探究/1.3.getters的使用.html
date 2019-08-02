@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <div>Count is {{$store.state.count}}</div>
+    <div>Amount is {{$store.getters.amount}}</div>
+    <button type="button" @click="handClick">Click</button>
+</div>
+</body>
+<script src="vue.2.6.1.js"></script>
+<script src="vuex.3.1.1.js"></script>
+<script>
+    //getters相当于computed
+
+    var store = new Vuex.Store({
+        state:{
+            count:0
+        },
+        mutations:{
+            increment:function (state) {
+                state.count++;
+            }
+        },
+        getters:{
+            amount:function (state) {
+                return state.count*2
+            }
+        }
+    });
+
+    new Vue({
+        el:"#app",
+        data:function () {
+            return {
+
+            }
+        },
+        store:store,
+        methods:{
+            handClick:function () {
+                this.$store.commit("increment");
+            }
+        }
+    })
+</script>
+</html>

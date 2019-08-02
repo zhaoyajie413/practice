@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<svg width="200" height="200" viewBox="0 0 200 200">
+    <defs>
+        <filter id="blurFilter" y="-10"  height="30">
+            <feOffset in="SourceAlpha" dx="10" dy="10" />
+             <feGaussianBlur in="SourceGraphic" stdDeviation="2" y="-"/>
+        </filter>
+    </defs>
+
+    <ellipse cx="155" cy="60" rx="25" ry="15"
+             style="stroke: none; fill: #663399; filter: url(#blurFilter);" />
+</svg>
+</body>
+</html>

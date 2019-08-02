@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+</style>
+<body>
+<canvas style="background: #0e0e0e"></canvas>
+</body>
+<script>
+    class Point {
+        constructor(x,y,z){
+            this.x=x;
+            this.y=y;
+            this.z=z;
+        }
+    }
+
+    class Points{
+        constructor(X_MAX=2,X_MIN=-2,Y_MAX=2,Y_MIN=-2){
+            this.items = [];
+            this.X_MAX=X_MAX;
+            this.X_MIN=X_MIN;
+            this.Y_MAX=Y_MAX;
+            this.Y_MIN=Y_MIN;
+        }
+        push(element){
+            this.items.push(element)
+        }
+        roateY(point,theta){
+            return{
+                x:Math.cos(theta)*point.x-Math.sin(theta)*point.z,
+                y:point.y,
+                z:Math.sin(theta)*point.x+Math.cos(theta)*point.z,
+            }
+        }
+        translatePoint(stage,point){
+            let w = stage.canvas.width, h = stage.canvas.height,fallLength=stage.fallLength;
+
+            return {
+                x:point.x*fallLength/(fallLength+point.z)+w/2,
+                y:point.y*fallLength/(fallLength+point.z)+h/2,
+            }
+        }
+        draw(stage,theta){
+            this.items.forEach((point)=>{
+                point = this.roateY(point,theta);
+                var particle = this.translatePoint(stage,point);
+                stage.ctx.beginPath()
+                stage.ctx.fillStyle="rgba(255,255,255,1)";
+                stage.ctx.arc(particle.x,particle.y,2,0,2*Math.PI);
+                stage.ctx.fill();
+            })
+        }
+    }
+
+    class Stage{
+        constructor(canvas,width=this.getWindowWidth(),height=this.getWindowHeight()) {
+            this.canvas = canvas;
+            this.canvas.width=width;
+            this.canvas.height=height;
+            this.fallLength =100;
+            this.ctx = canvas.getContext('2d');
+        }
+        getWindowWidth(){
+            return Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+        }
+        getWindowHeight(){
+            return Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+        }
+        render(fn){
+            this.ctx.clearRect(0,0,this.canvas.width,this.canvas.height);
+            fn();
+            requestAnimationFrame(function () {
+                this.render(fn)
+            }.bind(this));
+        }
+    }
+
+    var stage = new Stage(document.querySelector('canvas'));
+    var points = new Points();
+    var step =10;
+    var initGeometry=()=>{
+        let w = stage.canvas.width, h = stage.canvas.height;
+        for (var i=0;i<100;i++ ) {
+            var x =Math.floor(Math.random()*200-100);
+            var y =Math.floor(Math.random()*200-100);
+            var z = Math.random()*100;
+            points.push(new Point(x,y,z));
+        }
+    }
+    initGeometry();
+    var theta=0;
+    var dtheta=0.01;
+    stage.render(function () {
+        theta+=dtheta
+        points.draw(stage,theta);
+
+    })
+
+</script>
+</html>

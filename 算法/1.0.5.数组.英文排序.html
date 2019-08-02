@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //在js里比较字符的大小是根据asc码的对应值来比较的。所以要调用localeCompare
+    var members = ["mayu","yoki","mio","nana","sakura","tomoki"];
+    members.sort(function (a,b) {
+        return a.localeCompare(b);
+    })
+    console.log(members)
+
+</script>
+</html>

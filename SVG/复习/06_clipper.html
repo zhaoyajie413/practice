@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="no-cache" http-equiv="Cache-Control"/>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimum-scale=1.0"
+          name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="Billions Connect" hid="description" name="description">
+    <meta content="portrait" hid="x5-orientation">
+    <meta content="portrait" hid="screen-orientation">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <style>
+        body{
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="mybg"></div>
+</body>
+<script>
+    class clipperBgImage {
+        constructor({dom,src,height,offsetBottom}) {
+            dom.innerHTML=this.teplate(src,this.getScreenWidth(),height,offsetBottom);
+        }
+        teplate(src,width,height,bottom) {
+            return `
+               <svg version="1.1"
+                 width="${width}"
+                 height="${height}"
+                 viewBox="0 0 ${width} ${height}"
+                 xmlns="http://www.w3.org/2000/svg">
+                <defs >
+                    <g>
+                        <clipPath id="bg">
+                            <path style="stroke: none; fill: #00ff00; filter: url(#blurFilter);" d="M0 0 L${width} 0 L${width} ${height-bottom}  C${width} ${height-bottom} ${width/2} ${height} 0 ${height-bottom} Z" stroke="red"  ></path>
+                        </clipPath>
+                        <filter id="blurFilter" y="-10" height="40" x="-10" width="150">
+                            <feOffset in="SourceAlpha" dx="3" dy="-3" result="offset" />
+                            <feGaussianBlur in="offset" stdDeviation="10"  result="blur"/>
+                            <feMerge>
+                                <feMergeNode in="blur" />
+                                <feMergeNode in="SourceGraphic" />
+                            </feMerge>
+                        </filter>
+                        <pattern id="imageSource" width="100%" height="${height}" patternUnits="userSpaceOnUse">
+                            <image   x="0" y="0"  height="${height}"  xlink:href="${src}"></image>
+                        </pattern>
+
+                    </g>
+                </defs>
+
+                <path x="0" y="0" fill="white" style="stroke: none;filter: url(#blurFilter);" d="M0 0 L${width} 0 L${width} ${height-bottom}  C${width} ${height-bottom} ${width/2} ${height} 0 ${height-bottom} Z" stroke="red"  ></path>
+                <g style="clip-path:url(#bg);" >
+                       <rect   x="0" y="0" width="100%"  height="${height}"  fill="url(#imageSource)"></rect>
+                </g>
+            </svg>
+            `
+        }
+        getScreenWidth(){
+            return Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+        }
+    }
+    new clipperBgImage({
+        dom:document.querySelector("#mybg"),
+        src:"feifei.jpg",
+        height:300,
+        offsetBottom:100
+    })
+</script>
+</html>

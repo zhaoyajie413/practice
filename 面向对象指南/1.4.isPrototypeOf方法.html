@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		var idol=function(){
+			this.name="";
+			this.age="";
+			this.sex="";
+			this.team=""
+		}
+		idol.prototype.skills=function(){
+			console.log("I can sing")
+		}
+		var mayu=function(){
+			idol.call(mayu)
+		}
+		mayu.prototype=new idol();
+		
+		//isPrototypeOf() 方法用于测试一个对象是否存在于另一个对象的原型链上。
+		var m=new mayu();
+		
+		console.log(idol.prototype.isPrototypeOf(m)) //true
+		console.log(mayu.prototype.isPrototypeOf(m))  //true
+	</script>
+	
+</html>

@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e39f0049-661c-409b-ac82-4004e78577e4" name="默认更改列表" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Dart_SDK.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SVG/之前的练习/1.10.tspan.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SVG/之前的练习/1.6.viewbox.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SVG/之前的练习/1.9.text.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SVG/线条.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mayuyu.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/musicWave/src/1.1.基本类型.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/musicWave/src/audioPlayer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/musicWave/src/canvasStage.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/musicWave/test/01.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/musicWave/test/aini.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/musicWave/test/audioPlayer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/musicWave/test/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/musicWave/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windowShades/images/fei.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windowShades/images/r1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windowShades/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windowShades/src/Shades.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windowShades/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/1.1.constructor.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/1.2.call来继承显性的属性和方法.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/assets/image/constructor_01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/assets/image/constructor_02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/assets/image/constructor_03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/css/zui-theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/css/zui-theme.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/css/zui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/css/zui.lite.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/css/zui.lite.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/css/zui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/fonts/zenicon.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/fonts/zenicon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/fonts/zenicon.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/fonts/zenicon.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/js/zui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/js/zui.lite.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/js/zui.lite.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/js/zui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/ajaxFake/zui.ajaxFake.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/ajaxFake/zui.ajaxFake.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/array/zui.array.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/array/zui.array.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/board/zui.board.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/board/zui.board.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/board/zui.board.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/board/zui.board.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/bootbox/bootbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/bootbox/bootbox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/bootbox/bootbox.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/bootbox/bootbox.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/calendar/zui.calendar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/calendar/zui.calendar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/calendar/zui.calendar.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/calendar/zui.calendar.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/chart/zui.chart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/chart/zui.chart.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/chosen/chosen.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/chosen/chosen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/chosen/chosen.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/chosen/chosen.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/chosenicons/zui.chosenicons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/chosenicons/zui.chosenicons.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/chosenicons/zui.chosenicons.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/chosenicons/zui.chosenicons.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/clipboard/clipboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/clipboard/clipboard.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/colorpicker/zui.colorpicker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/colorpicker/zui.colorpicker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/colorpicker/zui.colorpicker.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/colorpicker/zui.colorpicker.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/colorset.js/zui.colorset.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/colorset.js/zui.colorset.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/dashboard/zui.dashboard.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/dashboard/zui.dashboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/dashboard/zui.dashboard.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/dashboard/zui.dashboard.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/datagrid/zui.datagrid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/datagrid/zui.datagrid.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/datagrid/zui.datagrid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/datagrid/zui.datagrid.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/datatable/zui.datatable.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/datatable/zui.datatable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/datatable/zui.datatable.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/datatable/zui.datatable.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/datetimepicker/datetimepicker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/datetimepicker/datetimepicker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/datetimepicker/datetimepicker.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/datetimepicker/datetimepicker.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/hotkey/hotkey.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/hotkey/hotkey.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/ieonly/excanvas.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/ieonly/html5shiv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/ieonly/respond.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/imgcutter/zui.imgcutter.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/imgcutter/zui.imgcutter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/imgcutter/zui.imgcutter.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/imgcutter/zui.imgcutter.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/imgready/imgready.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/imgready/imgready.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/jquery/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/kindeditor/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/kindeditor/kindeditor.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/kindeditor/kindeditor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/kindeditor/kindeditor.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/kindeditor/kindeditor.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/kindeditor/lang/en.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/kindeditor/lang/zh_CN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/kindeditor/lang/zh_TW.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/kindeditor/plugins.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/kindeditor/themes/default/default.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/markdoc/zui.markdoc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/markdoc/zui.markdoc.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/migrate1.2/zui.migrate1.2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/migrate1.2/zui.migrate1.2.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/prettify/lang-apollo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/prettify/lang-basic.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/prettify/lang-clj.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/prettify/lang-css.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/prettify/lang-dart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/prettify/lang-erlang.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/prettify/lang-go.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/prettify/lang-hs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/prettify/lang-lisp.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/prettify/lang-llvm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/prettify/lang-lua.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/prettify/lang-matlab.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/prettify/lang-ml.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/prettify/lang-mumps.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/prettify/lang-n.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/prettify/lang-pascal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/prettify/lang-proto.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/prettify/lang-r.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/prettify/lang-rd.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/prettify/lang-scala.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/prettify/lang-sql.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/prettify/lang-tcl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/prettify/lang-tex.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/prettify/lang-vb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/prettify/lang-vhdl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/prettify/lang-wiki.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/prettify/lang-xq.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/prettify/lang-yaml.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/prettify/prettify.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/prettify/prettify.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/prettify/run_prettify.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/selectable/zui.selectable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/selectable/zui.selectable.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/sortable/zui.sortable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/sortable/zui.sortable.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/tabs/zui.tabs.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/tabs/zui.tabs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/tabs/zui.tabs.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/tabs/zui.tabs.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/treemap/zui.treemap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/treemap/zui.treemap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/treemap/zui.treemap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/treemap/zui.treemap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/ueditor/ueditor.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/ueditor/ueditor.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/uploader/Moxie.swf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/uploader/Moxie.xap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/uploader/zui.uploader.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/uploader/zui.uploader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/uploader/zui.uploader.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/lib/uploader/zui.uploader.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/logger/basic.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/logger/logger.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../面向对象指南/tools/theme/zui-theme.violet.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/practice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/practice.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/webpackStudy/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/webpackStudy/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/webpackStudy/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/webpackStudy/.idea/webpackStudy.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/webpackStudy/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/webpackStudy/axiom/CompileUtil.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/webpackStudy/axiom/Dep.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/webpackStudy/axiom/Mvvm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/webpackStudy/axiom/Watcher.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/webpackStudy/axiom/compile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/webpackStudy/axiom/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/webpackStudy/axiom/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/webpackStudy/axiom/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/webpackStudy/axiom/observe.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/webpackStudy/axiom/webpack.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/webpackStudy/config.02.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/webpackStudy/loader/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/webpackStudy/loader/mayu.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/webpackStudy/plugins/ConsoleLogOnBuildWebpackPlugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/webpackStudy/plugins/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/webpackStudy/plugins/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/webpackStudy/plugins/mayu.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/webpackStudy/plugins/output.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/webpackStudy/plugins/webpack.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/webpackStudy/start/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/webpackStudy/start/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/webpackStudy/start/mayu.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/webpackStudy/start/output.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/webpackStudy/start/webpack.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/webpackStudy/test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/webpackStudy/test/dist/output.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/webpackStudy/test/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/webpackStudy/test/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/webpackStudy/test/js/mayu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/webpackStudy/test/mayu.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/webpackStudy/test/output.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/webpackStudy/test/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/webpackStudy/test/webpack.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/webpackStudy/订阅者模式/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/webpackStudy/订阅者模式/publish.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/网易学习/JS自定义事件/基本原理.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/网易学习/JS自定义事件/我的代码.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/网易学习/vue学习与探究/1.1.vuex的基本使用.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/网易学习/vue学习与探究/1.2.action和mutation的区别.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/网易学习/vue学习与探究/1.3.getters的使用.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/网易学习/vue学习与探究/2.1.router基本使用.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/网易学习/vue学习与探究/vue-router.3.0.6.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/网易学习/vue学习与探究/vue.2.6.1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/网易学习/vue学习与探究/vuex.3.1.1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/网易学习/函数克里化/01.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/网易学习/函数克里化/02.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/网易学习/函数克里化/03.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/网易学习/函数克里化/04.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/网易学习/函数克里化/05.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/网易学习/函数式编程/1.2.1.printMessage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/网易学习/函数式编程/1.2.2.average.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/网易学习/函数式编程/2.1.Person类与Student类.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/网易学习/函数式编程/2.2.1.Student需求的函数式方案.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/网易学习/函数式编程/2.2.2.值对象.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/网易学习/函数式编程/2.2.3.1.浅冻结对象可变部分.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/网易学习/函数式编程/2.2.3.2.使用递归来深冻结对象.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/网易学习/函数式编程/2.3.1.高阶函数.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/网易学习/函数式编程/2.3.2.函数的方法apply和call.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/网易学习/函数式编程/spread.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2019/网易学习/链式设计/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SVG/path.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SVG/动画.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SVG/动画2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SVG/圆形.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SVG/多边形.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SVG/折现.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SVG/椭圆.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SVG/直线.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SVG/矩形.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../canvas/particle.html" beforeDir="false" afterPath="$PROJECT_DIR$/../canvas/particle.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../js内置对象/Array.html" beforeDir="false" afterPath="$PROJECT_DIR$/../js内置对象/Array.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../面向对象指南/Object.defineProperty.html" beforeDir="false" afterPath="$PROJECT_DIR$/../面向对象指南/2.5.Object.defineProperty.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../面向对象指南/call来继承显性的属性和方法.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../面向对象指南/hasOwnProperty.html" beforeDir="false" afterPath="$PROJECT_DIR$/../面向对象指南/1.3.hasOwnProperty.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../面向对象指南/isPrototypeOf方法.html" beforeDir="false" afterPath="$PROJECT_DIR$/../面向对象指南/1.4.isPrototypeOf方法.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../面向对象指南/new_file.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../面向对象指南/临时构造器.html" beforeDir="false" afterPath="$PROJECT_DIR$/../面向对象指南/2.1.临时构造器.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../面向对象指南/只继承原型.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../面向对象指南/命名空间.html" beforeDir="false" afterPath="$PROJECT_DIR$/../面向对象指南/2.2命名空间.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../面向对象指南/多重继承.html" beforeDir="false" afterPath="$PROJECT_DIR$/../面向对象指南/2.3.多重继承.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../面向对象指南/对象实例化.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../面向对象指南/工厂模式.html" beforeDir="false" afterPath="$PROJECT_DIR$/../面向对象指南/3.1.工厂模式.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../面向对象指南/建造这模式.html" beforeDir="false" afterPath="$PROJECT_DIR$/../面向对象指南/3.2.建造这模式.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../面向对象指南/构造器模式.html" beforeDir="false" afterPath="$PROJECT_DIR$/../面向对象指南/3.3.构造器模式.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../面向对象指南/模块化模式.html" beforeDir="false" afterPath="$PROJECT_DIR$/../面向对象指南/3.4.模块化模式.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../面向对象指南/深拷贝.html" beforeDir="false" afterPath="$PROJECT_DIR$/../面向对象指南/2.4.深拷贝.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../面向对象指南/继承.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../面向对象指南/观察者模式.html" beforeDir="false" afterPath="$PROJECT_DIR$/../面向对象指南/3.5.观察者模式.html" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/windowShades/src/Shades.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="386">
+              <caret line="37" column="22" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/musicWave/src/canvasStage.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="24" column="24" lean-forward="true" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/musicWave/test/audioPlayer.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="22" column="3" selection-start-line="22" selection-start-column="3" selection-end-line="25" selection-end-column="5" />
+              <folding>
+                <element signature="n#style#0;n#canvas#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/musicWave/test/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="50">
+              <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
+              <folding>
+                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#canvas#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="tsconfig.json" />
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/01.ts" />
+        <option value="$PROJECT_DIR$/src/ioi.js" />
+        <option value="$PROJECT_DIR$/tsconfig.json" />
+        <option value="$PROJECT_DIR$/built/1.1.基本类型.js" />
+        <option value="$PROJECT_DIR$/src/1.1.基本类型.ts" />
+        <option value="$PROJECT_DIR$/built/audioPlayer.js" />
+        <option value="$PROJECT_DIR$/src/audioDom.ts" />
+        <option value="$PROJECT_DIR$/src/audioPlayer.ts" />
+        <option value="$PROJECT_DIR$/test/audioPlayer.html" />
+        <option value="$PROJECT_DIR$/test/circlePlayer.html" />
+        <option value="$PROJECT_DIR$/src/canvasStage.ts" />
+        <option value="$PROJECT_DIR$/windowShades/tsconfig.json" />
+        <option value="$PROJECT_DIR$/windowShades/built/Shades.js" />
+        <option value="$PROJECT_DIR$/windowShades/src/Shades.ts" />
+        <option value="$PROJECT_DIR$/windowShades/index.html" />
+        <option value="$PROJECT_DIR$/musicWave/test/circlePlayer.html" />
+        <option value="$PROJECT_DIR$/musicWave/test/audioPlayer.html" />
+        <option value="$PROJECT_DIR$/musicWave/src/canvasStage.ts" />
+        <option value="$PROJECT_DIR$/musicWave/test/index.html" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="width" value="1026" />
+    <option name="height" value="546" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="typescript" type="b2602c69:ProjectViewProjectNode" />
+              <item name="typescript" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="typescript" type="b2602c69:ProjectViewProjectNode" />
+              <item name="typescript" type="462c0819:PsiDirectoryNode" />
+              <item name="musicWave" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="typescript" type="b2602c69:ProjectViewProjectNode" />
+              <item name="typescript" type="462c0819:PsiDirectoryNode" />
+              <item name="musicWave" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="typescript" type="b2602c69:ProjectViewProjectNode" />
+              <item name="typescript" type="462c0819:PsiDirectoryNode" />
+              <item name="musicWave" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="typescript" type="b2602c69:ProjectViewProjectNode" />
+              <item name="typescript" type="462c0819:PsiDirectoryNode" />
+              <item name="windowShades" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="typescript" type="b2602c69:ProjectViewProjectNode" />
+              <item name="typescript" type="462c0819:PsiDirectoryNode" />
+              <item name="windowShades" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="eu.ydp.idea.ts.spec.generator.settings.spec.template" value="import {$ClassName$} from '$TestsRelativePath$../src/$classRelativePath$/$ClassName$';&#10;&#10;describe('$ClassName$', () =&gt; {&#10;  let $ObjName$:$ClassName$;&#10;&#10;  beforeEach(() =&gt; {&#10;    $ObjName$ = new $ClassName$();&#10;  });&#10;&#10;  describe('', () =&gt; {&#10;    it('', () =&gt; {&#10;      // given&#10;&#10;      // when&#10;&#10;      // then&#10;    });&#10;  });&#10;});&#10;" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/workspace/公共插件/manx-portal/trunk" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2018.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\study\practice\typescript\windowShades\images" />
+      <recent name="C:\study\practice\typescript\windowShades" />
+      <recent name="C:\study\practice\typescript\musicWave" />
+      <recent name="C:\study\practice\typescript\src" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\study\practice\typescript\windowShades\images" />
+      <recent name="C:\study\practice\typescript\windowShades\src" />
+      <recent name="C:\study\practice\typescript\test" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.index.html">
+    <configuration name="audioPlayer.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/typescript/test/audioPlayer.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="circlePlayer.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/typescript/test/circlePlayer.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/typescript/windowShades/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/typescript/musicWave/test/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="1.1.基本类型.ts" type="TypeScriptProgramRunner" factoryName="TypeScript" temporary="true">
+      <module name="typescript" />
+      <option name="interpreterRef" value="project" />
+      <option name="interpreterOptions" value="" />
+      <option name="workingDirectory" value="$PROJECT_DIR$/src" />
+      <option name="tsconfigFile" value="" />
+      <option name="extraTypeScriptOptions" value="" />
+      <option name="scriptName" value="$PROJECT_DIR$/src/1.1.基本类型.ts" />
+      <option name="programParameters" value="" />
+      <option name="tsnodePackage" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JavaScript Debug.circlePlayer.html" />
+        <item itemvalue="JavaScript Debug.audioPlayer.html" />
+        <item itemvalue="TypeScript.1.1.基本类型.ts" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e39f0049-661c-409b-ac82-4004e78577e4" name="默认更改列表" comment="" />
+      <created>1564036324392</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1564036324392</updated>
+      <workItem from="1564036325647" duration="4673000" />
+      <workItem from="1564112040737" duration="12334000" />
+      <workItem from="1564361867100" duration="18068000" />
+      <workItem from="1564387845678" duration="2291000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="37366000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" x="164" y="85" width="224" height="633" id="Project" order="0" visible="true" weight="0.23511904" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32764506" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32935154" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32935154" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32935154" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5014881" side_tool="true" visible="true" weight="0.18941979" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4985119" visible="true" weight="0.18941979" />
+      <window_info anchor="bottom" id="调试" order="11" />
+      <window_info anchor="bottom" id="TypeScript" order="12" weight="0.32935154" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/01.js" />
+    <entry file="file://$PROJECT_DIR$/src/ioi.js" />
+    <entry file="file://$PROJECT_DIR$/built/01.js.map" />
+    <entry file="file://$PROJECT_DIR$/built/01.js" />
+    <entry file="file://$PROJECT_DIR$/musicWave/src/1.1.基本类型.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musicWave/built/1.1.基本类型.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musicWave/built/audioDom.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musicWave/built/audioPlayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="26" column="22" lean-forward="true" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musicWave/built/canvasStage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musicWave/src/audioPlayer.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-251">
+          <caret line="45" column="21" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/windowShades/built/Shades.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-164">
+          <caret line="18" column="48" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/windowShades/tsconfig.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musicWave/tsconfig.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/windowShades/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="21" column="43" lean-forward="true" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musicWave/test/audioPlayer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="22" column="3" selection-start-line="22" selection-start-column="3" selection-end-line="25" selection-end-column="5" />
+          <folding>
+            <element signature="n#style#0;n#canvas#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/windowShades/src/Shades.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="37" column="22" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musicWave/src/canvasStage.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="24" column="24" lean-forward="true" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musicWave/test/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

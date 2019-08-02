@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.wrapper {
+				height: 200px;
+				perspective: 1000px;
+				transform-style: preserve-3d;
+				transform: rotateX(-5deg);
+			}
+
+			.wrapper .item {
+				width: 200px;
+				position: relative;
+				margin: 200px auto;
+				transition: .5s;
+				transform-style: preserve-3d;
+				transform-origin: center;
+				animation: rotate 20s linear infinite;
+			}
+			@keyframes rotate{
+				from{
+					transform: rotateY(0deg);
+				}
+				to{
+					transform: rotateY(360deg);
+				}
+			}
+			.wrapper .item>div {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 200px;
+				height: 200px;
+				text-align: center;
+				line-height: 200px;
+
+			}
+		
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="item">
+				
+			</div>
+		</div>
+	</body>
+	<script>
+		function angle(n) {
+			var total = 180 * (n - 2);
+			var step = (total / n) - 180;
+			var start = 0;
+			var angleList = [];
+			var index = 0;
+			while (index < n) {
+				index++;
+				angleList.unshift(start);
+				start += step;
+			}
+			return angleList;
+		}
+
+		function mio(selectorName,panelSize, numberOfPanels) {
+			var tz = Math.round((panelSize / 2) / Math.tan(((Math.PI * 2) / numberOfPanels) / 2));
+			var angleList = angle(numberOfPanels);
+			var cssString = "";
+			angleList.forEach(function(it, i) {
+				cssString += selectorName+":nth-child(" + (i + 1) + ") { transform: rotateY( " + it + "deg ) translateZ( " + tz + "px );}\n"
+			})
+			return cssString;
+		}
+		console.log(mio(".wrapper .item>div",200, 100))
+	</script>
+</html>

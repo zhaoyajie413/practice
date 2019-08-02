@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    /*
+    * push：添加元素到栈顶;
+    * pop:移除栈顶元素
+    * peek:返回栈顶元素
+    * isEmpty:空返回true,反之false
+    * clear:清空
+    * size:返回长度
+    * */
+    class Stack {
+        constructor(){
+            this.items = [];
+        }
+        //
+        push(element){
+            this.items.push(element)
+        }
+        pop(){
+            return this.items.pop();
+        }
+        peek(){
+            return this.items[this.items.length-1];
+        }
+        isEmpty() {
+            return this.items.length === 0;
+        }
+        clear(){
+            this.items = Array.from([]);
+        }
+        size(){
+            return this.items.length;
+        }
+    }
+    var s =new Stack();
+    s.push('mayuyu');
+    console.log(s.items)
+    s.pop();
+    console.log(s.items)
+</script>
+</html>

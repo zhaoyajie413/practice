@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+   // 3D场景中,假设要获取P1(x1, y1, z1)与P2(x2, y2, z2)之间的距离d
+   function distance3D(p1, p2){
+
+       var dX = p1.x - p2.x
+
+           , dY = p1.y - p2.y
+
+           , dZ = p1.z - p2.z
+
+       return Math.sqrt(Math.pow(dX, 2) + Math.pow(dY, 2) + Math.pow(dZ, 2))
+
+   }
+   p1={x:12,y:22,z:31};
+   p2={x:21,y:32,z:42};
+   console.log(distance3D(p1, p2))
+</script>
+</html>

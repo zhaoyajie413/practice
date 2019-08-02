@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.wrapper{
+				position: relative;
+				margin: 20px auto;
+				/* perspective应该放在父级 */
+				 transform-style: preserve-3d;
+				
+				 perspective:800px;
+				text-align: center;
+				
+			}
+			.item{
+				width: 540px;
+				height: 320px;	
+				display: inline-block;
+				position: relative;
+				transition: .5s;				  
+			}
+			.item>img{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				transition: .5s;
+				/* 是否显示背面 */
+				backface-visibility:hidden;
+			}
+			.item>img:nth-child(1){
+				transform: rotateY(0deg);
+				
+			}
+			.item>img:nth-child(2){
+				transform:rotateY(180deg);
+			}
+			.item:hover>img:nth-child(1){
+				transform: rotateY(180deg);
+				
+			}
+		.item:hover>img:nth-child(2){
+			transform: rotateY(360deg);
+			
+		}
+			
+			
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="item">
+				<img src="./img/1.jpg" />
+				<img src="./img/2.jpg" />
+			</div>
+		</div>
+	</body>
+</html>

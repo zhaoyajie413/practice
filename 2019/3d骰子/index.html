@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			  body {
+	background:#0fa;
+}
+.box {
+	position:relative;
+	margin:200px auto;
+	width:200px;
+	height:200px;
+	animation:active 6s infinite forwards;
+	transform:rotate3d(1,1,-1,-60deg);
+	/* 设置使子元素也拥有父元素的3维效果 */
+            transform-style:preserve-3d;
+}
+.item {
+	width:200px;
+	height:200px;
+	position:absolute;
+	top:0;
+	left:0;
+	opacity:.9;
+	font-weight:600;
+	line-height:200px;
+	text-align:center;
+	font-size:36px;
+	border:1px solid #000;
+	background:#fff;
+	border-radius:10px;
+}
+.front {
+	transform:translateZ(100px)
+}
+.back {
+	transform:translateZ(-100px) rotateY(180deg)
+}
+.left {
+	transform:translateX(-100px) rotateY(-90deg)
+}
+.right {
+	transform:translateX(100px) rotateY(90deg)
+}
+.top {
+	transform:translateY(-100px) rotateX(90deg)
+}
+.bottom {
+	transform:translateY(100px) rotateX(-90deg)
+}
+@keyframes active {
+	from {
+	transform:rotate3d(1,-1,-1,-120deg)
+}
+20% {
+	transform:rotate3d(-1,-1,-1,-180deg)
+}
+40% {
+	transform:rotate3d(-1,-1,1,-240deg)
+}
+60% {
+	transform:rotate3d(-1,1,1,-300deg)
+}
+80% {
+	transform:rotate3d(1,-1,1,-360deg)
+}
+to {
+	transform:rotate3d(-1,1,-1,-60deg)
+}
+}.dice {
+	position:absolute;
+	width:20px;
+	height:20px;
+	border-radius:50%;
+	background:#000;
+}
+.one {
+	top:50%;
+	left:50%;
+	transform:translate(-50%);
+}
+.two {
+	background:red;
+	top:90px;
+	left:50px;
+}
+.two:nth-child(2) {
+	left:120px;
+}
+.three {
+	top:120px;
+	left:50px;
+}
+.three:nth-child(2) {
+	top:120px;
+	left:120px;
+}
+.three:nth-child(3) {
+	top:60px;
+	left:90px;
+}
+.four {
+	background:red;
+	top:120px;
+	left:120px;
+}
+.four:nth-child(2) {
+	top:120px;
+	left:50px;
+}
+.four:nth-child(3) {
+	top:60px;
+	left:50px;
+}
+.four:nth-child(4) {
+	top:60px;
+	left:120px;
+}
+.five {
+	top:140px;
+	left:140px;
+}
+.five:nth-child(2) {
+	top:140px;
+	left:40px;
+}
+.five:nth-child(3) {
+	top:40px;
+	left:40px;
+}
+.five:nth-child(4) {
+	top:40px;
+	left:140px;
+}
+.five:nth-child(5) {
+	top:90px;
+	left:90px;
+}
+.six {
+	top:140px;
+	left:140px;
+}
+.six:nth-child(2) {
+	top:140px;
+	left:40px;
+}
+.six:nth-child(3) {
+	top:40px;
+	left:40px;
+}
+.six:nth-child(4) {
+	top:40px;
+	left:140px;
+}
+.six:nth-child(5) {
+	top:40px;
+	left:90px;
+}
+.six:nth-child(6) {
+	top:140px;
+	left:90px;
+}
+
+		</style>
+	</head>
+	<body>
+		<div class="box">
+    <div class="item front">
+        <div class="dice one"></div>
+    </div>
+    <div class="item back">
+        <div class="dice three"></div>
+        <div class="dice three"></div>
+        <div class="dice three"></div>
+    </div>
+    <div class="item left">
+        <div class="dice two"></div>
+        <div class="dice two"></div>
+    </div>
+    <div class="item right">
+        <div class="dice four"></div>
+        <div class="dice four"></div>
+        <div class="dice four"></div>
+        <div class="dice four"></div>
+    </div>
+    <div class="item top">
+        <div class="dice five"></div>
+        <div class="dice five"></div>
+        <div class="dice five"></div>
+        <div class="dice five"></div>
+        <div class="dice five"></div>
+    </div>
+    <div class="item bottom">
+        <div class="dice six"></div>
+        <div class="dice six"></div>
+        <div class="dice six"></div>
+        <div class="dice six"></div>
+        <div class="dice six"></div>
+        <div class="dice six"></div>
+    </div>
+</div>
+	</body>
+	<script>
+		
+	</script>
+</html>
