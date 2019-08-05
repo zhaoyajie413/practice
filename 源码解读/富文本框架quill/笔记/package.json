@@ -1,0 +1,27 @@
+{
+  "name": "note",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "_clone@2.1.2@clone": "^2.1.2",
+    "_deep-equal@1.0.1@deep-equal": "^1.0.1",
+    "_extend@3.0.2@extend": "^3.0.2",
+    "_fast-diff@1.2.0@fast-diff": "^1.2.0",
+    "_parchment@1.1.4@parchment": "^1.1.4",
+    "_quill-delta@4.2.1@quill-delta": "^4.2.1",
+    "clone": "^2.1.2",
+    "deep-equal": "^1.0.1",
+    "eventemitter3": "^4.0.0",
+    "extend": "^3.0.2",
+    "parchment": "2.0.0-dev.0",
+    "quill-delta": "^4.2.1",
+    "url-loader": "^2.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

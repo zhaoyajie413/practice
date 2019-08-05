@@ -1275,7 +1275,6 @@
                     _classCallCheck(this, Quill);
                     //继承主题，配置等
                     this.options = expandConfig(container, options);
-                    console.log(this.options)
                     this.container = this.options.container;
 
                     if (this.container == null) {
@@ -1290,7 +1289,7 @@
                     this.container.classList.add('ql-container');
                     this.container.innerHTML = '';
                     this.container.__quill = this;
-                    return
+
                     this.root = this.addContainer('ql-editor');
                     this.root.classList.add('ql-blank');
                     this.root.setAttribute('data-gramm', false);

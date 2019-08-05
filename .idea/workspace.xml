@@ -1,7 +1,152 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="010225da-914c-43df-a79b-8a8a2cc355b9" name="Default Changelist" comment="" />
+    <list default="true" id="010225da-914c-43df-a79b-8a8a2cc355b9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/base.styl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/bubble.styl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/bubble/toolbar.styl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/bubble/tooltip.styl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/core.styl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/align-center.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/align-justify.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/align-left.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/align-right.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/attachment.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/audio.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/authorship.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/background.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/blockquote.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/bold.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/clean.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/code.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/color.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/comment.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/direction-ltr.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/direction-rtl.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/dropdown.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/embed.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/emoji.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/float-center.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/float-full.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/float-left.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/float-right.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/font.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/formula.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/hashtag.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/header-2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/header-3.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/header-4.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/header-5.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/header-6.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/header.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/horizontal-rule.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/image.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/indent.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/italic.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/link.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/list-bullet.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/list-check.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/list-ordered.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/map.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/mention.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/more.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/outdent.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/redo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/size-decrease.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/size-increase.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/size.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/spacing.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/speech.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/strike.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/subscript.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/superscript.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/table-border-all.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/table-border-bottom.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/table-border-left.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/table-border-none.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/table-border-outside.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/table-border-right.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/table-border-top.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/table-delete-cells.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/table-delete-columns.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/table-delete-rows.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/table-insert-cells.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/table-insert-columns.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/table-insert-rows.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/table-merge-cells.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/table-unmerge-cells.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/table.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/underline.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/undo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/icons/video.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/snow.styl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/snow/toolbar.styl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/assets/snow/tooltip.styl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/blots/block.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/blots/break.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/blots/container.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/blots/cursor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/blots/embed.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/blots/inline.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/blots/scroll.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/blots/text.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/core.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/core/editor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/core/emitter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/core/exports.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/core/instances.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/core/logger.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/core/module.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/core/quill.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/core/selection.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/core/theme.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/dist/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/formats/align.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/formats/background.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/formats/blockquote.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/formats/bold.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/formats/code.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/formats/color.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/formats/direction.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/formats/font.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/formats/formula.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/formats/header.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/formats/image.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/formats/indent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/formats/italic.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/formats/link.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/formats/list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/formats/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/formats/size.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/formats/strike.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/formats/table.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/formats/underline.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/formats/video.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/modules/clipboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/modules/history.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/modules/keyboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/modules/syntax.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/modules/table.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/modules/toolbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/modules/uploader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/quill.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/themes/base.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/themes/bubble.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/themes/snow.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/ui/color-picker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/ui/icon-picker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/ui/icons.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/ui/picker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/ui/tooltip.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/源码解读/富文本框架quill/源代码/quill.1.3.6.js" beforeDir="false" afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/源代码/quill.1.3.6.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/MiniQuill.css" beforeDir="false" afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/css/MiniQuill.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/MiniQuill.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/test/index.html" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -12,12 +157,104 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ui-design/手风琴/index.html">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/core/exports.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
+            <state relative-caret-position="50">
+              <caret line="2" selection-start-line="2" selection-end-line="12" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/quill.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1817">
+              <caret line="120" column="1" selection-start-line="120" selection-start-column="1" selection-end-line="120" selection-end-column="1" />
+              <folding>
+                <element signature="e#0#27#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/test/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="118">
+              <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/core.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/blots/scroll.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2525">
+              <caret line="70" column="31" lean-forward="true" selection-start-line="70" selection-start-column="31" selection-end-line="70" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#61#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/core/quill.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2425">
+              <caret line="97" column="42" selection-start-line="97" selection-start-column="42" selection-end-line="97" selection-end-column="42" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/core/editor.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="3" column="48" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/dist/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="193">
+              <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/dist/quill.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/webpack.config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="475">
+              <caret line="22" column="31" lean-forward="true" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -28,8 +265,19 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>this.scrollingContainer</find>
+      <find>Quill</find>
+      <find>Quill.im</find>
+      <find>register</find>
+      <find>addContainer</find>
+      <find>globalRegistry</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -38,20 +286,41 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/ui-design/手风琴/index.html" />
+        <option value="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/src/1.js" />
+        <option value="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/src/index.js" />
+        <option value="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/src/export.js" />
+        <option value="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/src/exports.js" />
+        <option value="$PROJECT_DIR$/源码解读/富文本框架quill/源代码/quill.1.3.6.js" />
+        <option value="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/src/expandConfig.js" />
+        <option value="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/src/MiniQuill.js" />
+        <option value="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/src/editor.js" />
+        <option value="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/src/blots/text.js" />
+        <option value="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/package.json" />
+        <option value="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/src/core/expandConfig.js" />
+        <option value="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/src/core/MiniQuill.js" />
+        <option value="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/src/core/exports.js" />
+        <option value="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/core.js" />
+        <option value="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/quill.js" />
+        <option value="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/index.html" />
+        <option value="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/webpack.config.js" />
+        <option value="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/dist/index.html" />
+        <option value="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/test/index.html" />
+        <option value="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/core/quill.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="width" value="1026" />
-    <option name="height" value="546" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1386" />
+    <option name="height" value="788" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -62,21 +331,58 @@
             <path>
               <item name="practice" type="b2602c69:ProjectViewProjectNode" />
               <item name="practice" type="462c0819:PsiDirectoryNode" />
-              <item name="ui-design" type="462c0819:PsiDirectoryNode" />
+              <item name="webpackStudy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="practice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="practice" type="462c0819:PsiDirectoryNode" />
+              <item name="源码解读" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="practice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="practice" type="462c0819:PsiDirectoryNode" />
+              <item name="源码解读" type="462c0819:PsiDirectoryNode" />
+              <item name="富文本框架quill" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="practice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="practice" type="462c0819:PsiDirectoryNode" />
+              <item name="源码解读" type="462c0819:PsiDirectoryNode" />
+              <item name="富文本框架quill" type="462c0819:PsiDirectoryNode" />
+              <item name="笔记" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="eu.ydp.idea.ts.spec.generator.settings.spec.template" value="import {$ClassName$} from '$TestsRelativePath$../src/$classRelativePath$/$ClassName$';&#10;&#10;describe('$ClassName$', () =&gt; {&#10;  let $ObjName$:$ClassName$;&#10;&#10;  beforeEach(() =&gt; {&#10;    $ObjName$ = new $ClassName$();&#10;  });&#10;&#10;  describe('', () =&gt; {&#10;    it('', () =&gt; {&#10;      // given&#10;&#10;      // when&#10;&#10;      // then&#10;    });&#10;  });&#10;});&#10;" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.smartKeys" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2018.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\study\最近的工作\practice\源码解读\富文本框架quill\笔记" />
+      <recent name="C:\study\最近的工作\practice\源码解读\富文本框架quill\笔记\src" />
+      <recent name="C:\study\最近的工作\practice\源码解读\富文本框架quill\笔记\dist" />
+      <recent name="C:\study\最近的工作\practice\源码解读\富文本框架quill\笔记\src\core" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\study\最近的工作\practice\源码解读\富文本框架quill\笔记\test" />
+      <recent name="C:\study\最近的工作\practice\源码解读\富文本框架quill\笔记" />
+      <recent name="C:\study\最近的工作\practice\源码解读\富文本框架quill\笔记\src\core" />
+      <recent name="C:\study\最近的工作\practice\源码解读\富文本框架quill\笔记\dist" />
+      <recent name="C:\study\最近的工作\practice\源码解读\富文本框架quill\笔记\css" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -90,6 +396,24 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="JavaScript Debug.index.html (2)">
+    <configuration name="index.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/practice/源码解读/富文本框架quill/源代码/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.html (2)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/practice/源码解读/富文本框架quill/笔记/dist/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/practice/源码解读/富文本框架quill/笔记/test/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html (2)" />
+        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JavaScript Debug.index.html (1)" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -101,30 +425,33 @@
       <option name="presentableId" value="Default" />
       <updated>1547619893101</updated>
       <workItem from="1547619895738" duration="708000" />
+      <workItem from="1564736683195" duration="5284000" />
+      <workItem from="1564967071778" duration="10845000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="708000" />
+    <option name="totallyTimeSpent" value="16837000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="TypeScript" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32935154" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32935154" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="调试" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -137,7 +464,170 @@
     <entry file="file://$PROJECT_DIR$/ui-design/手风琴/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
+          <caret line="42" column="12" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/src/index.js" />
+    <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/dist/MiniQuill.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/core/selection.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/源代码/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/源代码/quill.1.3.6.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32250">
+          <caret line="1295" column="91" selection-start-line="1295" selection-start-column="46" selection-end-line="1295" selection-end-column="91" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/blots/text.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/core/theme.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-225" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/core/emitter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="30" column="29" lean-forward="true" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/node_modules/parchment/src/attributor/attributor.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/src/core/expandConfig.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="28" column="68" selection-start-line="28" selection-start-column="60" selection-end-line="28" selection-end-column="68" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/core/instances.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/ui/icons.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7" selection-start-column="7" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/core/exports.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" selection-start-line="2" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/test/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="22" column="31" lean-forward="true" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/dist/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/dist/quill.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/blots/scroll.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2525">
+          <caret line="70" column="31" lean-forward="true" selection-start-line="70" selection-start-column="31" selection-end-line="70" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/core.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/quill.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1817">
+          <caret line="120" column="1" selection-start-line="120" selection-start-column="1" selection-end-line="120" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/core/quill.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2425">
+          <caret line="97" column="42" selection-start-line="97" selection-start-column="42" selection-end-line="97" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/core/editor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="48" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="48" />
         </state>
       </provider>
     </entry>
