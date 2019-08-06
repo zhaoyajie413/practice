@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="editor"></div>
+</body>
+<script>
+    //编辑器
+    var editor = new Quill("#editor")
+
+    let Inline = Quill.import('blots/inline');
+
+    class BoldBlot extends Inline { }
+    BoldBlot.blotName = 'bold';
+    BoldBlot.tagName = 'strong';
+
+    Quill.register(BoldBlot);
+
+    editor.insertText(0, 'Test', { bold: true });
+</script>
+</html>
