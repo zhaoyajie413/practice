@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+
+  class LinkBlot extends Parchment.Inline {
+    static create(url) {
+      let node = super.create();
+      node.setAttribute('href', url);
+      node.setAttribute('target', '_blank');
+      node.setAttribute('title', node.textContent);
+      return node;
+    }
+
+    static formats(domNode) {
+      return domNode.getAttribute('href') || true;
+    }
+
+    format(name, value) {
+      if (name === 'link' && value) {
+        this.domNode.setAttribute('href', value);
+      } else {
+        super.format(name, value);
+      }
+    }
+
+    formats() {
+      let formats = super.formats();
+      formats['link'] = LinkBlot.formats(this.domNode);
+      return formats;
+    }
+  }
+  LinkBlot.blotName = 'link';
+  LinkBlot.tagName = 'A';
+
+  Parchment.register(LinkBlot);
+</script>
+</html>
