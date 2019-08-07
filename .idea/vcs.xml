@@ -3,5 +3,6 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/idoc" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/源码解读/Quill的detal库解读/delta" vcs="Git" />
   </component>
 </project>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+	class InnerAudioContext {
+		constructor(){
+			var audio = this._audio = new Audio();
+			var watchers = ['src', 'autoplay', 'loop', 'duration', 'currentTime', 'paused', 'volume'];
+			watchers.forEach((watcher) => {
+				console.log(watcher)
+				Object.defineProperty(this, watcher, {
+					set (val) {
+						audio[watcher] = val
+						return audio[watcher]
+					},
+					get () {
+						return audio[watcher]
+					}
+				})
+			})
+		}
+	}
+	var audio=new InnerAudioContext();
+	audio.src="./source/王心凌 - 爱你.mp3"
+
+	</script>
+</html>

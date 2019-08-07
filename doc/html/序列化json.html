@@ -1,0 +1,28 @@
+
+			   <meta charset="utf-8">
+			   <meta name="viewport" content="width=device-width">
+			   <title></title>
+			   <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#000000">
+			   <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://assets-cdn.github.com/favicon.ico">
+			   <meta name="theme-color" content="#1e2327">
+			   <meta name="u2f-support" content="true">
+			    <link rel="stylesheet" href="../css/style.css" />
+			   <link rel="stylesheet"  type="text/css"  href="../plugin/zui/css/zui.css" />
+			   <script src="../plugin/jquery/jquery.min.js"></script>
+			   <script src="../plugin/zui/js/zui.js"></script>
+			 <body style='padding:100px 30px'><h1 id="-json-"> 序列化json对象</h1>
+<blockquote>
+<p>code:</p>
+</blockquote>
+<pre><code class="language-$xslt">export const serialize=(data)=&gt;{
+     var keys=Object.keys(data);
+        keys.sort(function(left,right){
+            return left.toLowerCase().localeCompare(right.toLowerCase());
+        })
+        var dataString=&#39;&#39;;
+        keys.map(function(k,i){
+            dataString+=k+&quot;=&quot;+data[k]+(i&lt;keys.length-1?&quot;&amp;&quot;:&quot;&quot;);
+        })
+        return dataString;
+}</code></pre>
+</body>

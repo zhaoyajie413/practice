@@ -1,0 +1,48 @@
+
+			   <meta charset="utf-8">
+			   <meta name="viewport" content="width=device-width">
+			   <title></title>
+			   <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#000000">
+			   <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://assets-cdn.github.com/favicon.ico">
+			   <meta name="theme-color" content="#1e2327">
+			   <meta name="u2f-support" content="true">
+			    <link rel="stylesheet" href="../css/style.css" />
+			   <link rel="stylesheet"  type="text/css"  href="../plugin/zui/css/zui.css" />
+			   <script src="../plugin/jquery/jquery.min.js"></script>
+			   <script src="../plugin/zui/js/zui.js"></script>
+			 <body style='padding:100px 30px'><h1 id="vue-sass-sass-">vue -- 使用sass并引入公共sass文件</h1>
+<p>sass可以提高我们的开发效率，怎么在vue的项目中使用sass并且可以设置一些公共的文件呢？</p>
+<h2 id="-sass">使用sass</h2>
+<h3 id="1-sass-">1、安装sass的依赖包</h3>
+<pre><code>npm install --save-dev sass-loader
+//sass-loader依赖于node-sass
+npm install --save-dev node-sass</code></pre><h3 id="2-build-webpack-base-conf-js-rules-">2、在build文件夹下的webpack.base.conf.js的rules里面添加配置</h3>
+<pre><code>module: {
+    rules: [
+      //...默认及其他
+      {
+        test: /\.scss$/,
+        loaders: [&quot;style&quot;, &quot;css&quot;, &quot;sass&quot;]
+      }
+    ]
+}</code></pre><h3 id="3-vue-style-">3、在.vue文件中修改style标签</h3>
+<pre><code>&lt;style lang=&quot;scss&quot;&gt;</code></pre><h2 id="-sass-">配置公共sass文件</h2>
+<p>目前没有靠谱的方案，这里有一个方案（如果.vue的结构相对规律是完全可以使用）</p>
+<p>在build文件夹下的utils.js的exports.cssLoaders里面的return中添加配置</p>
+<pre><code>//默认
+sass: generateLoaders(&#39;sass&#39;, { indentedSyntax: true }),  
+//.vue文件相对于base.scss文件，所以结构相对统一时用处更大喽~
+scss: generateLoaders(&#39;sass&#39;,{data:&#39;@import &quot;../assets/scss/base&quot;;&#39;}), </code></pre><h2 id="-">官方推荐的方式（亲测有效-但需要其他依赖）</h2>
+<h3 id="1-">1、下载依赖</h3>
+<pre><code>cnpm install  --save-dev  sass-resources-loader </code></pre><h3 id="2-build-utils-js-">2、在build/utils.js中修改配置：</h3>
+<pre><code>scss: generateLoaders(&#39;sass&#39;).concat(
+  {
+    loader: &#39;sass-resources-loader&#39;,
+    options: {
+          resources:[
+                        path.resolve(__dirname, &#39;../src/assets/scss/color.scss&#39;,),
+                        path.resolve(__dirname, &#39;../src/assets/scss/reset.scss&#39;,)
+                    ]  
+    }
+  }
+),</code></pre></body>

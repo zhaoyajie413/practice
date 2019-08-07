@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function queryMap(url) {
+        if (typeof url === 'string') {
+            const urls = url.split('?')
+
+            url = urls[0]
+
+            const params = {};
+            (urls[1] || '').split('&').forEach(function (pair) {
+                if (pair) {
+                    const pairs = pair.split('=')
+                    params[pairs[0]] = encodeURIComponent(pairs[1])
+                }
+            })
+
+            return params
+        }
+        return url
+    }
+    var map=queryMap('http://www.baidu.com?name=mayuyu&age=12&grend=female');
+    console.log(map)
+</script>
+</html>

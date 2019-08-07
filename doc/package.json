@@ -1,0 +1,31 @@
+{
+  "name": "my-doc",
+  "version": "1.0.0",
+  "description": "Management documents",
+  "main": "app.js",
+  "directories": {
+    "doc": "doc",
+    "lib": "lib"
+  },
+  "dependencies": {
+    "idoc": "^0.3.0",
+    "marked": "^0.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "doc"
+  ],
+  "author": "zhaoyajie",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhaoyajie413/mdoc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zhaoyajie413/mdoc/issues"
+  },
+  "homepage": "https://github.com/zhaoyajie413/mdoc#readme"
+}

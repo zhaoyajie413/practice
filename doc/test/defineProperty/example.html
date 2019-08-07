@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var o = {}; // 创建一个新对象
+
+    // 在对象中添加一个属性与存取描述符的示例
+    var bValu="";
+    Object.defineProperty(o, "b", {
+        get : function(){
+            console.log("mayuyu")
+            return bValue;
+        },
+        set : function(newValue){
+            console.log("mio")
+            bValue = newValue;
+        },
+        enumerable : true,
+        configurable : true
+    });
+
+    o.b = 38;
+</script>
+</html>

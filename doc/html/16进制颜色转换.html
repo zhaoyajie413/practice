@@ -1,0 +1,50 @@
+
+			   <meta charset="utf-8">
+			   <meta name="viewport" content="width=device-width">
+			   <title></title>
+			   <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#000000">
+			   <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://assets-cdn.github.com/favicon.ico">
+			   <meta name="theme-color" content="#1e2327">
+			   <meta name="u2f-support" content="true">
+			    <link rel="stylesheet" href="../css/style.css" />
+			   <link rel="stylesheet"  type="text/css"  href="../plugin/zui/css/zui.css" />
+			   <script src="../plugin/jquery/jquery.min.js"></script>
+			   <script src="../plugin/zui/js/zui.js"></script>
+			 <body style='padding:100px 30px'><h1 id="16-">16进制颜色转换</h1>
+<blockquote>
+<p>代码</p>
+</blockquote>
+<pre><code class="language-$xslt">
+    function hexToRgba (hex) {
+     let r
+     let g
+     let b
+     hex = hex.replace(&#39;#&#39;, &#39;&#39;)
+     if (hex.length === 6) {
+       r = hex.substring(0, 2)
+       g = hex.substring(2, 4)
+       b = hex.substring(4, 6)
+     } else {
+       return false
+     }
+     if (r.length === 1) {
+       r += r
+     }
+     if (g.length === 1) {
+       g += g
+     }
+     if (b.length === 1) {
+       b += b
+     }
+     r = parseInt(r, 16)
+     g = parseInt(g, 16)
+     b = parseInt(b, 16)
+     return {
+       r,
+       g,
+       b
+     }
+   }
+
+</code></pre>
+</body>

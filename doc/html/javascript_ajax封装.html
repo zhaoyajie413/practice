@@ -1,0 +1,140 @@
+
+			   <meta charset="utf-8">
+			   <meta name="viewport" content="width=device-width">
+			   <title></title>
+			   <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#000000">
+			   <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://assets-cdn.github.com/favicon.ico">
+			   <meta name="theme-color" content="#1e2327">
+			   <meta name="u2f-support" content="true">
+			    <link rel="stylesheet" href="../css/style.css" />
+			   <link rel="stylesheet"  type="text/css"  href="../plugin/zui/css/zui.css" />
+			   <script src="../plugin/jquery/jquery.min.js"></script>
+			   <script src="../plugin/zui/js/zui.js"></script>
+			 <body style='padding:100px 30px'><h1 id="ajax-">AJAX 的封装</h1>
+<blockquote>
+<p>code:</p>
+</blockquote>
+<pre><code class="language-$xslt">/**
+ * 发起网络请求
+ * @param {object} param0
+ * @param {string} callbackId
+ * @return {RequestTask}
+ */
+export function request ({
+                             url,
+                             data,
+                             header,
+                             method,
+                             dataType,
+                             responseType
+                         }, callbackId) {
+    const {
+        invokeCallbackHandler: invoke
+    } = UniServiceJSBridge
+    var body = null
+    var timeout = (__uniConfig.networkTimeout &amp;&amp; __uniConfig.networkTimeout.request) || 60 * 1000
+    // 根据请求类型处理数据
+    var contentType
+    for (const key in header) {
+        if (header.hasOwnProperty(key)) {
+            if (key.toLowerCase() === &#39;content-type&#39;) {
+                contentType = header[key]
+                if (contentType.indexOf(&#39;application/json&#39;) === 0) {
+                    contentType = &#39;json&#39;
+                } else if (contentType.indexOf(&#39;application/x-www-form-urlencoded&#39;) === 0) {
+                    contentType = &#39;urlencoded&#39;
+                } else {
+                    contentType = &#39;string&#39;
+                }
+                break
+            }
+        }
+    }
+    if (method === &#39;GET&#39;) {
+        url = setUrl(url, data)
+    } else {
+        if (!contentType) {
+            /**
+             * 跨域时部分服务器OPTION响应头Access-Control-Allow-Headers未包含Content-Type会请求失败
+             */
+            header[&#39;Content-Type&#39;] = &#39;application/json&#39;
+            contentType = &#39;json&#39;
+        }
+        if (typeof data === &#39;string&#39; || data instanceof ArrayBuffer) {
+            body = data
+        } else {
+            if (contentType === &#39;json&#39;) {
+                try {
+                    body = JSON.stringify(data)
+                } catch (error) {
+                    body = data.toString()
+                }
+            } else if (contentType === &#39;urlencoded&#39;) {
+                let bodyArray = []
+                for (let key in data) {
+                    if (data.hasOwnProperty(key)) {
+                        bodyArray.push(encodeURIComponent(key) + &#39;=&#39; + encodeURIComponent(data[key]))
+                    }
+                }
+                body = bodyArray.join(&#39;&amp;&#39;)
+            } else {
+                body = data.toString()
+            }
+        }
+    }
+    var xhr = new XMLHttpRequest()
+    var requestTask = new RequestTask(xhr)
+    xhr.open(method, url)
+    for (var key in header) {
+        if (header.hasOwnProperty(key)) {
+            xhr.setRequestHeader(key, header[key])
+        }
+    }
+
+    var timer = setTimeout(function () {
+        xhr.onload = xhr.onabort = xhr.onerror = null
+        requestTask.abort()
+        invoke(callbackId, {
+            errMsg: &#39;request:fail timeout&#39;
+        })
+    }, timeout)
+    xhr.responseType = responseType.toLowerCase()
+    xhr.onload = function () {
+        clearTimeout(timer)
+        let statusCode = xhr.status
+        let res = responseType === &#39;TEXT&#39; ? xhr.responseText : xhr.response
+        if (responseType === &#39;TEXT&#39; &amp;&amp; dataType === &#39;JSON&#39;) {
+            try {
+                res = JSON.parse(res)
+            } catch (error) {
+                // 和微信一致解析失败不抛出错误
+                // invoke(callbackId, {
+                //   errMsg: &#39;request:fail json parse error&#39;
+                // })
+                // return
+            }
+        }
+        invoke(callbackId, {
+            data: res,
+            statusCode,
+            header: parseHeaders(xhr.getAllResponseHeaders()),
+            errMsg: &#39;request:ok&#39;
+        })
+    }
+    xhr.onabort = function () {
+        clearTimeout(timer)
+        invoke(callbackId, {
+            errMsg: &#39;request:fail abort&#39;
+        })
+    }
+    xhr.onerror = function () {
+        clearTimeout(timer)
+        invoke(callbackId, {
+            errMsg: &#39;request:fail&#39;
+        })
+    }
+    xhr.send(body)
+    return requestTask
+}
+</code></pre>
+</body>

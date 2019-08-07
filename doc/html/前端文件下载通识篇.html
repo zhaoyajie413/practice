@@ -1,0 +1,88 @@
+
+			   <meta charset="utf-8">
+			   <meta name="viewport" content="width=device-width">
+			   <title></title>
+			   <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#000000">
+			   <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://assets-cdn.github.com/favicon.ico">
+			   <meta name="theme-color" content="#1e2327">
+			   <meta name="u2f-support" content="true">
+			    <link rel="stylesheet" href="../css/style.css" />
+			   <link rel="stylesheet"  type="text/css"  href="../plugin/zui/css/zui.css" />
+			   <script src="../plugin/jquery/jquery.min.js"></script>
+			   <script src="../plugin/zui/js/zui.js"></script>
+			 <body style='padding:100px 30px'><h1 id="-">前端文件下载通识篇</h1>
+<h2 id="-">前言</h2>
+<p>前端如何实现下载文件呢?随着前端技术的发展，越来越多的前端需求中会出现下载文件这样的需求。</p>
+<p>看着掘金很多人在近期不断的分享有关的文章，我总结了下自己的经验，根据不同情况，总结了一篇算是前端文件下载的通识篇，如果你对这方面完全不懂或者没有任何方案，那么本文会给你一个很不错的启示。</p>
+<h2 id="ajax-">Ajax来提交上传的文件</h2>
+<p>利用FormData来携带file和参数并通过ajax发送到后台。</p>
+<pre><code>                    var form = new FormData();
+                    form.append(&quot;file&quot;, $(&quot;#uploadOtherSide&quot;)[0].files[0]);
+                    form.append(&quot;type&quot;, &quot;1&quot;);
+                    $.ajax({
+                        type: &quot;POST&quot;,
+                        url: path + &quot;fileLoad/uploadFile&quot;,
+                        data: form,
+                        cache: false,
+                        dataType: &quot;json&quot;,
+                        processData: false,
+                        headers: {
+                            &quot;TOKEN&quot;: t
+                        },
+                        contentType: false,
+                        success: function(data) {
+                            if(data.key == &quot;0000&quot;) {
+                                console.log(&quot;ok&quot;);
+                            } else {
+                                console.log(&quot;fail&quot;);
+                            }
+                        },
+                        error: function(XMLHttpRequest, textStatus, errorThrown) {
+                            console.log(&quot;error&quot;);
+                        }
+                    });
+</code></pre><h2 id="-ajax-">通过ajax来下载文件</h2>
+<p>*Content-disposition</p>
+<p>Content-disposition 是 MIME 协议的扩展，MIME 协议指示 MIME 用户代理如何显示附加的文件。当 Internet Explorer 接收到头时，它会激活文件下载对话框，它的文件名框自动填充了头中指定的文件名。（请注意，这是设计导致的；无法使用此功能将文档保存到用户的计算机上，而不向用户询问保存位置。）<br> 服务端向客户端游览器发送文件时，如果是浏览器支持的文件类型，一般会默认使用浏览器打开，比如txt、jpg等，会直接在浏览器中显示，如果需要提示用户保存，就要利用Content-Disposition进行一下处理，关键在于一定要加上attachment：
+Response.AppendHeader(&quot;Content-Disposition&quot;,&quot;attachment;filename=FileName.txt&quot;);</p>
+<p>备注：这样浏览器会提示保存还是打开，即使选择打开，也会使用相关联的程序比如记事本打开，而不是IE直接打开了。
+Content-Disposition就是当用户想把请求所得的内容存为一个文件的时候提供一个默认的文件名。</p>
+<p>具体的定义如下：</p>
+<pre><code>content-disposition = “Content-Disposition” “:”</code></pre><pre><code>disposition-type *( “;” disposition-parm )</code></pre><pre><code>disposition-type = “attachment” | disp-extension-token</code></pre><pre><code>disposition-parm = filename-parm | disp-extension-parm</code></pre><pre><code>filename-parm = “filename” “=” quoted-string</code></pre><pre><code>disp-extension-token = token</code></pre><pre><code>disp-extension-parm = token “=” ( token | quoted-string )</code></pre><p>那么由上可知具体的例子：</p>
+<pre><code>Content-Disposition: attachment; filename=“filename.xls”</code></pre><pre><code>   当然filename参数可以包含路径信息，但User-Agnet会忽略掉这些信息，只会把路径信息的最后一部分做为文件名。当你在响应类型为application/octet- stream情况下使用了这个头信息的话，那就意味着你不想直接显示内容，而是弹出一个”文件下载”的对话框，接下来就是由你来决定“打开”还是“保存” 了。</code></pre><p>注意事项：</p>
+<p>1.当代码里面使用Content-Disposition来确保浏览器弹出下载对话框的时候。 response.addHeader(&quot;Content-Disposition&quot;,&quot;attachment&quot;);一定要确保没有做过关于禁止浏览器缓存的操作。如下：</p>
+<pre><code>response.setHeader(&quot;Pragma&quot;, &quot;No-cache&quot;);  
+response.setHeader(&quot;Cache-Control&quot;, &quot;No-cache&quot;);  
+response.setDateHeader(&quot;Expires&quot;, 0);</code></pre><p>不然会发现下载功能在opera和firefox里面好好的没问题，在IE下面就是不行，就是找不到文件。</p>
+<p>*Blob</p>
+<p>Blob 对象表示一个不可变、原始数据的类文件对象。Blob 表示的不一定是JavaScript原生格式的数据。File 接口基于Blob，继承了 blob 的功能并将其扩展使其支持用户系统上的文件。</p>
+<p>要从其他非blob对象和数据构造一个Blob，请使用 Blob() 构造函数。要创建包含另一个blob数据的子集blob，请使用 slice()方法。要获取用户文件系统上的文件对应的Blob对象，请参阅 File文档。</p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Blob" target="_blank">Blob参考文献</a></p>
+<pre><code> $http({
+            headers: {
+                &#39;TOKEN&#39;: t,
+                &#39;Content-Type&#39;: &#39;application/x-www-form-urlencoded;charset=utf-8&#39;
+            },
+            type:&quot;HEAD&quot;,
+            method:&quot;post&quot;,
+            url:p+&quot;deliveryInfo/exportLogisticsFee&quot;,
+            paramSerializer: &#39;$httpParamSerializerJQLike&#39;,
+            responseType:&quot;arraybuffer&quot;,
+            data:$.param($scope.logistics),
+        }).then(function(result){
+            //主要逻辑
+            //获取文件名
+            var fileName = result.headers(&#39;Content-Disposition&#39;);
+            var downName=fileName.split(&quot;;&quot;)[1].split(&quot;=&quot;)[1];
+             //转xls格式
+            var blob = new Blob([result.data], {type: &quot;application/vnd.ms-excel&quot;});
+            var objectUrl = URL.createObjectURL(blob);
+            var aForExcel = $(&quot;&lt;a&gt;&lt;span class=&#39;forExcel&#39;&gt;下载excel&lt;/span&gt;&lt;/a&gt;&quot;).attr(&quot;href&quot;,objectUrl);
+            aForExcel.attr(&quot;download&quot;,downName);
+            $(&quot;body&quot;).append(aForExcel);
+            $(&quot;.forExcel&quot;).click();
+            aForExcel.remove();
+        },function(res){
+            window.parent.xmlErr(res);
+        })
+    }</code></pre></body>

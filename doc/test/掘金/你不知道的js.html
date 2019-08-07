@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#trigger{
+				width: 40px;
+				height: 40px;
+				background-color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="trigger"></div>
+		<script>
+			var trigger=document.querySelector("#trigger");
+			trigger.addEventListener("click",function(){
+				console.log(1)
+			})
+			trigger.addEventListener("mouseenter",function(){
+				console.log(2)
+			})
+			console.log(trigger.listeners)
+		</script>
+	</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+	</body>
+	<script>
+		/*
+		 * @forEach()不一定改变自身数组。
+		 * 我们可以看看数组中的元素是值类型和引用类型场景下，是否都能获得改变：
+		 * 当数组中元素是值类型，forEach绝对不会改变数组；当是引用类型，则可以改变数组
+		 */
+		var arr1 = [
+		   {name:'鸣人',age:16},
+		   {name:'佐助',age:17}
+		];
+		var arr2 = [1,2,3];
+
+		arr1.forEach(item => { 
+		  item.age = item.age + 1}
+		);
+
+		arr2.forEach(item => {
+		  item = item * 2}
+		)
+		console.log(arr1)
+		console.log(arr2);
+		
+		/*
+		 @some():用于检查数组中是否有某些符合条件。
+				 只要有一个满足即返回true，之后的不再执行
+		 * */
+		var res_some = [
+			   {name:'鸣人',age:16},
+			   {name:'佐助',age:17}
+			].some(item => {
+				return item.age > 16 
+			});
+		console.log(res_some);
+		
+		/*
+		 * @every()
+		 * 如果说some()是"||"判断，那every()就是"&&"判断，
+		 * 它用于检测数组中的每一项是否都满足条件，只有都满足了才会返回true。这点也很好理解：
+		 * */
+		var res_every = [
+		   {name:'鸣人',age:16},
+		   {name:'佐助',age:17}
+		].every(item => {
+			return item.age > 16 
+		});
+		console.log(res_every);
+		
+		/*
+		 @new Set() 的局限性,
+		 不能对引用类型去重
+		 深度去重可以使用lodash.js
+		 * */
+		let tempArr = new Set([1,2,3,3,4,4,5]);
+		console.log([...tempArr]);
+		tempArr.add({name:'mayu',age:16});
+		tempArr.add({name:'mayu',age:16});
+		console.log([...tempArr])
+		
+		/*
+		 @ findIndex()
+		 * */
+		let menmber=["mio","mayu","nana","ela","yokrin","sakura"];
+		let mIndex=menmber.findIndex(function(item){
+			return item=="nana";
+		})
+		console.log(mIndex);
+		
+		/*
+		 find():在数组中找到需要的元素，
+		 并且和some()一样，只要有一个满足即返回该元素，不会多余遍历，对性能很友善。
+		 * */
+		let findArr = [{name:'鸣人',age:16},{name:'佐助',age:17},{name:'卡卡西',age:27},{name:'佐助',age:17}]
+		let finRes = findArr.find(item => { return item.name == '卡卡西'});
+		console.log(finRes);
+	</script>
+</html>

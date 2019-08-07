@@ -1,0 +1,189 @@
+
+			   <meta charset="utf-8">
+			   <meta name="viewport" content="width=device-width">
+			   <title></title>
+			   <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#000000">
+			   <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://assets-cdn.github.com/favicon.ico">
+			   <meta name="theme-color" content="#1e2327">
+			   <meta name="u2f-support" content="true">
+			    <link rel="stylesheet" href="../css/style.css" />
+			   <link rel="stylesheet"  type="text/css"  href="../plugin/zui/css/zui.css" />
+			   <script src="../plugin/jquery/jquery.min.js"></script>
+			   <script src="../plugin/zui/js/zui.js"></script>
+			 <body style='padding:100px 30px'><p>###select 选框</p>
+<p>select.options :选框下所有的option集合。</p>
+<p>select.selectedIndex : 选框当前选择的option的序列号。</p>
+<p>select.length :选框下所有option的长度。</p>
+<p>select改写源码</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;&lt;/title&gt;
+        &lt;style&gt;
+            .custom-select {
+                position: relative;
+                font-family: Arial;
+            }
+            .custom-select select{
+                display: none;
+            }
+            .select-selected {
+                background-color: DodgerBlue;
+            }
+            .select-selected:after {
+                position: absolute;
+                content: &quot;&quot;;
+                top: 14px;
+                right: 10px;
+                width: 0;
+                height: 0;
+                border: 6px solid transparent;
+                border-color: #fff transparent transparent transparent;
+            }
+
+            .select-selected.select-arrow-active:after {
+                border-color: transparent transparent #fff transparent;
+                top: 7px;
+            }
+
+            .select-items div,
+            .select-selected {
+                color: #ffffff;
+                padding: 8px 16px;
+                border: 1px solid transparent;
+                border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+                cursor: pointer;
+                user-select: none;
+            }
+
+            .select-items {
+                position: absolute;
+                background-color: DodgerBlue;
+                top: 100%;
+                left: 0;
+                right: 0;
+                z-index_home: 99;
+            }
+
+            .select-hide {
+                display: none;
+            }
+
+            .select-items div:hover,
+            .same-as-selected {
+                background-color: rgba(0, 0, 0, 0.1);
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;自定义选择框&lt;/h1&gt;
+        &lt;div class=&quot;custom-select&quot; style=&quot;width:200px;&quot;&gt;
+            &lt;select&gt;
+                &lt;option value=&quot;0&quot;&gt;Select car&lt;/option&gt;
+                &lt;option value=&quot;1&quot;&gt;Audi&lt;/option&gt;
+                &lt;option value=&quot;2&quot;&gt;BMW&lt;/option&gt;
+                &lt;option value=&quot;3&quot;&gt;Citroen&lt;/option&gt;
+                &lt;option value=&quot;4&quot;&gt;Ford&lt;/option&gt;
+                &lt;option value=&quot;5&quot;&gt;Honda&lt;/option&gt;
+                &lt;option value=&quot;6&quot;&gt;Jaguar&lt;/option&gt;
+                &lt;option value=&quot;7&quot;&gt;Land Rover&lt;/option&gt;
+                &lt;option value=&quot;8&quot;&gt;Mercedes&lt;/option&gt;
+                &lt;option value=&quot;9&quot;&gt;Mini&lt;/option&gt;
+                &lt;option value=&quot;10&quot;&gt;Nissan&lt;/option&gt;
+                &lt;option value=&quot;11&quot;&gt;Toyota&lt;/option&gt;
+                &lt;option value=&quot;12&quot;&gt;Volvo&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+    &lt;script&gt;
+
+        var x,a,b,selElmnt,wrapper;
+
+        wrapper=document.querySelector(&quot;.custom-select&quot;);
+        selElmnt=document.querySelector(&quot;select&quot;);
+        /* 已选中 */
+        a = document.createElement(&quot;DIV&quot;);
+        a.setAttribute(&quot;class&quot;, &quot;select-selected&quot;);
+        a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+        wrapper.appendChild(a);
+
+        /*点击a显示隐藏optios*/
+        a.addEventListener(&quot;click&quot;, function(e) {
+            e.stopPropagation();            
+
+            //关闭其他选框
+            closeAllSelect(this);
+
+            /* 点击a的时候显示隐藏options */
+            this.nextSibling.classList.toggle(&quot;select-hide&quot;);
+            this.classList.toggle(&quot;select-arrow-active&quot;);
+        });
+
+        /*模拟options容器*/
+        b = document.createElement(&quot;DIV&quot;);
+        b.setAttribute(&quot;class&quot;, &quot;select-items select-hide&quot;);
+
+        /* 添加option选项 */
+        for (j = 1; j &lt; selElmnt.length; j++) {
+
+            c = document.createElement(&quot;DIV&quot;);
+            c.innerHTML = selElmnt.options[j].innerHTML;
+            c.addEventListener(&quot;click&quot;, function(e) {
+                /*when an item is clicked, update the original select box,
+                and the selected item:*/
+                var y, i, k, s, h;
+
+                s = this.parentNode.parentNode.getElementsByTagName(&quot;select&quot;)[0];
+                /* select-selected容器 */
+                h = this.parentNode.previousSibling;
+
+                for (i = 0; i &lt; s.length; i++) {
+                    if (s.options[i].innerHTML == this.innerHTML) {
+                        s.selectedIndex = i;
+                        h.innerHTML = this.innerHTML;
+
+                        y = this.parentNode.getElementsByClassName(&quot;same-as-selected&quot;);
+                        for (k = 0; k &lt; y.length; k++) {
+                            y[k].removeAttribute(&quot;class&quot;);
+                        }
+                        this.setAttribute(&quot;class&quot;, &quot;same-as-selected&quot;);
+                        break;
+                    }
+                }
+                h.click();
+            })
+            b.appendChild(c);
+        }
+
+        /* 关闭选框 */
+        function closeAllSelect(elmnt) {
+
+            var x, y, i, arrNo = [];
+            x = document.getElementsByClassName(&quot;select-items&quot;);
+            y = document.getElementsByClassName(&quot;select-selected&quot;);
+
+            for (i = 0; i &lt; y.length; i++) {
+                if (elmnt == y[i]) {
+                    arrNo.push(i)
+                } else {
+                    y[i].classList.remove(&quot;select-arrow-active&quot;);
+                }
+            }
+
+            for (i = 0; i &lt; x.length; i++) {
+                if (arrNo.indexOf(i)) {
+                    x[i].classList.add(&quot;select-hide&quot;);
+                }
+            }
+        }
+
+        /* 将optios容器添加到wrapper */
+        wrapper.appendChild(b);
+
+
+        document.addEventListener(&quot;click&quot;, closeAllSelect);
+    &lt;/script&gt;
+&lt;/html&gt;
+
+</code></pre></body>

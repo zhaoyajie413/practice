@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    
+			   <meta charset="utf-8">
+			   <meta name="viewport" content="width=device-width">
+			   <title></title>
+			   <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#000000">
+			   <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://assets-cdn.github.com/favicon.ico">
+			   <meta name="theme-color" content="#1e2327">
+			   <meta name="u2f-support" content="true">
+			    <link rel="stylesheet" href="./css/style.css" />
+			   <link rel="stylesheet"  type="text/css"  href="./plugin/zui/css/zui.css" />
+			   <script src="./plugin/jquery/jquery.min.js"></script>
+			   <script src="./plugin/zui/js/zui.js"></script>
+			 
+	</head>
+	<body>
+		<div class="side-menu"> 
+			<div class="side-menu-title">
+				文档目录
+			</div>
+			<ul id="tree" class="tree tree-menu" style="width: 100%">	
+			</ul>
+		</div>
+		<div  class="content">
+			<iframe name="content" src="default.html"  frameborder="0" noresize="1"  style="width: 100%;height: 100%;">
+			</iframe>
+		</div>
+	</body>
+</html>
+<script>
+    
+			$('#tree').tree({
+			'data':[{"title":"flutter","children":[{"path":"./doc/flutter/flutter_appBar使用.md","title":"flutter_appBar使用.md","isFile":true},{"path":"./doc/flutter/flutter的materialApp使用.md","title":"flutter的materialApp使用.md","isFile":true},{"path":"./doc/flutter/flutter的插件svg使用.md","title":"flutter的插件svg使用.md","isFile":true}],"isFile":false},{"title":"html","children":[{"path":"./doc/html/select选框知识点.md","title":"select选框知识点.md","isFile":true}],"isFile":false},{"title":"java","children":[{"path":"./doc/java/java_dynamic web没有web.xml.md","title":"java_dynamic web没有web.xml.md","isFile":true},{"path":"./doc/java/java_springIDE的安装.md","title":"java_springIDE的安装.md","isFile":true}],"isFile":false},{"title":"javascript","children":[{"path":"./doc/javascript/Number 对象方法.md","title":"Number 对象方法.md","isFile":true},{"path":"./doc/javascript/前端文件下载通识篇.md","title":"前端文件下载通识篇.md","isFile":true},{"path":"./doc/javascript/缓动小结.md","title":"缓动小结.md","isFile":true},{"path":"./doc/javascript/菜逼.md","title":"菜逼.md","isFile":true},{"path":"./doc/javascript/鼠标滚轮事件.md","title":"鼠标滚轮事件.md","isFile":true}],"isFile":false},{"path":"./doc/jenkens的安装.md","title":"jenkens的安装.md","isFile":true},{"path":"./doc/marked.js简易手册.md","title":"marked.js简易手册.md","isFile":true},{"title":"utils","children":[{"path":"./doc/utils/16进制颜色转换.md","title":"16进制颜色转换.md","isFile":true},{"path":"./doc/utils/javascript_ajax封装.md","title":"javascript_ajax封装.md","isFile":true},{"path":"./doc/utils/url的查询部分.md","title":"url的查询部分.md","isFile":true},{"path":"./doc/utils/对json的key进行排序.md","title":"对json的key进行排序.md","isFile":true},{"path":"./doc/utils/序列化json.md","title":"序列化json.md","isFile":true}],"isFile":false},{"title":"vue","children":[{"path":"./doc/vue/Vue_mapMutations和mapActions错误.md","title":"Vue_mapMutations和mapActions错误.md","isFile":true},{"path":"./doc/vue/Vue_引入sass.md","title":"Vue_引入sass.md","isFile":true}],"isFile":false},{"path":"./doc/算法学习.md","title":"算法学习.md","isFile":true}], 
+			 itemCreator: function($li, item) {
+			 console.log(item)
+			       var title=item.title.replace('.md','');
+			       var attr=item.path?{href:'./html/'+title+'.html',target:'content'}:{}
+                    $li.append($('<a/>',attr ).text(title));
+                }
+    });
+	
+</script>

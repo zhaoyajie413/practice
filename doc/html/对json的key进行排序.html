@@ -1,0 +1,35 @@
+
+			   <meta charset="utf-8">
+			   <meta name="viewport" content="width=device-width">
+			   <title></title>
+			   <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#000000">
+			   <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://assets-cdn.github.com/favicon.ico">
+			   <meta name="theme-color" content="#1e2327">
+			   <meta name="u2f-support" content="true">
+			    <link rel="stylesheet" href="../css/style.css" />
+			   <link rel="stylesheet"  type="text/css"  href="../plugin/zui/css/zui.css" />
+			   <script src="../plugin/jquery/jquery.min.js"></script>
+			   <script src="../plugin/zui/js/zui.js"></script>
+			 <body style='padding:100px 30px'><h1 id="-json-key-">对json的key进行排序</h1>
+<p>很多时候我们都要对发往后台的数据进行验签。这个时候就要对发送的数据进行排序。</p>
+<p>这里主要是用 <strong>toLowerCase().localeCompare</strong> 方法来进行大小比较</p>
+<pre><code>    var data={
+             &quot;reqNo&quot;: &quot;20180919105921000001&quot;,
+             &quot;version&quot;: &quot;1.0.0&quot;,
+             &quot;channelId&quot;: &quot;10001&quot;,
+             &quot;cardId&quot;: &quot;01234567890&quot;,
+             &quot;transAmount&quot;: &quot;1&quot;,
+             &quot;type&quot;: &quot;1&quot;,
+             &quot;onlineTradeNo&quot;: &quot;0&quot;,
+             &quot;callBackURL&quot;: &quot;http://www.baidu.com&quot;
+
+        }
+        var keys=Object.keys(data);
+        keys.sort(function(left,right){
+            return left.toLowerCase().localeCompare(right.toLowerCase());
+        })
+        var dataString=&#39;&#39;;
+        keys.map(function(k,i){
+            dataString+=k+data[k]+(i&lt;keys.length-1?&quot;&amp;&quot;:&quot;&quot;);
+        })
+        document.write(dataString)</code></pre></body>

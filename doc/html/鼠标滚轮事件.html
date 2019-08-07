@@ -1,0 +1,38 @@
+
+			   <meta charset="utf-8">
+			   <meta name="viewport" content="width=device-width">
+			   <title></title>
+			   <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#000000">
+			   <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://assets-cdn.github.com/favicon.ico">
+			   <meta name="theme-color" content="#1e2327">
+			   <meta name="u2f-support" content="true">
+			    <link rel="stylesheet" href="../css/style.css" />
+			   <link rel="stylesheet"  type="text/css"  href="../plugin/zui/css/zui.css" />
+			   <script src="../plugin/jquery/jquery.min.js"></script>
+			   <script src="../plugin/zui/js/zui.js"></script>
+			 <body style='padding:100px 30px'><h1 id="-">鼠标滚轮事件</h1>
+<p>//兼容性写法，该函数也是网上别人写的，不过找不到出处了，蛮好的，所有我也没有必要修改了
+//判断鼠标滚轮滚动方向
+if (window.addEventListener)//FF,火狐浏览器会识别该方法
+    window.addEventListener(&#39;DOMMouseScroll&#39;, wheel, false);
+window.onmousewheel = document.onmousewheel = wheel;//W3C
+//统一处理滚轮滚动事件
+function wheel(event){
+    var delta = 0;
+    if (!event) event = window.event;
+    if (event.wheelDelta) {//IE、chrome浏览器使用的是wheelDelta，并且值为“正负120”
+        delta = event.wheelDelta/120; 
+        if (window.opera) delta = -delta;//因为IE、chrome等向下滚动是负值，FF是正值，为了处理一致性，在此取反处理
+    } else if (event.detail) {//FF浏览器使用的是detail,其值为“正负3”
+        delta = -event.detail/3;
+    }
+    if (delta)
+        handle(delta);
+}
+//上下滚动时的具体处理函数
+function handle(delta) {
+        if (delta &lt;0){//向下滚动</p>
+<pre><code>    }else{//向上滚动
+
+    }
+}</code></pre></body>
