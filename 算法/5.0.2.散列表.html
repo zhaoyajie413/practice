@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    const defaultToString=(item)=> {
+        if(item === null){
+            return "null";
+        }else if(item === undefined){
+            return "undefined";
+        }else if(typeof item === "string" || item instanceof String){
+            return `${item}`;
+        }
+        return item.toString();
+    }
+
+    class ValuePair{
+        constructor(key,value) {
+            console.log(key)
+            this.key = key;
+            this.value = value;
+        }
+        toString(){
+            return `[#${this.key}: ${this.value}]`
+        }
+    }
+    /*
+    * 分离链表等查阅《学习javascript数据结构与算法》
+    * */
+    class HashTable{
+        constructor(toStrFn = defaultToString){
+            this.toStrFn = function () {
+
+            }
+            this.table = {};
+        }
+        loseloseHashCode(key){
+            if(typeof key === 'number'){
+                return key;
+            }
+            const tableKey = this.toStrFn(key);
+            let hash = 0;
+            for(let i = 0;i<tableKey.length;i++){
+                hash+=tableKey.charCodeAt(i);
+            }
+            /*除以任意一个数防止数量过大超过最大计算数值*/
+            return hash % 37;
+        }
+        hashCode(key){
+            return this.loseloseHashCode(key)
+        }
+        put(key,value){
+            if(key!=null && value!=null){
+                const position = this.hashCode(key);
+                this.table[position] = new ValuePair(key,value);
+                return true;
+            }
+            return false;
+        }
+        get(key){
+                let position = this.hashCode(key);
+                let valuePair = this.table[position];
+                return valuePair==null?null:valuePair.value;
+        }
+    }
+</script>
+</html>

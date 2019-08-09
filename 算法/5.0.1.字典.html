@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function defaultToString(item) {
+        if(item === null){
+            return "null";
+        }else if(item === undefined){
+            return "undefined";
+        }else if(typeof item === "string" || item instanceof String){
+            return `${item}`;
+        }
+        return item.toString();
+    }
+    class ValuePair{
+        constructor(key,value) {
+            console.log(key)
+            this.key = key;
+            this.value = value;
+        }
+        toString(){
+            return `[#${this.key}: ${this.value}]`
+        }
+    }
+    /*
+    * set 添加、设置
+    * remove 删除
+    * */
+    class Dictionary {
+        constructor(toStrFn = defaultToString){
+            this.toStrFn=toStrFn;
+            this.table={};
+        }
+        set(key, value){
+            console.log(key)
+            if(key!=null && value!=null){
+                const tableKey = this.toStrFn(key);
+                this.table[tableKey]=new ValuePair(tableKey,value);
+                return true;
+            }
+            return false;
+        }
+        hasKey(key){
+            return Object.keys(this.table).includes(this.toStrFn(key));
+        }
+        remove(key){
+            if(this.hasKey(key)){
+                delete this.table[this.toStrFn(key)];
+                return true;
+            }
+            return false;
+        }
+        get(key){
+            const valuePair = this.table[this.toStrFn(key)];
+            return valuePair == null ? undefined : valuePair.value;
+        }
+        keyValues(){
+            const valuePairs = [];
+            Object.keys(this.table).forEach(key=>{
+                if(this.hasKey(key)){
+                    valuePairs.push(this.table[key]);
+                }
+            })
+            return valuePairs;
+        }
+        keys(){
+            return Object.keys(this.table);
+        }
+        values(){
+            var values = [];
+            Object.keys(this.table).forEach(key=>{
+                if(this.hasKey(key)){
+                    values.push(this.table[key].value);
+                }
+            })
+            return values;
+        }
+    }
+    var d = new Dictionary();
+    d.set("mayu",{name:"mayu",age:27,gender:"female"});
+    d.set("youki",{name:"youki",age:28,gender:"female"});
+    d.set("nana",{name:"nana",age:20,gender:"female"});
+    d.remove("mayu");
+    console.log(d);
+    console.log(d.hasKey("mayu"))
+    console.log(d.keyValues());
+    console.log(d.keys());
+    console.log(d.values())
+</script>
+</html>
