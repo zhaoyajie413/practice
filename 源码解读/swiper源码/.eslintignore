@@ -4,4 +4,4 @@ playground
 node_modules
 dist
 package.js
-src/swiper.js
+src/Slider.js

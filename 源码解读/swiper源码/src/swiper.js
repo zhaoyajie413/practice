@@ -9,7 +9,6 @@ import Resize from './modules/resize/resize';
 import Observer from './modules/observer/observer';
 
 //IMPORT_COMPONENTS
-
 const components = [
   Device,
   Support,
