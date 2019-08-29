@@ -11,7 +11,7 @@
     }
 </style>
 <body>
-<canvas style="background: #0e0e0e"></canvas>
+<canvas style=" background: linear-gradient(to right, red , blue);"></canvas>
 </body>
 <script>
     class Point {
@@ -19,19 +19,37 @@
             this.x=x;
             this.y=y;
             this.z=z;
+            this.r=1+Math.floor(Math.random()*5)
+            this.life=Math.floor(100*Math.random())+100
+            this.a = Math.random()>0.5?1:-1;
+        }
+        resetPos(i){
+            this.life--;
+            if(i%3==1){
+                this.x+=this.a
+            }
+            if(i%3==2){
+                this.y+=this.a;
+            }
+            if(i%3==0){
+                this.z+=this.a;
+            }
         }
     }
 
     class Points{
-        constructor(X_MAX=2,X_MIN=-2,Y_MAX=2,Y_MIN=-2){
+        constructor(){
             this.items = [];
-            this.X_MAX=X_MAX;
-            this.X_MIN=X_MIN;
-            this.Y_MAX=Y_MAX;
-            this.Y_MIN=Y_MIN;
         }
         push(element){
             this.items.push(element)
+        }
+        roateX(point,theta){
+            return{
+                x:point.x,
+                y:Math.cos(theta)*point.y-Math.sin(theta)*point.z,
+                z:Math.sin(theta)*point.y+Math.cos(theta)*point.z,
+            }
         }
         roateY(point,theta){
             return{
@@ -49,12 +67,22 @@
             }
         }
         draw(stage,theta){
-            this.items.forEach((point)=>{
-                point = this.roateY(point,theta);
+            var _this=this;
+            this.items.forEach((point,i)=>{
+                point.resetPos(i);
+                point = {...point,...this.roateY(point,theta)};
+                point = {...point,...this.roateX(point,theta)};
                 var particle = this.translatePoint(stage,point);
                 stage.ctx.beginPath()
+                stage.ctx.fillStyle="rgba(255,255,255,0.4)";
+                stage.ctx.arc(particle.x,particle.y,point.r,0,2*Math.PI);
+                stage.ctx.fill();
+                stage.ctx.beginPath()
                 stage.ctx.fillStyle="rgba(255,255,255,1)";
-                stage.ctx.arc(particle.x,particle.y,2,0,2*Math.PI);
+                stage.ctx.arc(particle.x,particle.y,point.r*0.5,0,2*Math.PI);
+                stage.ctx.fill();
+                //console.log(point.life)
+                if(point.life==0)_this.items.splice(i,1);
                 stage.ctx.fill();
             })
         }
@@ -75,7 +103,9 @@
             return Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
         }
         render(fn){
-            this.ctx.clearRect(0,0,this.canvas.width,this.canvas.height);
+           /* this.ctx.fillStyle="rgba(0,0,0,0.5)";
+            this.ctx.fillRect(0,0,this.canvas.width,this.canvas.height);*/
+           this.ctx.clearRect(0,0,this.canvas.width,this.canvas.height)
             fn();
             requestAnimationFrame(function () {
                 this.render(fn)
@@ -88,20 +118,21 @@
     var step =10;
     var initGeometry=()=>{
         let w = stage.canvas.width, h = stage.canvas.height;
-        for (var i=0;i<100;i++ ) {
-            var x =Math.floor(Math.random()*200-100);
-            var y =Math.floor(Math.random()*200-100);
-            var z = Math.random()*100;
+        for (var i=points.items.length;i<500;i++ ) {
+            var x =Math.floor(Math.random()*2*w-w);
+            var y =Math.floor(Math.random()*2*h-h);
+            var z = Math.random()*2*h;
             points.push(new Point(x,y,z));
         }
     }
     initGeometry();
     var theta=0;
-    var dtheta=0.01;
+    var dtheta=0.002;
     stage.render(function () {
         theta+=dtheta
         points.draw(stage,theta);
-
+        initGeometry();
+        console.log(points.items.length)
     })
 
 </script>

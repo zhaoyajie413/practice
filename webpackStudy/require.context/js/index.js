@@ -7,4 +7,5 @@ modules.keys().forEach(function (key) {
         Object.assign(api, modules(key))
     }
 })
+console.log(api)
 export default api
