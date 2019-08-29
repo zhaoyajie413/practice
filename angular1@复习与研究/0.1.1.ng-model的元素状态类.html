@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input{
+            padding: 4px 8px;
+            border-radius: 4px;
+            outline: none;
+            border: 1px solid #e5e5e5;
+        }
+        form.ng-empty,
+        form.ng-invalid,
+        form.ng-valid{
+            border-color: transparent;
+            box-shadow: none;
+        }
+        .ng-empty,.ng-invalid{
+            border-color: #CC3300;
+            box-shadow: 0 0 2px 1px rgba(204,51,0,0.4);
+        }
+        .ng-valid{
+            border-color: #00CC66;
+            box-shadow: 0 0 2px 1px rgba(0,204,102,0.4);
+        }
+        .text-invalid{
+            color: #CC3300;
+            font-size: 13px;
+            font-family:"Microsoft YaHei", "Segoe UI", "Lucida Grande", Helvetica, Arial, sans-serif
+        }
+    </style>
+</head>
+<body ng-app="app" ng-controller="ctrl">
+<form name="myForm">
+    <div style="color: silver;margin: 6px 0">
+        ng-pattern 校验不通过。不会对绑定的变量进行复制操作。
+    </div>
+    输入你的名字:
+    <input name="text" ng-model="text" ng-pattern="/^[0-9]+$/" required>
+    <span ng-show="myForm.text.$invalid">
+        <span class="text-invalid">只能填入数字</span>
+    </span>
+</form>
+<pre>
+    ng-empty
+    ng-not-empty
+    ng-touched
+    ng-untouched
+    ng-valid
+    ng-invalid
+    ng-dirty
+    ng-pending
+    ng-pristine
+</pre>
+</body>
+<script src="lib/angular/angular.js"></script>
+<script>
+    var app = angular.module('app', []);
+    app.controller('ctrl', function($scope) {
+        $scope.text = "mayuyu"
+    });
+</script>
+</html>

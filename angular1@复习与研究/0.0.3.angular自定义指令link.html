@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body ng-app="app" ng-controller="ctrl">
+    <p piece-of-food='pieces[0]'></p>
+    <p piece-of-food='pieces[1]'></p>
+</body>
+<script src="lib/angular/angular.js"></script>
+<script>
+    var deli = angular.module('app', []);
+
+    deli.controller('ctrl', function ($scope) {
+        $scope.pieces = ['Fish & Chips', 'Potato Salad'];
+    });
+
+    deli.directive('pieceOfFood', function () {
+        return {
+            template: '{{pieceOfFood}}',
+            scope: true,
+            link: function (scope, element, attrs) {
+                attrs.$observe('pieceOfFood', function (value) {
+                    scope.pieceOfFood = scope.$eval(value);
+                });
+            }
+        };
+    });
+</script>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>1. 为什么要对数组进行单独处理</h2>
+<p>在Vue现有阶段中，对响应式处理利用的是Object.defineProperty对数据进行拦截，而这个方法并不能监听到数组内部变化，
+    数组长度变化，数组的截取变化等，所以我们需要对这些操作进行hack，让vue能监听到其中的变化。</p>
+</body>
+<script>
+    const arrayProto = Array.prototype;
+    const arrayMethods = Object.create(arrayProto);
+    const methodsToPatch = [
+        'push',
+        'pop',
+        'shift',
+        'unshift',
+        'splice',
+        'sort',
+        'reverse'
+    ]
+
+    methodsToPatch.forEach(function (method) {
+        const original = arrayProto[method];
+        def(arrayMethods, method, function mutator (...args) {
+            const result = original.apply(this, args)
+            const ob = this.__ob__
+            let inserted
+            switch (method) {
+                case 'push':
+                case 'unshift':
+                    inserted = args
+                    break
+                case 'splice':
+                    inserted = args.slice(2)
+                    break
+            }
+            if (inserted) ob.observeArray(inserted)
+            // notify change
+            ob.dep.notify()
+            return result
+        })
+    })
+</script>
+</html>

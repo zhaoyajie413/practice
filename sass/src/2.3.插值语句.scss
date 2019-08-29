@@ -1,0 +1,9 @@
+$name: foo;
+$attr: border;
+p.#{$name} {
+  #{$attr}-color: blue;
+}
+
+#{name}-yaya{
+  font-size:22px;
+}

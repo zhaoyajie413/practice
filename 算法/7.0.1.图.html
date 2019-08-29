@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function Graph() {
+        var vertices = []; //存储图中所有的顶点名字
+        var adjList = new Dictionary();//用之前的一个字典来存储邻接表
+        this.addVertex = function(v){ //添加顶点
+            vertices.push(v);
+            adjList.set(v, []); //顶点为键，字典值为空数组
+        };
+        this.addEdge = function(v, w){ //添加边
+            adjList.get(v).push(w); //基于有向图
+            adjList.get(w).push(v); //基于无向图
+        };
+        this.toString = function(){
+            var s = '';
+            for (var i=0; i<vertices.length; i++){
+                s += vertices[i] + ' -> ';
+                var neighbors = adjList.get(vertices[i]);
+                for (var j=0; j<neighbors.length; j++){
+                    s += neighbors[j] + ' ';
+                }
+                s += '\n';
+            }
+            return s;
+        };
+        var initializeColor = function(){
+            var color = [];
+            for (var i=0; i<vertices.length; i++){
+                color[vertices[i]] = 'white';
+            }
+            return color;
+        };
+    }
+</script>
+</html>

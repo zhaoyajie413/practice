@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .panel{
+            padding: 8px 12px;
+            box-shadow: 0 0 2px 2px rgba(0,0,0,0.04);
+            border-radius: 6px;
+            border:1px solid #e5e5e5;
+            background-color: rgba(0,0,0,0.01);
+            color: rgba(0,0,0,0.7);
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body ng-app="app">
+    <panel>
+        德玛西亚从不退缩
+    </panel>
+</body>
+<script src="lib/angular/angular.js"></script>
+<script>
+    var app = angular.module("app", []);
+    /*
+    * restrict 值可以是以下几种:E 作为元素名使用,A 作为属性使用,C 作为类名使用,M 作为注释使用
+    * transclude 类似vue的插槽
+    * */
+    app.directive("panel", function() {
+        return {
+            restrict : "E",
+            transclude:true,
+            template : "<div class='panel' ng-transclude></div>"
+        };
+    });
+</script>
+</html>

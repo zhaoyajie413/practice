@@ -1,0 +1,12 @@
+/* 1. */
+a {
+  font-weight: bold;
+  text-decoration: none;
+  &:hover { text-decoration: underline; }
+  body.firefox & { font-weight: normal; }
+}
+/* 2.*/
+#main {
+  color: black;
+  &-sidebar { border: 1px solid; }
+}

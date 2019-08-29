@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body ng-app="app" >
+<span piece-of-food='Fish & Chips'></span>
+</body>
+<script src="lib/angular/angular.js"></script>
+<script>
+    var deli = angular.module('app', []);
+
+    deli.directive('pieceOfFood', function () {
+        return {
+            template: '{{pieceOfFood}}',
+            link: function (scope, element, attrs) {
+                attrs.$observe('pieceOfFood', function (value) {
+                    scope.pieceOfFood = value;
+                });
+            }
+        };
+    });
+</script>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var obj = {};
+    // 循环使用同一对象
+    function withValue(value) {
+        var d = withValue.d || (
+            withValue.d = {
+                enumerable: false,
+                writable: false,
+                configurable: false,
+                value: null
+            }
+        );
+        d.value = value;
+        return d;
+    }
+    // ... 并且 ...
+    Object.defineProperty(obj, "key", withValue("static"))
+</script>
+</html>

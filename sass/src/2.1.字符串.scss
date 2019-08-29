@@ -1,0 +1,23 @@
+@mixin firefox-message($selector) {
+  body.firefox #{$selector}:before {
+    content: "Hi, Firefox users!";
+  }
+}
+@include firefox-message(".header");
+
+p {
+  cursor: e + -resize;
+}
+
+p:before {
+  content: "Foo " + Bar;
+  font-family: sans- + "serif";
+}
+
+p {
+  margin: 3px + 4px auto;
+}
+
+p:before {
+  content: "I ate #{5 + 10} pies!";
+}

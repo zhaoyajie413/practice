@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    class Node {
+        constructor(key){
+            this.key = key;
+            this.left = null;
+            this.right = null;
+        }
+    }
+
+
+    /*
+    * insert 向书中插入一个新的键
+    * search 在树中查找一个键
+    * inOrderTraverse 通过中序遍历方式遍历所有的节点
+    * preOrderTraverse 通过先序遍历方式遍历所有的节点
+    * PostOrderTraverse 通过后序便利方式遍历所有的节点
+    * min 返回树中最小的值/键
+    * max 返回树中最大的值/键
+    * remove 枞树中移除某个数
+    * */
+    class BinarySearchTree{
+        constructor(){
+            this.root = null;
+        }
+        insert(key){
+            if(this.root == null ){
+                this.root = new Node(key);
+            }else{
+                this.insertNode(this.root,key)
+            }
+        }
+        insertNode(key){
+            const _insertNode = (node,newNode) => {
+                if (newNode.data < node.data){
+                    if(node.left === null){
+                        node.left = newNode
+                    }else {
+                        _insertNode(node.left,newNode)
+                    }
+                }else {
+                    if(node.right === null){
+                        node.right = newNode
+                    }else{
+                        _insertNode(node.right,newNode)
+                    }
+                }
+            };
+            const newNode = new Node(data);
+            if(!this.root){
+                this.root = newNode
+            }else {
+                _insertNode(this.root,newNode)
+            }
+        }
+        //中序遍历
+        inOrderTraverse(){
+            let backs = [];
+            const inOrderNode = (node,callback) => {
+                if(node !== null){
+                    inOrderNode(node.left,callback);
+                    backs.push(callback(node.data));
+                    inOrderNode(node.right,callback)
+                }
+            };
+            inOrderNode(this.root,callback);
+            function callback(v){
+                return v
+            }
+            return backs
+        }
+        //前序遍历
+        preOrderTraverse(){
+            let backs = [];
+            const preOrderNode = (node,callback) => {
+                if(node !== null){
+                    backs.push(callback(node.data));
+                    preOrderNode(node.left,callback);
+                    preOrderNode(node.right,callback)
+                }
+            };
+            preOrderNode(this.root,callback);
+            function callback(v){
+                return v
+            }
+            return backs
+        }
+        //后序遍历
+        postOrderTraverse(){
+            let backs = [];
+            const postOrderNode = (node,callback) => {
+                if(node !== null){
+                    postOrderNode(node.left,callback);
+                    postOrderNode(node.right,callback);
+                    backs.push(callback(node.data))
+                }
+            };
+            postOrderNode(this.root,callback);
+            function callback(v){
+                return v
+            }
+            return backs
+        }
+        //查找最小值
+        getMin(node){
+            const minNode = node => {
+                return node? (node.left? minNode(node.left):node):null
+            };
+            return minNode( node || this.root)
+        }
+        //查找最大值
+        getMax(node){
+            const maxNode = node => {
+                return node? (node.right? maxNode(node.right):node):null
+            };
+            return maxNode(node || this.root)
+        }
+        //查找特定值
+        find(data){
+            const findNode = (node,data) => {
+                if(node===null) return false;
+                if(node.data===data) return node;
+                return findNode((data < node.data)? node.left: node.right,data)
+            };
+            return findNode(this.root,data)
+
+        }
+        //删除节点
+        remove(data){
+            const removeNode = (node,data) => {
+                if(node === null) return null;
+                if(node.data === data){
+                    if(node.left === null && node.right === null) return null;
+                    if(node.left === null) return node.right;
+                    if(node.right === null) return node.left;
+                    if(node.left !==null && node.right !==null){
+                        let _node = this.getMin(node.right);
+                        node.data = _node.data;
+                        node.right = removeNode(node.right,data);
+                        return node
+                    }
+                } else if(data < node.data){
+                    node.left=removeNode(node.left,data);
+                    return node
+                } else {
+                    node.right=removeNode(node.right,data);
+                    return node
+                }
+            };
+            return removeNode(this.root,data)
+        }
+    }
+
+
+</script>
+</html>
