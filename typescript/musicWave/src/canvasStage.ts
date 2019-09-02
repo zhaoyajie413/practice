@@ -42,7 +42,6 @@ class CanvasStage {
                 y:num
             })
         });
-        console.log(points)
         return points;
     }
    drawLine(list:Array<any>){

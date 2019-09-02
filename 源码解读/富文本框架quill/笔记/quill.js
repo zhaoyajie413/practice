@@ -119,3 +119,5 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
 if ( typeof window === "object" && typeof window.document === "object" ) {
     window.Quill = window.Quill = Quill;
 }
+
+export default Quill

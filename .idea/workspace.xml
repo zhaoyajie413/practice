@@ -2,69 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="010225da-914c-43df-a79b-8a8a2cc355b9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2019/表清包/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SVG/svg文字动画.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular1@复习与研究/0.0.1.angular自定义指令.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular1@复习与研究/0.0.2.angular自定义指令$observe.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular1@复习与研究/0.0.3.angular自定义指令link.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular1@复习与研究/0.1.1.ng-model的元素状态类.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular1@复习与研究/lib/angular/angular.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/canvas/3d粒子研究/login_bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dart/0.0.1.一个最基本的dart程序.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dart/0.0.2.json还是map.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dart/0.0.3.可选位置参数.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dart/0.0.4.classes.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/doc/utils/去空格.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/doc/移动端实现内滚动的4种方案.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js习题册/0.0.1.防抖，节流.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js习题册/0.0.2.正则表达式.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js习题册/116.输出以下代码运行结果.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js习题册/123.vue 是如何对数组方法进行变异的.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js习题册/51.0.Object.defineProperty.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js习题册/51.1.Vue 的响应式原理中 Object.defineProperty有什么缺陷.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sass/src/1.0.嵌套.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sass/src/1.1.父级选择器.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sass/src/1.2.属性嵌套.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sass/src/1.3.变量.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sass/src/2.1.字符串.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sass/src/2.2.圆括号.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sass/src/2.3.插值语句.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sass/src/2.4.@media.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sass/src/2.5.@extend.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sass/src/2.6.占位符.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sass/src/3.1.@if.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sass/src/3.2.@for.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sass/src/3.3.@each.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sass/src/3.4.@while.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sass/src/3.5.混合指令.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sass/src/3.6.@function.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpackStudy/require.context/webpack.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/源码解读/lodash/lib/lodash.1.8.3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/源码解读/lodash/underscore-1.8.3-analysis.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/源码解读/写一个自己的angular/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/源码解读/写一个自己的angular/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/源码解读/写一个自己的angular/src/scope.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/源码解读/写一个自己的angular/test/InfiniteLoop.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/源码解读/写一个自己的angular/test/LoopExecutionOfAsynchronousQueues.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/源码解读/写一个自己的angular/test/apply.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/源码解读/写一个自己的angular/test/asyncEvaluate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/源码解读/写一个自己的angular/test/compareValue.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/源码解读/写一个自己的angular/test/exception.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/源码解读/写一个自己的angular/test/phase.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/源码解读/写一个自己的angular/test/scopeDestroy.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/源码解读/写一个自己的angular/test/watchingAsync.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/源码解读/写一个自己的angular/webpack.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/算法/6.0.1.二叉树.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/算法/7.0.1.图.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/practice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/practice.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019/表清包/custom.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019/表清包/embed.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019/表清包/quill/quill.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019/表清包/quill/quill.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019/轮盘/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2019/卡片/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2019/卡片/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/canvas/3d粒子研究/06.html" beforeDir="false" afterPath="$PROJECT_DIR$/canvas/3d粒子研究/06.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpackStudy/require.context/dist/output.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpackStudy/require.context/dist/output.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpackStudy/require.context/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpackStudy/require.context/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpackStudy/require.context/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpackStudy/require.context/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2019/表清包/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2019/表清包/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/typescript/musicWave/src/canvasStage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/typescript/musicWave/src/canvasStage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/modules/toolbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/modules/toolbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/quill.js" beforeDir="false" afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/quill.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/webpack.config.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -77,14 +29,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/源码解读/Quill的detal库解读/delta/src/AttributeMap.ts">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/2019/轮盘/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="125">
+              <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/2019/轮盘/Roulette.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="185">
+              <caret line="42" column="46" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -96,17 +54,16 @@
       <list>
         <option value="markdown" />
         <option value="Vue Single File Component" />
-        <option value="CSS File" />
         <option value="Dart File" />
-        <option value="HTML File" />
+        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
     <option name="SCHEME" value="Project" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>this.scrollingContainer</find>
       <find>Quill</find>
       <find>Quill.im</find>
       <find>register</find>
@@ -132,40 +89,36 @@
       <find>X_MAX</find>
       <find>fallLength</find>
       <find>dart</find>
+      <find>toolbar</find>
+      <find>getCirclePoints</find>
+      <find>_this</find>
+      <find>cons</find>
+      <find>consol</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+      <replace>self</replace>
+    </replaceStrings>
     <dirStrings>
       <dir>C:\study\practice\源码解读\swiper源码</dir>
       <dir>C:\study\practice\源码解读\swiper源码\src</dir>
       <dir>C:\study\practice</dir>
+      <dir>C:\study\practice\源码解读\富文本框架quill\笔记</dir>
+      <dir>C:\study\practice\源码解读\富文本框架quill</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/源码解读/Quill的detal库解读/delta" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/sass/dist/3.2.@for.css" />
-        <option value="$PROJECT_DIR$/sass/src/3.3.@each.scss" />
-        <option value="$PROJECT_DIR$/sass/src/3.4.@while.scss" />
-        <option value="$PROJECT_DIR$/sass/src/3.5.混合指令.scss" />
-        <option value="$PROJECT_DIR$/sass/src/3.6.@function.scss" />
-        <option value="$PROJECT_DIR$/算法/6.0.1.html" />
-        <option value="$PROJECT_DIR$/算法/6.0.1.二叉树.html" />
-        <option value="$PROJECT_DIR$/SVG/svg文字动画.html" />
-        <option value="$PROJECT_DIR$/canvas/3d粒子研究/06.html" />
-        <option value="$PROJECT_DIR$/算法/7.0.1.图.html" />
-        <option value="$PROJECT_DIR$/js习题册/0.0.1.防抖，节流.html" />
-        <option value="$PROJECT_DIR$/js习题册/51.Vue 的响应式原理中 Object.defineProperty 有什么缺陷.html" />
-        <option value="$PROJECT_DIR$/js习题册/51.Vue 的响应式原理中 Object.defineProperty有什么缺陷.html" />
-        <option value="$PROJECT_DIR$/js习题册/51.0.Object.defineProperty.html" />
         <option value="$PROJECT_DIR$/js习题册/123.vue 是如何对数组方法进行变异的.html" />
         <option value="$PROJECT_DIR$/js习题册/116.输出以下代码运行结果.html" />
         <option value="$PROJECT_DIR$/js习题册/0.0.2.正则表达式.html" />
         <option value="$PROJECT_DIR$/test/app.js" />
         <option value="$PROJECT_DIR$/dart/0.0.1.一个最基本的dart程序.dart" />
         <option value="$PROJECT_DIR$/dart/0.0.2.json还是map.dart" />
-        <option value="$PROJECT_DIR$/2019/表清包/index.html" />
         <option value="$PROJECT_DIR$/dart/0.0.3.可选位置参数.dart" />
         <option value="$PROJECT_DIR$/dart/0.0.4.dart" />
         <option value="$PROJECT_DIR$/dart/0.0.4.断言.dart" />
@@ -196,6 +149,21 @@
         <option value="$PROJECT_DIR$/源码解读/写一个自己的angular/index.js" />
         <option value="$PROJECT_DIR$/源码解读/写一个自己的angular/src/scope.js" />
         <option value="$PROJECT_DIR$/源码解读/lodash/lib/lodash.js" />
+        <option value="$PROJECT_DIR$/2019/表清包/quill/quill.js" />
+        <option value="$PROJECT_DIR$/2019/表清包/quill/quill.css" />
+        <option value="$PROJECT_DIR$/2019/表清包/index.html" />
+        <option value="$PROJECT_DIR$/2019/表清包/custom.html" />
+        <option value="$PROJECT_DIR$/2019/表清包/embed.html" />
+        <option value="$PROJECT_DIR$/2019/表清包/magic.html" />
+        <option value="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/package.json" />
+        <option value="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/webpack.config.js" />
+        <option value="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/quill.js" />
+        <option value="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/modules/toolbar.js" />
+        <option value="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/index.js" />
+        <option value="$PROJECT_DIR$/源码解读/富文本框架quill/笔记/test/index.html" />
+        <option value="$PROJECT_DIR$/typescript/musicWave/src/canvasStage.ts" />
+        <option value="$PROJECT_DIR$/2019/轮盘/index.html" />
+        <option value="$PROJECT_DIR$/2019/轮盘/Roulette.js" />
       </list>
     </option>
   </component>
@@ -222,28 +190,13 @@
             <path>
               <item name="practice" type="b2602c69:ProjectViewProjectNode" />
               <item name="practice" type="462c0819:PsiDirectoryNode" />
-              <item name="源码解读" type="462c0819:PsiDirectoryNode" />
+              <item name="2019" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="practice" type="b2602c69:ProjectViewProjectNode" />
               <item name="practice" type="462c0819:PsiDirectoryNode" />
-              <item name="源码解读" type="462c0819:PsiDirectoryNode" />
-              <item name="Quill的detal库解读" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="practice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="practice" type="462c0819:PsiDirectoryNode" />
-              <item name="源码解读" type="462c0819:PsiDirectoryNode" />
-              <item name="Quill的detal库解读" type="462c0819:PsiDirectoryNode" />
-              <item name="delta" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="practice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="practice" type="462c0819:PsiDirectoryNode" />
-              <item name="源码解读" type="462c0819:PsiDirectoryNode" />
-              <item name="Quill的detal库解读" type="462c0819:PsiDirectoryNode" />
-              <item name="delta" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="2019" type="462c0819:PsiDirectoryNode" />
+              <item name="轮盘" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -266,19 +219,19 @@
     <property name="ts.external.directory.path" value="C:\study\practice\源码解读\vant解读\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\study\practice\angular1@复习与研究" />
-      <recent name="C:\study\practice\sass\src" />
-      <recent name="C:\study\最近的工作\practice\源码解读\富文本框架quill\笔记\test" />
-      <recent name="C:\study\最近的工作\practice\源码解读\富文本框架quill\笔记" />
-      <recent name="C:\study\最近的工作\practice\源码解读\富文本框架quill\笔记\src\core" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\study\practice\源码解读\lodash" />
       <recent name="C:\study\practice\源码解读\写一个自己的angular\src" />
       <recent name="C:\study\practice\源码解读\写一个自己的angular" />
       <recent name="C:\study\practice\angular1@复习与研究\lib\angular" />
       <recent name="C:\study\practice\test" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\study\practice\angular1@复习与研究" />
+      <recent name="C:\study\practice\sass\src" />
+      <recent name="C:\study\最近的工作\practice\源码解读\富文本框架quill\笔记\test" />
+      <recent name="C:\study\最近的工作\practice\源码解读\富文本框架quill\笔记" />
+      <recent name="C:\study\最近的工作\practice\源码解读\富文本框架quill\笔记\src\core" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -293,29 +246,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.scope.js">
-    <configuration name="0.0.1.angular自定义指令.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/practice/angular1@复习与研究/0.0.1.angular自定义指令.html" useBuiltInWebServerPort="true">
+  <component name="RunManager" selected="JavaScript Debug.index.html (1)">
+    <configuration name="custom.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/practice/2019/表清包/custom.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="0.0.2.angular自定义指令$observe.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/practice/angular1@复习与研究/0.0.2.angular自定义指令$observe.html" useBuiltInWebServerPort="true">
+    <configuration name="embed.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/practice/2019/表清包/embed.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="0.0.3.angular自定义指令link.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/practice/angular1@复习与研究/0.0.3.angular自定义指令link.html" useBuiltInWebServerPort="true">
+    <configuration name="index.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/practice/2019/轮盘/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="检测浏览器版本.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/practice/js内置对象/检测浏览器版本.html" useBuiltInWebServerPort="true">
+    <configuration name="magic.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/practice/2019/表清包/magic.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="scope.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/源码解读/写一个自己的angular/test/scope.js" working-dir="$PROJECT_DIR$">
+    <configuration name="Roulette.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/2019/轮盘/Roulette.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Node.js.scope.js" />
-        <item itemvalue="JavaScript Debug.检测浏览器版本.html" />
-        <item itemvalue="JavaScript Debug.0.0.3.angular自定义指令link.html" />
-        <item itemvalue="JavaScript Debug.0.0.2.angular自定义指令$observe.html" />
-        <item itemvalue="JavaScript Debug.0.0.1.angular自定义指令.html" />
+        <item itemvalue="JavaScript Debug.index.html (1)" />
+        <item itemvalue="Node.js.Roulette.js" />
+        <item itemvalue="JavaScript Debug.magic.html" />
+        <item itemvalue="JavaScript Debug.embed.html" />
+        <item itemvalue="JavaScript Debug.custom.html" />
       </list>
     </recent_temporary>
   </component>
@@ -369,38 +322,20 @@
       <workItem from="1566959410023" duration="2347000" />
       <workItem from="1566975629035" duration="9687000" />
       <workItem from="1567039673718" duration="16057000" />
-      <workItem from="1567061967120" duration="1446000" />
+      <workItem from="1567061967120" duration="13028000" />
+      <workItem from="1567127622271" duration="268000" />
+      <workItem from="1567133802981" duration="676000" />
+      <workItem from="1567143273856" duration="5207000" />
+      <workItem from="1567385873211" duration="577000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="151267000" />
+    <option name="totallyTimeSpent" value="169577000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17336309" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32935154" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32935154" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.33049405" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32879046" />
-      <window_info anchor="bottom" id="调试" order="11" />
-      <window_info anchor="bottom" id="TypeScript" order="12" />
-      <window_info anchor="bottom" id="Dart Analysis" order="13" weight="0.32935154" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
-    <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17336309" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -413,7 +348,29 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.33105803" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32935154" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32879046" />
+      <window_info anchor="bottom" id="调试" order="11" />
+      <window_info anchor="bottom" id="TypeScript" order="12" />
+      <window_info anchor="bottom" id="Dart Analysis" order="13" weight="0.32935154" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17336309" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32935154" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32935154" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32935154" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32879046" />
       <window_info anchor="bottom" id="调试" order="11" />
       <window_info anchor="bottom" id="TypeScript" order="12" />
@@ -443,226 +400,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/doc/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="18" selection-start-line="18" selection-end-line="18" selection-end-column="31" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-450">
-          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dart/0.0.1.一个最基本的dart程序.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/面向对象指南/tools/lib/prettify/lang-dart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dart/0.0.2.json还是map.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2019/表清包/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="7" column="27" lean-forward="true" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dart/0.0.3.可选位置参数.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dart/0.0.4.classes.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular1@复习与研究/lib/angular/angular.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular1@复习与研究/0.0.1.angular自定义指令.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="775">
-          <caret line="31" column="27" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js内置对象/检测浏览器版本.html" />
-    <entry file="file://$PROJECT_DIR$/doc/doc/utils/去空格.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SECOND">
-          <first_editor relative-caret-position="125">
-            <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular1@复习与研究/0.0.2.angular自定义指令$observe.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular1@复习与研究/0.1.1.ng-model的元素状态类.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1425">
-          <caret line="57" column="8" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js内置对象/异步函数.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js内置对象/Array.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1050">
-          <caret line="18" column="35" lean-forward="true" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js内置对象/1.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js内置对象/print.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#style#0;n#p#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js内置对象/test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" selection-start-line="4" selection-end-line="5" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js内置对象/strint.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular1@复习与研究/0.0.3.angular自定义指令link.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/源码解读/写一个自己的angular/Gruntfile.js" />
-    <entry file="file://$PROJECT_DIR$/源码解读/写一个自己的angular/package-lock.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-22289" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/源码解读/写一个自己的angular/test/scope.js" />
-    <entry file="file://$PROJECT_DIR$/源码解读/写一个自己的angular/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/源码解读/写一个自己的angular/dist/index.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/源码解读/写一个自己的angular/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/源码解读/写一个自己的angular/dist/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/源码解读/写一个自己的angular/src/isEqual.js" />
-    <entry file="file://$PROJECT_DIR$/源码解读/写一个自己的angular/test/compareValue.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/源码解读/写一个自己的angular/test/asyncEvaluate.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="15" column="16" lean-forward="true" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/源码解读/写一个自己的angular/test/LoopExecutionOfAsynchronousQueues.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/源码解读/写一个自己的angular/test/InfiniteLoop.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/源码解读/写一个自己的angular/test/watchingAsync.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="4" column="25" lean-forward="true" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/源码解读/写一个自己的angular/test/phase.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-258">
-          <caret line="7" column="49" lean-forward="true" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/源码解读/写一个自己的angular/test/apply.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/源码解读/写一个自己的angular/test/exception.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/源码解读/写一个自己的angular/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
@@ -731,18 +468,145 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/themes/snow.js">
+    <entry file="file://$PROJECT_DIR$/源码解读/Quill的detal库解读/delta/src/AttributeMap.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="100">
+          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/common.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1086">
+          <caret line="127" column="18" selection-start-line="127" selection-start-column="18" selection-end-line="127" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2019/表清包/quill/quill.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2019/表清包/quill/quill.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="944" column="1" selection-start-line="944" selection-start-column="1" selection-end-line="944" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2019/表清包/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-464">
+          <caret line="16" selection-start-line="16" selection-end-line="48" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/解读/themes/bubble.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2250">
+          <caret line="114" column="23" lean-forward="true" selection-start-line="114" selection-start-column="23" selection-end-line="114" selection-end-column="23" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/core/logger.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2019/表清包/magic.html" />
+    <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/dist/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/quill.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="122" column="20" selection-start-line="122" selection-start-column="20" selection-end-line="122" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/core/quill.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11925">
+          <caret line="477" column="22" selection-start-line="477" selection-start-column="22" selection-end-line="477" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/core/selection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/core/theme.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/core/instances.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/core/exports.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/core/emitter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/core/editor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/formats/align.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/themes/bubble.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-525">
+        <state relative-caret-position="-1125">
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
@@ -752,17 +616,137 @@
     <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/themes/base.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+          <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/源码解读/Quill的detal库解读/delta/src/AttributeMap.ts">
+    <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/core/module.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/modules/toolbar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+        <state relative-caret-position="150">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
           <folding>
-            <element signature="e#0#31#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1375">
+          <caret line="55" column="9" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/blots/block.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/blots/inline.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="2" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2019/表清包/embed.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2175">
+          <caret line="87" column="3" selection-start-line="87" selection-start-column="3" selection-end-line="93" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2019/表清包/custom.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2175">
+          <caret line="87" selection-start-line="87" selection-end-line="90" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/themes/snow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2100">
+          <caret line="84" column="42" selection-start-line="84" selection-start-column="42" selection-end-line="84" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/源码解读/富文本框架quill/笔记/test/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/canvas/3d粒子研究/3d粒子研究04.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-450" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/canvas/3d粒子研究/06.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1050" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/canvas/canvas旋转的点.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-300" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/canvas/musicWave.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-675" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/typescript/musicWave/test/audioPlayer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-507" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/typescript/musicWave/src/canvasStage.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="13" column="5" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="13" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/typescript/musicWave/src/audioPlayer.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="32" column="3" lean-forward="true" selection-start-line="32" selection-start-column="3" selection-end-line="44" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/canvas/particle.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="79" column="28" lean-forward="true" selection-start-line="79" selection-start-column="12" selection-end-line="79" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2019/轮盘/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2019/轮盘/Roulette.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="42" column="46" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="46" />
         </state>
       </provider>
     </entry>

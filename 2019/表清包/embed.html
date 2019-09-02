@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="quill/quill.css">
+    <style>
+        body {
+            background-color: #222;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: whitesmoke;
+            border-radius: 9px;
+        }
+
+        #quillEditor {
+            min-height: 200px;
+        }
+
+        .fa.fa-paw {
+            color: white;
+        }
+
+        #cat-button {
+            padding:10px;
+            border: 1px solid;
+            color: grey;
+            border-radius: 9px;
+            font-size: 12px;
+            font-weight: 300;
+            text-decoration: none;
+            border: 2px solid #222;
+            margin-bottom: 6px;
+        }
+
+        #cat-button:hover{
+            background-color: slategrey;
+            border: 2px solid slategrey;
+            cursor: pointer;
+        }
+
+        #cat-button:active{
+            background-color: black;
+            border: 2px solid slategrey;
+            cursor: pointer;
+        }
+
+        img{
+            border-radius: 9px;
+        }
+    </style>
+</head>
+<body>
+<button id="cat-button"><i class="fa fa-paw fa-2x"> Push for fresh cat</i></button>
+<div class="container">
+    <div id="quillEditor"></div>
+</div>
+</body>
+<script src="quill/quill.js"></script>
+<script>
+    let BlockEmbed = Quill.import('blots/block/embed');
+    var quill = new Quill('#quillEditor');
+
+    // Extending a class with our new functionality
+    class ImageBlot extends BlockEmbed {
+        static create(value) {
+            let node = super.create();
+            node.setAttribute('alt', value.alt);
+            node.setAttribute('src', value.url);
+            return node;
+        }
+
+        static value(node) {
+            return {
+                alt: node.getAttribute('alt'),
+                url: node.getAttribute('src')
+            };
+        }
+    }
+
+    ImageBlot.blotName = 'image';
+    ImageBlot.tagName = 'img';
+
+    Quill.register(ImageBlot);
+    document.querySelector('#cat-button').addEventListener("click",function(){
+        let range = quill.getSelection(true);
+        quill.insertText(range.index, '\n', Quill.sources.USER);
+        quill.insertEmbed(range.index + 1, 'image', {
+            alt: 'Kitten',
+            url: 'https://placekitten.com/'+getRandom(100,400)+ '/' +getRandom(100,400)
+        }, Quill.sources.USER);
+        quill.setSelection(range.index + 2, Quill.sources.SILENT);
+    })
+
+    // Random for placeKitten
+    function getRandom(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min)) + min;
+    }
+
+</script>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="quill/quill.css">
+    <style>
+        body {
+            background-color: #222;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: whitesmoke;
+        }
+
+        #buttonQuill {
+            min-height: 200px;
+            overflow: auto;
+        }
+
+
+        /* new ¯\_(ツ)_/¯ Button */
+
+        .ql-whatever:after{
+            content: '¯\_(ツ)_/¯';
+        }
+
+        .ql-snow.ql-toolbar button.ql-whatever{
+            font-size: 20px;
+            width: 100px;
+            height: 36px;
+            border: solid 1px;
+        }
+
+        .ql-snow.ql-toolbar button.ql-whatever:hover{
+            stroke:black;
+            fill:black;
+            color:black;
+            background-color: lightgrey;
+        }
+
+
+        /* new (╯°□°)╯︵ ┻━┻ Button */
+
+        .ql-table:after{
+            content: '(╯°□°)╯︵ ┻━┻';
+        }
+
+        .ql-snow.ql-toolbar button.ql-table{
+            font-size: 20px;
+            width: 200px;
+            height: 36px;
+            border: solid 1px;
+            margin-left:4px;
+        }
+
+        .ql-snow.ql-toolbar button.ql-table:hover{
+            stroke:black;
+            fill:black;
+            color:black;
+            background-color: lightgrey;
+        }
+
+        /* new ಠ_ಠ Button */
+
+        .ql-disapproval:after{
+            content: 'ಠ_ಠ';
+        }
+
+        .ql-snow.ql-toolbar button.ql-disapproval{
+            font-size: 20px;
+            width: 80px;
+            height: 36px;
+            border: solid 1px;
+            margin-left:4px;
+        }
+
+        .ql-snow.ql-toolbar button.ql-disapproval:hover{
+            stroke:black;
+            fill:black;
+            color:black;
+            background-color: lightgrey;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div id="buttonQuill">
+    </div>
+</div>
+</body>
+<script src="quill/quill.js"></script>
+<script>
+    var toolbarOptions = [
+        {'whatever': 'man'},
+        'table','disapproval'
+    ];
+
+    var options = {
+        theme: 'snow',
+        modules: {
+            toolbar: toolbarOptions
+        }
+    }
+
+    var container = document.getElementById('buttonQuill');
+    var quill = new Quill(container, options);
+    var whateverButton = document.querySelector('.ql-whatever');
+    var tableButton = document.querySelector('.ql-table');
+    var disapprovalButton = document.querySelector('.ql-disapproval');
+
+    whateverButton.addEventListener('click', function(e) {
+        quill.focus();
+        var range = quill.getSelection();
+        quill.insertText(range.index, ' ¯\_(ツ)_/¯ ', 'bold', false);
+        quill.setSelection(range.index + 10);
+        console.log(e.target.value);
+    });
+
+    tableButton.addEventListener('click', function(e) {
+        // Contrast the behaviour of the whatever Button with the flipping table one, it
+        //  just prepends the content, it is also bold... and awesome.
+        quill.insertText(0, ' (╯°□°)╯︵ ┻━┻ ', 'bold', true);
+    });
+
+    disapprovalButton.addEventListener('click', function(e) {
+        quill.insertText(0, ' ಠ_ಠ ', 'bold', false);
+    });
+</script>
+</html>

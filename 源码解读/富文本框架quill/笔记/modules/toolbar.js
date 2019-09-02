@@ -8,6 +8,7 @@ const debug = logger('quill:toolbar');
 
 class Toolbar extends Module {
   constructor(quill, options) {
+    console.log("mio")
     super(quill, options);
     if (Array.isArray(this.options.container)) {
       const container = document.createElement('div');
@@ -23,6 +24,7 @@ class Toolbar extends Module {
       return debug.error('Container required for toolbar', this.options);
     }
     this.container.classList.add('ql-toolbar');
+
     this.controls = [];
     this.handlers = {};
     Object.keys(this.options.handlers).forEach(format => {
@@ -38,6 +40,7 @@ class Toolbar extends Module {
         this.update(range);
       }
     });
+
     this.quill.on(Quill.events.SCROLL_OPTIMIZE, () => {
       const [range] = this.quill.selection.getRange(); // quill.getSelection triggers update
       this.update(range);

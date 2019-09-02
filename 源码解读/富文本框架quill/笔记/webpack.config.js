@@ -5,12 +5,12 @@ const config = {
     mode: 'development',
     devtool: 'source-map',
     output: {
-        filename: 'quill.js',
+        filename: 'index.js',
         // 将输出的文件都放在dist目录下
         path: path.resolve(__dirname, 'dist'),
-        publicPath: '/dist'
+        publicPath: '/'
     },
-    entry: './quill.js',
+    entry: './index.js',
     module: {
         rules: [
             {
@@ -22,7 +22,7 @@ const config = {
     plugins:[
         new htmlWebpackPlugin({
             //注意传的参数是一个对象
-            template:'./test/index.html'   //传一个模板，就是根目录下的index.html
+            template:'test/index.html'   //传一个模板，就是根目录下的index.html
         })
     ]
 };
