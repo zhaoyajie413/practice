@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAOA,QAAS;EAAE,KAAK,EAAE,KAAa",
+"sources": ["../src/3.6.@function.scss"],
+"names": [],
+"file": "3.6.@function.css"
+}

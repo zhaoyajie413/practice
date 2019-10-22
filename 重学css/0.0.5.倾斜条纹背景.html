@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            float: left;
+            margin-right: 10px;
+        }
+        /*
+        复杂的技巧实现
+        */
+        .stripe-container{
+            width: 200px;
+            height: 200px;
+            background-image: linear-gradient(45deg,#fb3 25%, #58a 0%,#58a 50%,#fb3 0%,#fb3 75%, #58a 0%);
+            background-size: 42px 42px;
+        }
+        /*
+        repeating-linear-gradient() 函数用于创建重复的线性渐变 "图像"。
+        */
+        .titl-container{
+            background-image: repeating-linear-gradient(45deg, #fb3, #fb3 15px, #58a 0px, #58a 30px);
+            width: 200px;
+            height: 200px;
+            animation: rotate .5s linear infinite;
+        }
+        .spread-container{
+            background-image: repeating-linear-gradient(45deg,
+            rgba(255,0,0,1),
+            rgba(255,0,0,0.2) 15px,
+            blueviolet 0, blueviolet 30px);
+            width: 200px;
+            height: 200px;
+            animation: rotate .5s linear infinite;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="stripe-container"></div>
+    <div class="titl-container"></div>
+    <div class="spread-container"></div>
+</body>
+
+</html>

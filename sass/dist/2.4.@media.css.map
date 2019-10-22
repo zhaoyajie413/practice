@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,QAAS;EACP,KAAK,EAAE,KAAK;EACZ,0CAA2C;IAF7C,QAAS;MAGL,KAAK,EAAE,KAAK",
+"sources": ["../src/2.4.@media.scss"],
+"names": [],
+"file": "2.4.@media.css"
+}

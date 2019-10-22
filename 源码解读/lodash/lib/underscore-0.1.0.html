@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script src="underscore-0.1.0.js"></script>
+<script>
+    var inject = _.inject([1,2,3,4,5],0,function (memo,num) {
+        return memo+num;
+    },0);
+    console.log(inject);
+
+    var detect = _.detect(["mio","komi","mayuyu","youki"],function (item,index) {
+            return this==item;
+    },"mayuyu");
+    console.log(detect)
+</script>
+</html>

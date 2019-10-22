@@ -1,0 +1,17 @@
+body.firefox .header:before {
+  content: "Hi, Firefox users!"; }
+
+p {
+  cursor: e-resize; }
+
+p:before {
+  content: "Foo Bar";
+  font-family: sans-serif; }
+
+p {
+  margin: 7px auto; }
+
+p:before {
+  content: "I ate 15 pies!"; }
+
+/*# sourceMappingURL=2.1.%D7%D6%B7%FB%B4%AE.css.map */

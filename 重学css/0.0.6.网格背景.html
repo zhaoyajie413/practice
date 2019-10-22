@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*
+        只使用一个渐变时，我们能创建的图案并不多。当我们把多个渐变图
+案组合起来，让它们透过彼此的透明区域显现时，神奇的事情就发生了。按
+照这个思路，我们首先想到的可能就是把水平和垂直的条纹叠加起来，从而
+得到各种样式的网格。
+        */
+        .net-background{
+            background: white;
+            background-image: linear-gradient(90deg,
+            rgba(200,0,0,.5) 50%, transparent 0),
+            linear-gradient(
+                    rgba(200,0,0,.5) 50%, transparent 0);
+            background-size: 30px 30px;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="net-background"></div>
+</body>
+</html>

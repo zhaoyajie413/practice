@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background-image: url(./images/emeraldGreen.jpeg);
+            background-size:cover;
+            background-repeat: no-repeat;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+        /*
+         通过box-shadow来模拟多层border
+          */
+        .border-mutiple {
+            background: yellowgreen;
+            box-shadow: 0 0 0 10px #655,
+            0 0 0 15px deeppink,
+            0 0px 0px 20px rgba(0,0,0,.6),
+            0 0px 0px 30px darkmagenta,
+            0 0px 0px 40px rgba(255,0,156,0.7);
+            background-clip: padding-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            width: 100px;
+            height: 60px;
+            color: rgba(0,0,0,0.8);
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+<div class="border-mutiple">
+    <div style="height: 20px">重新学习css</div>
+</div>
+</body>
+</html>

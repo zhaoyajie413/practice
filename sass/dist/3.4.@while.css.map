@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEE,OAAY;EAAE,KAAK,EAAE,IAAQ;;AAA7B,OAAY;EAAE,KAAK,EAAE,GAAQ;;AAA7B,OAAY;EAAE,KAAK,EAAE,GAAQ",
+"sources": ["../src/3.4.@while.scss"],
+"names": [],
+"file": "3.4.@while.css"
+}

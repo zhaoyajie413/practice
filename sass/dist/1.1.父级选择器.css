@@ -1,0 +1,16 @@
+/* 1. */
+a {
+  font-weight: bold;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+  body.firefox a {
+    font-weight: normal; }
+
+/* 2.*/
+#main {
+  color: black; }
+  #main-sidebar {
+    border: 1px solid; }
+
+/*# sourceMappingURL=1.1.%B8%B8%BC%B6%D1%A1%D4%F1%C6%F7.css.map */

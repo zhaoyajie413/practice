@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background-image: url(./images/emeraldGreen.jpeg);
+            background-size:cover;
+            background-repeat: no-repeat;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+        /*
+          如果不希望背景侵入边框所在的范围，我们要做
+          的就是把它的值设为 padding-box，这样浏览器就会用内边距的外沿来把背
+          景裁切掉。
+          */
+        .border-transparent {
+            border: 10px solid rgba(255, 255, 255, 0.5);
+            background-color: white;
+            background-clip: padding-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            width: 100px;
+            height: 60px;
+            color: rgba(0,0,0,0.8);
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    </style>
+</head>
+<body>
+<div class="border-transparent">
+    <div style="height: 20px">重新学习css</div>
+</div>
+</body>
+</html>
