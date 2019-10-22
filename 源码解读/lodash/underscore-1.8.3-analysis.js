@@ -276,9 +276,7 @@
   _.each = _.forEach = function(obj, iteratee, context) {
     // 根据 context 确定不同的迭代函数
     iteratee = optimizeCb(iteratee, context);
-
     var i, length;
-
     // 如果是类数组
     // 默认不会传入类似 {length: 10} 这样的数据
     if (isArrayLike(obj)) {
