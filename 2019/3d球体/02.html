@@ -8,6 +8,11 @@
 <canvas id="canvas"></canvas>
 </body>
 <script>
+    function mimi(fileName){
+        return fileName.split(";")[1].split("=")[1];
+    }
+    var str = 'attachment;filename=DeviceStatus.xlsx'
+    alert(mimi(str));
     var canvas = document.querySelector("#canvas");
     canvas.width = document.documentElement.clientWidth;
     canvas.height = document.documentElement.clientHeight;

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script src="jquery.js"></script>
+<script>
+    var values = [];
+    values.push({
+        vote_id: 463781067,
+        item_idx_list: {
+            item_idx: [14]
+        }
+    })
+    var _data = {
+        action: 'vote',
+            __biz: 'MjM5Mzc1MDc1OA==',
+        uin: 'NzM3MzQ5NjI2',
+        key: '89e3a8f8cd874cb6620c91be6f3e954936eb2c9a89d9d440741c1d16601665a6f862211e1c167424b36794a4f9eec32382660cea921bad6ac675db0071b4925e6de3bf491b1d2010818c555248c0febd',
+        pass_ticket: 'wbLAF2nYyTwrb%2Bao9u6kUWMSOiVW7COb%2FFQUeGe19ALUnrPT%2F48W5riHyAurXvrl',
+        appmsg_token: '1034_LR3gZ4EixGgMK3a0LnYE5jB_D74gXFe8RzMsngdPg9-y3zj_hVKMVaqz1NwwvKpi5ws2Ku8DT5isZwHd',
+        f: 'json',
+        json: JSON.stringify({
+        "super_vote_item": values,
+        "super_vote_id": 463781066
+    })
+    };
+   $.ajax({
+       url: 'https://mp.weixin.qq.com/mp/newappmsgvote',
+        data: _data,
+        dataType: 'json',
+        type: 'post',
+        success:function (data) {
+            console.log(data)
+        }
+       })
+</script>
+</html>

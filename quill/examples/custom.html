@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../quill.core.css">
+    <link rel="stylesheet" href="../quill.snow.css" >
+    <style>
+.zone-name{
+
+}
+.zone-name:after{
+    content: '国家名称';
+}
+        button{
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+<div id="toolbar">
+    <button id="zoneName">国家信息</button>
+    <button id="zoneCode">基础套餐code</button>
+    <button>套餐时长</button>
+    <button>商品套餐sku名称</button>
+    <button id="submit">提交</button>
+</div>
+<div id="editor">
+
+</div>
+</body>
+<script src="../quill.js"></script>
+<script>
+    var Code = Quill.import('formats/code');
+    class myButton extends Code {
+        static create(value) {
+            let node = super.create(value); // 创建一个节点
+            node.innerText = value;
+            node.setAttribute('contenteditable',false);
+            return node;
+        }
+    }
+    myButton.blotName = 'mybtn'; // bolt name
+    myButton.tagName = 'BUTTON'; // 渲染成 html 标签
+
+    Quill.register(myButton);
+
+    var quill = new Quill('#editor', {
+        modules: {
+            toolbar: '#toolbar'
+        }
+    });
+
+    var zoneName = document.querySelector("#zoneName");
+
+    zoneName.addEventListener('click', function(e) {
+        quill.focus();
+        var range = quill.getSelection();
+        quill.insertEmbed(range.index, 'mybtn','zone-name');
+        var nextRange = quill.setSelection(range.index + 10);
+        quill.insertText(nextRange, 'text','23 ');
+    });
+
+    var submitBtn = document.querySelector('#submit');
+
+    submitBtn.addEventListener('click', function () {
+        var content = quill.getText();
+        console.log(content);
+    })
+
+    tableButton.addEventListener('click', function(e) {
+        // Contrast the behaviour of the whatever Button with the flipping table one, it
+        //  just prepends the content, it is also bold... and awesome.
+        quill.insertText(0, ' (╯°□°)╯︵ ┻━┻ ', 'bold', true);
+    });
+
+    disapprovalButton.addEventListener('click', function(e) {
+        quill.insertText(0, ' ಠ_ಠ ', 'bold', false);
+    });
+</script>
+</html>

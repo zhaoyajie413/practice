@@ -1,0 +1,79 @@
+{
+  "coomon":{
+    "close":"关闭",
+    "day":"天",
+    "save":"保存"
+  },
+  "router":{
+  "orderDetails":"订单详情",
+  "orderService":"售后申请",
+  "service":"售后管理",
+  "serviceDetails":"售后详情",
+  "afterSaleStatus": "售后状态"},
+  "orderDetails":{
+  "proName":"商品名称",
+  "duration":"充值天数",
+  "totalMoney":"支付金额",
+  "serviceReason":"售后原因",
+  "refundMoney":"退款金额",
+  "serviceInstructions":"售后说明",
+  "pleaseInput":"请输入内容",
+  "pictureProof":"图片证明"
+  },
+  "orderService":{
+    "proName":"商品名称",
+    "duration":"充值天数",
+    "totalMoney":"支付金额",
+    "serviceReason":"售后原因",
+    "refundMoney":"退款金额",
+    "serviceInstructions":"售后说明",
+    "pleaseInput":"请输入内容",
+    "pictureProof":"图片证明",
+    "serviceDesc":"售后描述",
+    "error_01":"退款金额不能比支付金额大",
+    "error_02":"请输入退款金额",
+    "error_03":"请输入正确的金额",
+    "error_04":"请选择售后原因"
+  },
+  "service":{
+    "orderId":"订单号",
+    "afterSaleNum":"售后单号",
+    "serviceReason":"售后原因",
+    "examineStatus":"审核状态",
+    "applyTime":"申请时间",
+    "applyStartTime":"申请开始时间",
+    "applyEndTime":"申请结束时间",
+    "proName":"商品名称",
+    "duration":"充值天数",
+    "totalMoney":"支付金额",
+    "refundMoney":"退款金额",
+    "refundMoneyStatus":"退款状态",
+    "operations":"操作",
+    "cancelService":"取消售后",
+    "details":"详情"
+  },
+
+  "afterSaleStatusMap":{
+    "afterSaleStatus_00":"售后审核中",
+    "afterSaleStatus_01":"已驳回",
+    "afterSaleStatus_02":"已驳回驳回",
+    "afterSaleStatus_03":"已取消"
+  },
+  "payStatusMap":{
+    "payStatus_00": "未支付",
+    "payStatus_01": "已支付",
+    "payStatus_02": "申请退款",
+    "payStatus_03": "退款",
+    "payStatus_04": "支付中"
+  },
+  "orderStatus":{
+    "unpaid":"待支付",
+    "paid":"待发邮件",
+    "mailSent":"已发邮件",
+    "application":"申请退款",
+    "refund":"已退款",
+    "inPayment":"支付中",
+    "close":"交易关闭"
+  }
+}
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+</body>
+<script>
+    var canvas = document.querySelector('#canvas');
+    canvas.width = document.documentElement.clientWidth;
+    canvas.height = document.documentElement.clientHeight;
+
+    var context = canvas.getContext('2d');
+    var increament = 0.01;
+    function color16(){//十六进制颜色随机
+        var r = Math.floor(Math.random()*256);
+        var g = Math.floor(Math.random()*256);
+        var b = Math.floor(Math.random()*256);
+        var color = '#'+r.toString(16)+g.toString(16)+b.toString(16);
+        return color;
+    }
+   function animate() {
+       context.beginPath();
+       context.strokeStyle = 'blue';
+       context.moveTo(0,canvas.height*0.75);
+       for(let i = 0; i < canvas.width; i++){
+           context.lineTo(i, canvas.height*0.75+(100*Math.cos(increament))*Math.sin(i*0.01+increament));
+       }
+       context.stroke();
+       increament+=0.01;
+   }
+   function ticker (callback) {
+       context.beginPath();
+       context.fillStyle="rgba(255,255,255,0.04)";
+        context.fillRect(0,0,canvas.width,canvas.height)
+       context.fill();
+       callback()
+       requestAnimationFrame(function () {
+           ticker(callback);
+       })
+   }
+   ticker(animate)
+
+</script>
+</html>
