@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="010225da-914c-43df-a79b-8a8a2cc355b9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/2019/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2019/test.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2019/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Blob对象/01.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/canvas/smooth.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quill/examples/custom.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/源码解读/lodash/ladash_pick.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/正则表达式/exec.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/正则表达式/match.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/正则表达式/回溯.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/正则表达式/子表达式.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2019/3d球体/02.html" beforeDir="false" afterPath="$PROJECT_DIR$/2019/3d球体/02.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/typescript/musicWave/src/1.1.基本类型.ts" beforeDir="false" afterPath="$PROJECT_DIR$/typescript/musicWave/src/1.1.基本类型.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpackStudy/require.context/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpackStudy/require.context/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,9 +23,9 @@
         <option value="Dart File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
-        <option value="HTML File" />
         <option value="tsconfig.json" />
         <option value="package.json" />
+        <option value="HTML File" />
       </list>
     </option>
     <option name="SCHEME" value="Project" />
@@ -51,7 +47,7 @@
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="eu.ydp.idea.ts.spec.generator.settings.spec.template" value="import {$ClassName$} from '$TestsRelativePath$../src/$classRelativePath$/$ClassName$';&#10;&#10;describe('$ClassName$', () =&gt; {&#10;  let $ObjName$:$ClassName$;&#10;&#10;  beforeEach(() =&gt; {&#10;    $ObjName$ = new $ClassName$();&#10;  });&#10;&#10;  describe('', () =&gt; {&#10;    it('', () =&gt; {&#10;      // given&#10;&#10;      // when&#10;&#10;      // then&#10;    });&#10;  });&#10;});&#10;" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/workspace/海外H5/mall-frontend" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/workspace/融拓物联/rongtuo_manager" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -61,13 +57,6 @@
     <property name="ts.external.directory.path" value="C:\study\practice\源码解读\vant解读\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\study\practice\test" />
-      <recent name="C:\study\practice\重学css\images" />
-      <recent name="C:\study\practice\element\lib\compatible" />
-      <recent name="C:\study\practice\element\lib" />
-      <recent name="C:\study\practice" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\study\practice\重学css" />
       <recent name="C:\study\practice\element\lib\compatible" />
@@ -75,18 +64,25 @@
       <recent name="C:\study\practice\angular1@复习与研究" />
       <recent name="C:\study\practice\sass\src" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\study\practice" />
+      <recent name="C:\study\practice\test" />
+      <recent name="C:\study\practice\重学css\images" />
+      <recent name="C:\study\practice\element\lib\compatible" />
+      <recent name="C:\study\practice\element\lib" />
+    </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.Vue_引入sass.html">
-    <configuration name="3d粒子研究02.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/practice/canvas/3d粒子研究/3d粒子研究02.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="3d粒子研究03.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/practice/canvas/3d粒子研究/3d粒子研究03.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="JavaScript Debug.exec.html">
     <configuration name="Vue_引入sass.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/practice/doc/html/Vue_引入sass.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
+    <configuration name="子表达式.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/practice/正则表达式/子表达式.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="custom.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/practice/quill/examples/custom.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="exec.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/practice/正则表达式/exec.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="ladash_pick.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/practice/源码解读/lodash/ladash_pick.html" useBuiltInWebServerPort="true">
@@ -94,11 +90,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.exec.html" />
+        <item itemvalue="JavaScript Debug.子表达式.html" />
         <item itemvalue="JavaScript Debug.Vue_引入sass.html" />
         <item itemvalue="JavaScript Debug.ladash_pick.html" />
         <item itemvalue="JavaScript Debug.custom.html" />
-        <item itemvalue="JavaScript Debug.3d粒子研究03.html" />
-        <item itemvalue="JavaScript Debug.3d粒子研究02.html" />
       </list>
     </recent_temporary>
   </component>
@@ -242,7 +238,19 @@
       <workItem from="1583215110976" duration="1556000" />
       <workItem from="1583290792805" duration="229000" />
       <workItem from="1583742437417" duration="3000" />
-      <workItem from="1583890852604" duration="1299000" />
+      <workItem from="1583890852604" duration="5227000" />
+      <workItem from="1583973258557" duration="599000" />
+      <workItem from="1584004688867" duration="595000" />
+      <workItem from="1584065312109" duration="8602000" />
+      <workItem from="1584321945302" duration="163000" />
+      <workItem from="1584337366137" duration="619000" />
+      <workItem from="1584426442889" duration="1512000" />
+      <workItem from="1584605712666" duration="1829000" />
+      <workItem from="1584607617349" duration="1385000" />
+      <workItem from="1584609540434" duration="325000" />
+      <workItem from="1584947381690" duration="27000" />
+      <workItem from="1585186766264" duration="1390000" />
+      <workItem from="1585219042818" duration="10000" />
     </task>
     <servers />
   </component>
@@ -250,10 +258,14 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1581988890222">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1584086890654">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1581988890222" />
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1584086890654" />
+    <state x="521" y="75" key="RollbackChangesDialog" timestamp="1584605968168">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="521" y="75" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1584605968168" />
     <state x="184" y="6" key="SettingsEditor" timestamp="1582019961596">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -262,6 +274,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="359" y="97" width="647" height="534" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1582101479584" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1584071932169">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1584071932169" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

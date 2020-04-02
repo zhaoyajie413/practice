@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var str = 'The cat scattered his food all over the room.';
+    var reg = /(a)(t|h|f|l)/g;
+    console.log(str.match(reg))
+    console.log(str.replace(reg,'$2$1'))
+
+    var str2 = '2009年11月12日，Rainbow推出首张专辑《Gossip Girl》，并正式出道 [2]  。2010年8月12日，Rainbow发布单曲辑《A》 [3]  。2011年4月7日，Rainbow公布第二张迷你专辑《So女》 [4]  ；9月，Rainbow公开了日本出道单曲《A》，发行当日在日本的Oricon排行榜排名第三位 [5]  。2012年3月28日，Rainbow在日本发售了日文正规一辑《Over the Rainbow》 [6]  。2013年2月13日，Rainbow发布了首张正规专辑《RainbowSyndrome-Part.1》 [7]  。2015年2月23日，Rainbow经历了1年零8个月的空白期后，发布了第三张迷你专辑《INNOCENT》，并宣布全面复出 [8-9]  。2016年2月12日，Rainbow公开了第四张迷你专辑《Prism》 [10]  ；11月12日，Rainbow组合7名成员与DSP Entertainment合约到期，经成员讨论决定，不再续约，Rainbow组合正式解散 [11]  。2019年11月14日，Rainbow为纪念出道十周年再次团聚，发行特别单曲专辑《Over the Rainbow》 [1';
+    var reg2=/([\u0100-\uffff]{2})([\u0100-\uffff]{2})/g
+    console.log(str2.replace(reg2,'$2$1'))
+
+    var res = str2.replace(reg2,function (match,$1,$2) {
+            return `<sapn style="color:red">${$2}${$1}</sapn>`
+    })
+    document.write(`
+        <div>${str2}</div>
+        <div>${res}</div>
+    `)
+</script>
+</html>

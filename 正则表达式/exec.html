@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let str = `湘伴君从湖南省卫生健康委获悉，
+    根据国家有关规定和《湖南省突发公共卫生事件应急预案》，
+    结合我省当前新冠肺炎疫情防控形势，省新冠肺炎疫情防控工作领导小组决定，
+    湖南省新冠肺炎疫情防控突发公共卫生事件应急响应级别由一级调整为二级。
+
+        省新冠肺炎疫情防控工作领导小组同时要求，
+        请各地继续按照分区分级防控工作要求，
+        根据地区特点和疫情形势精准施策，坚持“外防输入，
+        内防扩散”，毫不放松抓紧抓实抓细各项防控工作，
+        统筹推进疫情防控和经济社会发展，坚决打赢疫情防控总体战、阻击战。`
+    let res ;
+   let start=0;
+   let html = '';
+   let reg = /新冠/g;
+    res =reg.exec(str)
+    while (res !=null ){
+        html+= str.slice(start,res.index);
+        html+=`<span style="color:red">${res[0]}</span>`
+        start =res.index+res[0].length;
+        res = reg.exec(str);
+        if(res == null)html+=str.slice(start)
+    }
+    html+='<hr/>';
+    let reg2 = /湖南/g;
+    start=0;
+    while (res2 =reg2.exec(str)){
+        html+= str.slice(start,res2.index);
+        html+=`<span style="color:blue">${res2[0]}</span>`
+        start =res2.index+res2[0].length;
+    }
+    html+= str.slice(start);
+    document.write(html)
+
+   var vres =  /^(\/?[0-9]*)?\/verifyAccount$/.test('/10073s13/verifyAccount');
+    alert(vres)
+</script>
+</html>

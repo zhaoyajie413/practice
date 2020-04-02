@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var str = `2012年2月22日，组合发行单曲《窗帘围绕》后正式出道；5月凭借第二张单曲《来吧Shampoo》首次获得日本公信榜周榜冠军。2015年1月7日，发行首张专辑作品《透明色》。2015年12月31日，首次登上NHK红白歌会舞台。2017年及2018年，组合分别凭借第17张单曲《大影响家》、第20张单曲《同步巧合》连续两年斩获日本唱片大奖。至2019年9月，组合已发行24张单曲、5张专辑作品，单曲总销量突破1800万张，年度唱片总销售额超百亿日元（2018年）`
+
+    //var regular = /\d{4}\S{1}/    //不带g
+   // var regular = /\d{4}\S{1}/g   //不带g
+    var regular = /(\d{4})\S{1}/   //分组
+    var res = str.match(regular);
+    console.log(res)
+
+</script>
+</html>
